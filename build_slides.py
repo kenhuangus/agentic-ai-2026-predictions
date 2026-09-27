@@ -16,13 +16,13 @@ SLIDES_EN = [
         "number": 1,
         "raw_lines": [
             "Top 10 Predictions for Agentic AI in 2026",
-            "Investor thesis scorecard — as of September 27, 2026",
-            "Original predictions: Cloud Security Alliance, January 16, 2026",
+            "Technology predictions (CSA, January 16, 2026) — mid-year evidence through September 27, 2026",
+            "Investment theses added September 27, 2026 — illustrative only · Not Investment Advice",
             "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang",
-            "Lens: up to 3 investment theses per trend · US · China · EU evidence",
+            "Lens: technology forecast first; optional investment discussion per trend · US · China · EU",
             "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-            "Archive snapshot on GitHub tag: v1-midyear-scorecard"
+            "Archive: status-only mid-year audit at GitHub tag v1-midyear-scorecard"
         ]
     },
     {
@@ -47,6 +47,7 @@ SLIDES_EN = [
         "raw_lines": [
             "Original CSA Publication — January 16, 2026",
             "• Article: My Top 10 Predictions for Agentic AI in 2026",
+            "• These were technology and industry predictions — not investment recommendations",
             "• Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "• Publisher: Cloud Security Alliance (Industry Insights)",
             "• Open the original post:",
@@ -58,19 +59,19 @@ SLIDES_EN = [
     {
         "number": 4,
         "raw_lines": [
-            "About This Investor Scorecard",
-            "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)",
-            "• CSA URL: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-            "• Method: ≤3 investable theses per trend, plus explicit pitfalls and do-not-invest anti-theses (US/China/EU evidence through 2026-09-27)",
-            "• Prior mid-year audit (status only) preserved as GitHub tag v1-midyear-scorecard / branch archive/v1-midyear-scorecard",
-            "• Thesis bar: who pays, what product category, why now — not generic “AI will grow” claims",
+            "How to Read This Deck",
+            "• Base layer (2026-01-16): Ken Huang’s CSA Top 10 — technology predictions for Agentic AI",
+            "• Mid-year layer: public evidence check vs US / China / EU (status archive: tag v1-midyear-scorecard)",
+            "• Investment layer (added 2026-09-27): up to 3 illustrative theses, pitfalls, and do-not-invest lines per trend",
+            "• Thesis bar: who might pay, what product category, why the timing looks relevant — not a buy or sell call",
+            "• Disclaimer: Not Investment Advice — discussion and education only; do your own diligence",
             "• Regions still matter: US lab/CVE markets, China agent regulation, EU AI Act / CRA gates shape where capital can deploy"
         ]
     },
     {
         "number": 5,
         "raw_lines": [
-            "Thesis Map at a Glance — September 27, 2026",
+            "Illustrative Thesis Map — added September 27, 2026 · Not Investment Advice",
             "| # | Trend | Invest / avoid snapshot |",
             "|---|---|---|",
             "| 1 | RSI | Eval + governed self-mod + ML-ops RSI / avoid public AGI self-rewrite |",
@@ -208,7 +209,7 @@ SLIDES_EN = [
     {
         "number": 16,
         "raw_lines": [
-            "Regional Capital Lens — United States · China · European Union",
+            "Regional Discussion Lens — United States · China · European Union",
             "| Theme | United States | China | European Union |",
             "|---|---|---|---|",
             "| Where $ pools | Labs, CVE tooling, enterprise surveys | Internal ops under localization + filing | Compliance software + human-oversight UX |",
@@ -221,7 +222,7 @@ SLIDES_EN = [
     {
         "number": 17,
         "raw_lines": [
-            "Open Questions for Capital — Q4 2026",
+            "Open Questions into Q4 2026 — discussion only · Not Investment Advice",
             "• Does AIVSS v1 freeze create a scoring-engine category winner, or stay a free checklist?",
             "• Will AG-UI/A2UI reliability layers become infrastructure picks or stay framework features?",
             "• Is RSI investable beyond eval vendors before Level-2 ignition evidence?",
@@ -247,10 +248,11 @@ SLIDES_EN = [
     {
         "number": 19,
         "raw_lines": [
-            "Closing — Where capital meets agentic security",
-            "• Each of the 10 CSA trends maps to ≤3 theses plus pitfall / do-not-invest lines",
-            "• Strongest near-term wallets: enterprise GRC/runtime controls, AI AppSec for vibe coding, MCP/gateway security",
-            "• Structural openers into Q4: AIVSS v1 freeze, A2UI reliability, independent RSI replication",
+            "Closing — Technology trends first; capital lens is optional",
+            "• CSA published technology predictions (2026-01-16); investment theses on this deck were added 2026-09-27",
+            "• Not Investment Advice — theses are discussion frames, not recommendations to buy or sell",
+            "• Near-term discussion themes: enterprise GRC/runtime controls, AI AppSec for vibe coding, MCP/gateway security",
+            "• Watch into Q4: AIVSS v1 freeze, A2UI reliability, independent RSI replication",
             "• Status-only archive remains at tag v1-midyear-scorecard for comparison",
             "• Continue: kenhuangus.substack.com · aivss.owasp.org · CSA AI Safety working groups",
             "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"
@@ -270,13 +272,13 @@ SLIDES_EN = [
 SLIDES_ZH = {
     "1": [
         "2026 智能体 AI 十大预测",
-        "投资论点成绩单 — 截至 2026 年 9 月 27 日",
-        "原始预测：云安全联盟（CSA），2026 年 1 月 16 日",
+        "技术预测（CSA，2026 年 1 月 16 日）— 年中证据截至 2026 年 9 月 27 日",
+        "投资论点于 2026 年 9 月 27 日新增 — 仅供讨论 · 不构成投资建议",
         "作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "旧金山大学（USF）客座教授：https://www.usfca.edu/faculty/ken-huang",
-        "视角：每个趋势最多 3 条投资论点 · 美 · 中 · 欧证据",
+        "视角：技术预测优先；每个趋势可附讨论用投资论点 · 美 · 中 · 欧",
         "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "GitHub 存档标签：v1-midyear-scorecard"
+        "存档：仅状态判定的年中审计见 GitHub 标签 v1-midyear-scorecard"
     ],
     "2": [
         "关于演讲者：Ken Huang，CISSP",
@@ -294,6 +296,7 @@ SLIDES_ZH = {
     "3": [
         "CSA 原文发布 — 2026 年 1 月 16 日",
         "• 文章：My Top 10 Predictions for Agentic AI in 2026",
+        "• 原文是技术与产业预测 — 不是投资建议",
         "• 作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "• 发布方：云安全联盟（Industry Insights）",
         "• 打开原文：",
@@ -302,16 +305,16 @@ SLIDES_ZH = {
         "IMG:assets/images/csa-top-10-predictions-2026.png"
     ],
     "4": [
-        "关于本投资成绩单",
-        "• 出处：Ken Huang —《My Top 10 Predictions for Agentic AI in 2026》（CSA，2026-01-16）",
-        "• CSA 链接：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "• 方法：每个趋势 ≤3 条可投资论点，并列出陷阱与不宜投的反论点（美/中/欧证据截至 2026-09-27）",
-        "• 先前年中审计（仅状态判定）保留为 GitHub 标签 v1-midyear-scorecard / 分支 archive/v1-midyear-scorecard",
-        "• 论点标准：谁付费、什么产品类别、为何是现在 — 而非笼统的「AI 会增长」",
-        "• 区域仍关键：美国实验室/CVE 市场、中国智能体监管、欧盟 AI 法案/CRA 门禁决定资本可部署之处"
+        "如何阅读本演示",
+        "• 基础层（2026-01-16）：Ken Huang 的 CSA 十大 — 智能体 AI 的技术预测",
+        "• 年中层：对照美 / 中 / 欧公开证据（状态存档：标签 v1-midyear-scorecard）",
+        "• 投资层（2026-09-27 新增）：每个趋势最多 3 条讨论用论点，并附陷阱与不宜投",
+        "• 论点标准：谁可能付费、什么产品类别、时机为何相关 — 不是买卖建议",
+        "• 免责声明：不构成投资建议 — 仅供讨论与教育；请自行尽职调查",
+        "• 区域仍关键：美国实验室/CVE 市场、中国智能体监管、欧盟 AI 法案/CRA 门禁影响资本可部署之处"
     ],
     "5": [
-        "投资论点地图一览 — 2026 年 9 月 27 日",
+        "讨论用论点地图 — 2026 年 9 月 27 日新增 · 不构成投资建议",
         "| # | 趋势 | 宜投 / 不宜投速览 |",
         "|---|---|---|",
         "| 1 | RSI | 评测 + 受控自改 + ML 运维 RSI / 不宜投公网自称 AGI 自改 |",
@@ -416,7 +419,7 @@ SLIDES_ZH = {
         "• 不宜投 — v1 成为公开标准后，仍拒绝对照 AIVSS、AIUC-1 和 MAESTRO 的专有「AI 风险分」"
     ],
     "16": [
-        "区域资本视角 — 美国 · 中国 · 欧盟",
+        "区域讨论视角 — 美国 · 中国 · 欧盟",
         "| 主题 | 美国 | 中国 | 欧盟 |",
         "|---|---|---|---|",
         "| 资金池 | 实验室、CVE 工具、企业调研 | 本地化 + 备案下的内部运营 | 合规软件 + 人类监督体验 |",
@@ -426,12 +429,12 @@ SLIDES_ZH = {
         "| 企业 | 内部平台、双线项目 | 数据本地智能体平台 | HITL 优先的外部化 |"
     ],
     "17": [
-        "给资本的未决问题 — 2026 年第四季度",
+        "进入 2026 年第四季度的未决问题 — 仅供讨论 · 不构成投资建议",
         "• AIVSS v1 冻结会造就评分引擎类别赢家，还是停留在免费清单？",
         "• AG-UI/A2UI 可靠性层会成为基础设施标的，还是框架附带功能？",
-        "• 在二级点火证据出现前，RSI 是否只在评估供应商层面可投资？",
+        "• 在二级点火证据出现前，RSI 是否只在评估供应商层面可讨论投资？",
         "• 内部优先平台能否在开放网络 B2C 智能体建立信任前拿下预算？",
-        "• AI AppSec 厂商能否把约 91% 的氛围编程漏洞基线压到成为默认 CI？",
+        "• AI AppSec 厂商能否把约 91% 的 vibe coding 漏洞基线压到成为默认 CI？",
         "• 关注监管：中国智能体备案成本 vs 美国 CVE 速度 vs 欧盟 CRA/AI 法案门禁"
     ],
     "18": [
@@ -446,10 +449,11 @@ SLIDES_ZH = {
         "• Contentstack 2026 智能体企业报告；NVD CVE-2026-55443；AIVSS aivss.owasp.org v0.8 + 评审"
     ],
     "19": [
-        "结语 — 资本与智能体安全交汇之处",
-        "• CSA 的 10 个趋势各自映射到 ≤3 条投资论点，并附陷阱 / 不宜投",
-        "• 近期最强钱包：企业 GRC/运行时控制、氛围编程 AI AppSec、MCP/网关安全",
-        "• 进入第四季度的结构性窗口：AIVSS v1 冻结、A2UI 可靠性、独立 RSI 复现",
+        "结语 — 技术趋势优先；资本视角仅供选读",
+        "• CSA 发布的是技术预测（2026-01-16）；本演示的投资论点于 2026-09-27 新增",
+        "• 不构成投资建议 — 论点是讨论框架，不是买卖推荐",
+        "• 近期可讨论主题：企业 GRC/运行时控制、vibe coding 的 AI AppSec、MCP/网关安全",
+        "• 进入第四季度可关注：AIVSS v1 冻结、A2UI 可靠性、独立 RSI 复现",
         "• 仅状态判定的存档仍在标签 v1-midyear-scorecard，便于对照",
         "• 继续对话：kenhuangus.substack.com · aivss.owasp.org · CSA AI 安全工作组",
         "• 联系：DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"
@@ -538,8 +542,8 @@ def main() -> None:
               </div>
               <div class="slide-1-hero-desc">
                 ${slideLang === 'zh'
-                  ? '基于 CSA 十大预测（2026-01-16）的投资论点成绩单。每个趋势最多 3 条可投资论点，锚定美 · 中 · 欧至 2026-09-27 的证据。状态审计存档：GitHub 标签 v1-midyear-scorecard。'
-                  : 'Investor thesis scorecard from the CSA Top 10 (2026-01-16). Up to 3 investable theses per trend, grounded in US · China · EU evidence through 2026-09-27. Prior status audit: GitHub tag v1-midyear-scorecard.'}
+                  ? 'CSA 技术预测（2026-01-16），年中证据截至 2026-09-27；投资论点为今日新增的讨论框架，不构成投资建议。状态存档：标签 v1-midyear-scorecard。'
+                  : 'CSA technology predictions (2026-01-16), mid-year evidence through 2026-09-27, plus illustrative investment theses added today. Not Investment Advice. Status archive: tag v1-midyear-scorecard.'}
               </div>
             </div>"""
 
