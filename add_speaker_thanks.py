@@ -202,7 +202,7 @@ RENDER_FUNCS = r"""
               <a href="https://www.amazon.com/stores/author/B0D3J7L7GN" target="_blank" rel="noopener noreferrer">${amazonLabel}</a>
             </div>
             <div class="books-gallery-grid">
-              <a href="https://www.amazon.com/dp/3031900251" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Agentic AI: Theories and Practices (Springer)">
+              <a href="https://link.springer.com/book/10.1007/978-3-031-90026-6" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Agentic AI: Theories and Practices (Springer)">
                 <img src="assets/images/books/springer_agentic_ai.jpg" alt="Agentic AI (Springer)" class="book-cover-img" />
                 <div class="book-item-title">Agentic AI</div>
                 <div class="book-publisher-tag">SPRINGER</div>
