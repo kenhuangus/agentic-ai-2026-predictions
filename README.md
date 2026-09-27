@@ -1,38 +1,33 @@
 # Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard
 
-Interactive GitHub Pages site auditing Ken Huang’s January 16, 2026 Cloud Security Alliance predictions against public evidence in the **United States**, **China**, and the **European Union** as of **September 27, 2026**.
+Interactive bilingual (EN / 中文) GitHub Pages site auditing Ken Huang’s January 16, 2026 Cloud Security Alliance predictions against public evidence in the **United States**, **China**, and the **European Union** as of **September 27, 2026**.
 
-- Live site (after Pages is enabled): `https://kenhuangus.github.io/agentic-ai-2026-predictions/`
-- Slides: [`slides.html`](./slides.html) (EN / 中文 via `?lang=zh`)
-- Machine-readable verdicts: [`research/scorecard.json`](./research/scorecard.json)
+## Links
+
+| | English | 中文 |
+|---|---|---|
+| **Public site** | https://kenhuangus.github.io/agentic-ai-2026-predictions/ | same home page |
+| **Public slides** | https://kenhuangus.github.io/agentic-ai-2026-predictions/slides.html?lang=en | https://kenhuangus.github.io/agentic-ai-2026-predictions/slides.html?lang=zh |
+| **Repo** | https://github.com/kenhuangus/agentic-ai-2026-predictions | |
+
+### Local (this machine)
+
+- Home: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/index.html`
+- Slides EN: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/slides.html?lang=en`
+- Slides 中文: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/slides.html?lang=zh`
+
+```powershell
+start C:\Users\kenhu\agentic-ai-2026-predictions\index.html
+start "C:\Users\kenhu\agentic-ai-2026-predictions\slides.html?lang=zh"
+```
 
 ## Original predictions
 
-Published on CSA and Substack: [My Top 10 Predictions for Agentic AI in 2026](https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026).
+[My Top 10 Predictions for Agentic AI in 2026](https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026) (CSA, 2026-01-16).
 
-| # | Prediction | Mid-year verdict |
-|---|---|---|
-| 1 | Self-improving / RSI agents | On track |
-| 2 | Agency > Intelligence | On track |
-| 3 | MAESTRO-based security benchmarks | Partial |
-| 4 | Agentic risk management center stage | Confirmed |
-| 5 | Vibe-coding security hangover | Confirmed |
-| 6 | Browser agents struggle | On track |
-| 7 | Enterprise: internal first | Mostly confirmed |
-| 8 | More CVEs in agentic ecosystem | Confirmed |
-| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |
-| 10 | OWASP AIVSS v1 official release | In progress |
+## Language switch
 
-## Local preview
-
-Open `index.html` or `slides.html` in a browser (no build step required at runtime).
-
-To regenerate slides after editing `build_slides.py`:
-
-```bash
-python build_slides.py
-python cleanup_slides.py
-```
+Use the **EN** / **中文** header buttons, or `?lang=en` / `?lang=zh`. Chinese copy is in `slides-zh.js` (same line count as English).
 
 ## Author
 
