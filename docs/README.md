@@ -20,7 +20,7 @@ Published on CSA and Substack: [My Top 10 Predictions for Agentic AI in 2026](ht
 | 6 | Browser agents struggle | On track |
 | 7 | Enterprise: internal first | Mostly confirmed |
 | 8 | More CVEs in agentic ecosystem | Confirmed |
-| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |
+| 9 | MAESTRO v2 practical release | In progress (v2 not published; still 7 layers) |
 | 10 | OWASP AIVSS v1 official release | In progress |
 
 ## Local preview

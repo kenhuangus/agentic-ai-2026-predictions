@@ -97,12 +97,12 @@ REVISED_EN = {
     ],
     9: [
         "P9 — MAESTRO v2 Practical Adoption — Investor theses",
-        "Evidence so far: CSA MAESTRO v2 shipped 2026-06-22 (10 layers + Trust Control Plane).",
-        "• Thesis 1 — Implementation software: layer templates, L1–L10 threat IDs, and a matrix of who owns each layer, sold to the security engineering team",
-        "• Thesis 2 — Trust Control Plane products: agent identity, action monitoring, and an interrupt path mapped to v2 domains; buyer is the agent-platform owner",
-        "• Thesis 3 — Training and certification: paid courses that security hiring managers can list for agent-security roles",
-        "• Pitfall — Workshops that never put L1–L10 checks into a tool the customer runs",
-        "• Do not invest — Products that rename IAM or observability \"trust plane\" and omit agent identity and an interrupt path",
+        "Evidence so far: MAESTRO v2 is not published yet. The CSA-adopted model in use is still seven layers (L1–L7); a 10-layer v2 release has not shipped.",
+        "• Thesis 1 — Seven-layer implementation software: L1–L7 templates, threat IDs, and a layer-owner matrix sold to the security engineering team",
+        "• Thesis 2 — Adoption into CI and playbooks: scanners and questionnaires that encode today’s seven-layer MAESTRO while v2 is still in draft",
+        "• Thesis 3 — Training on the published model: paid courses that hiring managers can list for agent-security roles against L1–L7",
+        "• Pitfall — Selling “MAESTRO v2” or “10-layer Trust Control Plane” before CSA publishes v2; buyers will treat that as vapor",
+        "• Do not invest — Pre-release “v2-compliant” badges, or products that rename IAM “trust plane” with no agent identity and no interrupt path",
     ],
     10: [
         "P10 — OWASP AIVSS v1 — Investor theses",
@@ -190,12 +190,12 @@ REVISED_ZH = {
     ],
     9: [
         "预测 9 — MAESTRO v2 落地采用 — 投资论点",
-        "现有证据：CSA MAESTRO v2 已于 2026-06-22 发布（10 层 + 信任控制平面）。",
-        "• 论点 1 — 落地软件：分层模板、L1–L10 威胁编号，以及各层责任人矩阵，卖给安全工程团队",
-        "• 论点 2 — 信任控制平面产品：对齐 v2 域的智能体身份、动作监控和中断路径；买方是智能体平台负责人",
-        "• 论点 3 — 培训与认证：安全招聘负责人可以写进智能体安全岗位要求的付费课程",
-        "• 陷阱 — 只办研讨班，从不把 L1–L10 检查放进客户能运行的工具",
-        "• 不宜投 — 把身份与访问管理或可观测性改名为「信任平面」，却没有智能体身份和中断路径的产品",
+        "现有证据：MAESTRO v2 尚未发布。CSA 已采用、实际在用的仍是七层模型（L1–L7）；所谓十层 v2 并未上市。",
+        "• 论点 1 — 七层落地软件：L1–L7 模板、威胁编号和各层责任人矩阵，卖给安全工程团队",
+        "• 论点 2 — 写入 CI 与操作手册：在 v2 仍为草稿时，把现行七层 MAESTRO 编进扫描器和问卷",
+        "• 论点 3 — 基于已发布模型的培训：招聘负责人可按 L1–L7 写进智能体安全岗位要求的付费课程",
+        "• 陷阱 — 在 CSA 发布 v2 之前销售「MAESTRO v2」或「十层信任控制平面」；买方会视为空谈",
+        "• 不宜投 — 未发布前的「v2 合规」徽章，或把身份与访问管理改名为「信任平面」、却没有智能体身份和中断路径的产品",
     ],
     10: [
         "预测 10 — OWASP AIVSS v1 — 投资论点",
@@ -259,7 +259,7 @@ def main() -> None:
                 "| 6 | Browser agents | Protocol reliability + action catalogs + CUA controls / avoid pay-send bots |",
                 "| 7 | Internal-first | Internal platforms + KPI back-office + controlled B2B / avoid premature B2C |",
                 "| 8 | Agentic CVEs | SBOM firewall + MCP gateway + patchable vendors / avoid unauth MCP |",
-                "| 9 | MAESTRO v2 | Implementation software + trust plane + listed training / avoid renamed IAM |",
+                "| 9 | MAESTRO v2 | 7-layer tooling + adoption + training / avoid pre-release v2 or 10-layer badges |",
                 "| 10 | AIVSS v1 | Scoring + crosswalk + release gates / avoid proprietary unmapped scores |",
             ]
             zh[str(s["number"])] = [
@@ -274,7 +274,7 @@ def main() -> None:
                 "| 6 | 浏览器智能体 | 协议可靠 + 动作目录 + 计算机操作控制 / 不宜投可支付发信机器人 |",
                 "| 7 | 内部优先 | 内部平台 + KPI 后台 + 受控 B2B / 不宜投过早消费级 |",
                 "| 8 | 智能体 CVE | SBOM 防火墙 + MCP 网关 + 能过采购厂商 / 不宜投无认证 MCP |",
-                "| 9 | MAESTRO v2 | 落地软件 + 信任平面 + 可写进 JD 的培训 / 不宜投改名 IAM |",
+                "| 9 | MAESTRO v2 | 七层落地工具 + 采用 + 培训 / 不宜投未发布的 v2 或十层徽章 |",
                 "| 10 | AIVSS v1 | 评分 + 对照 + 发布门禁 / 不宜投拒绝对照的专有分 |",
             ]
 
