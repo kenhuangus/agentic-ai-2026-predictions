@@ -22,11 +22,28 @@ SLIDES_EN = [
             "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang",
             "Regional lens: United States · China · European Union",
             "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-            "Sources: CSA article + Substack; research cut-off 2026-09-27",
-        ],
+            "Sources: CSA article + Substack; research cut-off 2026-09-27"
+        ]
     },
     {
         "number": 2,
+        "slide_type": "speaker",
+        "raw_lines": [
+            "About the Speaker: Ken Huang, CISSP",
+            "• AI book author and speaker (Harness Engineering, MAESTRO)",
+            "• Adjunct Professor, University of San Francisco",
+            "• OWASP AIVSS Project Lead",
+            "• Fellow and co-chair of two CSA AI Safety working groups",
+            "• Core member, OWASP Top 10 for LLM Applications",
+            "• AIUC-1 Consortium Member",
+            "• Grant reviewer, Schmidt Sciences",
+            "• EC-Council instructor — Generative AI for Cyber Security",
+            "• CEO of DistributedApps.ai: https://distributedapps.ai/",
+            "• Substack: kenhuangus.substack.com  ·  LinkedIn: linkedin.com/in/kenhuang8"
+        ]
+    },
+    {
+        "number": 3,
         "raw_lines": [
             "Original CSA Publication — January 16, 2026",
             "• Article: My Top 10 Predictions for Agentic AI in 2026",
@@ -35,11 +52,11 @@ SLIDES_EN = [
             "• Open the original post:",
             "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
             "• Screenshot below captures the published list of all 10 predictions",
-            "IMG:assets/images/csa-top-10-predictions-2026.png",
-        ],
+            "IMG:assets/images/csa-top-10-predictions-2026.png"
+        ]
     },
     {
-        "number": 3,
+        "number": 4,
         "raw_lines": [
             "About This Scorecard",
             "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)",
@@ -47,11 +64,11 @@ SLIDES_EN = [
             "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27",
             "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation",
             "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)",
-            "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open",
-        ],
+            "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open"
+        ]
     },
     {
-        "number": 4,
+        "number": 5,
         "raw_lines": [
             "Scorecard at a Glance — September 27, 2026",
             "| # | Prediction | Verdict |",
@@ -65,11 +82,11 @@ SLIDES_EN = [
             "| 7 | Enterprise: internal first | Mostly confirmed |",
             "| 8 | More CVEs in agentic ecosystem | Confirmed |",
             "| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |",
-            "| 10 | OWASP AIVSS v1 official release | In progress (review open) |",
-        ],
+            "| 10 | OWASP AIVSS v1 official release | In progress (review open) |"
+        ]
     },
     {
-        "number": 5,
+        "number": 6,
         "raw_lines": [
             "P1 — The Self-Improving Agentic AI System",
             "Prediction (Jan 2026): move past static agents; more research and some real-world self-improving agents.",
@@ -81,11 +98,11 @@ SLIDES_EN = [
             "  • Tiered authorization, auditable decision logs, human override for high-impact autonomous agents",
             "  • Self-modification loops face stronger filing/testing obligations than in open US labs",
             "• European Union: EU AI Act high-risk oversight + human-oversight duties slow open-web RSI deployment",
-            "  • Research continues; production self-rewriting agents remain rare outside controlled sandboxes",
-        ],
+            "  • Research continues; production self-rewriting agents remain rare outside controlled sandboxes"
+        ]
     },
     {
-        "number": 6,
+        "number": 7,
         "raw_lines": [
             "P2 — Agency > Intelligence",
             "Prediction: industry stops obsessing over raw intelligence scores; agency (plan, tools, persist) becomes primary.",
@@ -96,11 +113,11 @@ SLIDES_EN = [
             "• China: agent products compete on task completion and tool chains more than MMLU-style leaderboards",
             "  • Regulatory framing treats agent decision authority as the control object, not model IQ",
             "• European Union: conformity and oversight discussions track autonomy level and impact, not raw capability scores",
-            "  • Academic work (e.g. bipredictability / agency–intelligence theory, arXiv:2602.22519) separates the two constructs",
-        ],
+            "  • Academic work (e.g. bipredictability / agency–intelligence theory, arXiv:2602.22519) separates the two constructs"
+        ]
     },
     {
-        "number": 7,
+        "number": 8,
         "raw_lines": [
             "P3 — New Security Benchmarks via MAESTRO",
             "Prediction: new agent security benchmarks based on MAESTRO threat modeling get adopted.",
@@ -110,11 +127,11 @@ SLIDES_EN = [
             "• China: MAESTRO cited in CSA guidance as a way to evidence engineered agent boundaries for regulators",
             "  • Domestic agent security evaluations increasingly require layer-wise threat coverage, not prompt-only tests",
             "• European Union: mappings into EU AI Act / ISO 42001 via CSA AICM; MAESTRO used as threat-generation front-end",
-            "  • Gap: no single global numeric \"MAESTRO score\" yet — frameworks + scanners ahead of shared leaderboards",
-        ],
+            "  • Gap: no single global numeric \"MAESTRO score\" yet — frameworks + scanners ahead of shared leaderboards"
+        ]
     },
     {
-        "number": 8,
+        "number": 9,
         "raw_lines": [
             "P4 — Agentic AI Risk Management Takes Center Stage",
             "Prediction: organizations align with NIST AI RMF, CSA AICM, and OWASP AIVSS for agentic risk.",
@@ -125,11 +142,11 @@ SLIDES_EN = [
             "  • Filing, testing, tiered decision authority, and mandatory human override for Level 2/3 agent decisions",
             "• European Union: EU AI Act obligations (transparency, risk assessment, human oversight) for high-risk systems",
             "  • AICM v1.1 supplies operational security controls the Act itself does not prescribe",
-            "• Crosswalks: AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 now published and used in enterprise programs",
-        ],
+            "• Crosswalks: AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 now published and used in enterprise programs"
+        ]
     },
     {
-        "number": 9,
+        "number": 10,
         "raw_lines": [
             "P5 — The \"Vibe Coding\" Security Hangover",
             "Prediction: vibe coding accelerates shipping; non-deterministic NL→code worsens DevSecOps risk.",
@@ -141,11 +158,11 @@ SLIDES_EN = [
             "• China: rapid adoption of AI coding assistants in startups; same failure modes (secrets, IDOR, missing auth)",
             "  • Domestic AppSec vendors shipping AI-code scanners into CI; regulators watch supply-chain leakage",
             "• European Union: NIS2 / CRA pressure pushes SBOM + build-time gates for AI-generated dependencies",
-            "  • Shift-left DAST and fix-or-waive policies for AI-introduced CWE classes entering enterprise playbooks",
-        ],
+            "  • Shift-left DAST and fix-or-waive policies for AI-introduced CWE classes entering enterprise playbooks"
+        ]
     },
     {
-        "number": 10,
+        "number": 11,
         "raw_lines": [
             "P6 — The Struggle of Browser Agents",
             "Prediction: browser agents struggle until AG-UI / A2UI interoperability and contractual gaps are fixed.",
@@ -157,11 +174,11 @@ SLIDES_EN = [
             "  • Domestic platforms prefer constrained action catalogs over open DOM control for consumer products",
             "• European Union: A2UI (Google + community) at v0.9.1 production; v1.0 release candidate (updated Jun 2026)",
             "  • Declarative UI catalogs improve safety vs arbitrary code; ordered delivery still required to avoid corruption",
-            "• Bottom line: standards exist; \"widespread reliable adoption\" is not yet the default production posture",
-        ],
+            "• Bottom line: standards exist; \"widespread reliable adoption\" is not yet the default production posture"
+        ]
     },
     {
-        "number": 11,
+        "number": 12,
         "raw_lines": [
             "P7 — Enterprise Deployment: Internal First",
             "Prediction: internal agent deployments widen; limited B2B/B2C agents on the open web due to caution.",
@@ -173,11 +190,11 @@ SLIDES_EN = [
             "  • Consumer-facing agents exist but high-impact autonomy triggers July 2026 agent-regulation obligations",
             "• European Union: GDPR + AI Act push human-in-the-loop and DPIA before open-web autonomous agents",
             "  • Customer-service agents expand carefully; back-office automation remains the safer ROI path",
-            "• Nuance vs Jan prediction: \"limited B2B/B2C\" is directionally right, but hybrid programs are now majority in US survey",
-        ],
+            "• Nuance vs Jan prediction: \"limited B2B/B2C\" is directionally right, but hybrid programs are now majority in US survey"
+        ]
     },
     {
-        "number": 12,
+        "number": 13,
         "raw_lines": [
             "P8 — More CVEs for the Agentic Ecosystem",
             "Prediction: more CVEs for agent frameworks, browser/CUA agents, and vibe-coding tools — treated like classic vulns.",
@@ -189,11 +206,11 @@ SLIDES_EN = [
             "• China: CNVD/CNNVD mirroring of agent-framework CVEs; domestic forks must patch MCP/tool hosts quickly",
             "• European Union: ENISA / national CERTs track agent supply-chain CVEs under product-security regimes",
             "  • Vendors increasingly issue advisories with CVSS and fixed versions — same severity culture as traditional software",
-            "• Implication: SBOM + dependency pinning for LangChain/MCP/agent IDEs is now table stakes",
-        ],
+            "• Implication: SBOM + dependency pinning for LangChain/MCP/agent IDEs is now table stakes"
+        ]
     },
     {
-        "number": 13,
+        "number": 14,
         "raw_lines": [
             "P9 — MAESTRO v2: Making It Practical",
             "Prediction: publish MAESTRO v2 with clear how-to guidance for vendor implementation.",
@@ -204,11 +221,11 @@ SLIDES_EN = [
             "• Aligned with CSA AI Agent Reference Architecture + Agentic Control Plane / Agentic Trust Framework papers (same day)",
             "• United States: skills, playbooks, and CI tooling encode L1–L10 threat IDs for assessments",
             "• China / EU: v2 used as a practical bridge from architecture → controls (AICM) → regulatory evidence packs",
-            "• Artifact: https://cloudsecurityalliance.org/artifacts/maestro-v2",
-        ],
+            "• Artifact: https://cloudsecurityalliance.org/artifacts/maestro-v2"
+        ]
     },
     {
-        "number": 14,
+        "number": 15,
         "raw_lines": [
             "P10 — Official Release of OWASP AIVSS v1",
             "Prediction: publish AIVSS v1 at aivss.owasp.org as the definitive agentic scoring standard.",
@@ -219,11 +236,11 @@ SLIDES_EN = [
             "• Public review for v1.0 opened 2026-04-26; closes 2026-10-01; v1.0 slated before end of 2026",
             "• United States: RSAC 2026 sessions on measuring agentic risk with AIVSS; enterprise pilots on v0.8 scoring",
             "• China / EU: mappings to MAESTRO layers and AIUC-1 used in multinational risk programs ahead of v1 freeze",
-            "• Status vs prediction: substance is live; \"official v1\" remains a Q4 2026 deliverable",
-        ],
+            "• Status vs prediction: substance is live; \"official v1\" remains a Q4 2026 deliverable"
+        ]
     },
     {
-        "number": 15,
+        "number": 16,
         "raw_lines": [
             "Regional Pattern — United States · China · European Union",
             "| Theme | United States | China | European Union |",
@@ -234,11 +251,11 @@ SLIDES_EN = [
             "| Vibe-code risk | Large empirical studies | Fast adoption + scanners | CRA/NIS2 build gates |",
             "| Browser agents | AG-UI scale + drift bugs | Constrained catalogs | A2UI std + oversight |",
             "| Enterprise posture | Internal-first, 53% both | Internal ops under localization | HITL before open web |",
-            "| CVE culture | NVD-tracked agent CVEs | CNVD mirror + patch | CERT + product security |",
-        ],
+            "| CVE culture | NVD-tracked agent CVEs | CNVD mirror + patch | CERT + product security |"
+        ]
     },
     {
-        "number": 16,
+        "number": 17,
         "raw_lines": [
             "What Remains Open for Q4 2026",
             "• AIVSS v1.0: finish public review (closes 2026-10-01) and publish the frozen standard",
@@ -246,11 +263,11 @@ SLIDES_EN = [
             "• Browser-agent reliability: AG-UI sequence/resync defaults; A2UI v1.0 ratification and broader renderers",
             "• RSI beyond Level-1: independent replication of AIDE²; governance for self-modifying production agents",
             "• Open-web B2C agents: still the cautious minority — watch whether dual programs tip to external-primary",
-            "• Vibe-coding controls: whether shift-left gates cut the 91% vulnerability baseline in production fleets",
-        ],
+            "• Vibe-coding controls: whether shift-left gates cut the 91% vulnerability baseline in production fleets"
+        ]
     },
     {
-        "number": 17,
+        "number": 18,
         "raw_lines": [
             "Primary Sources (selected)",
             "• CSA predictions (2026-01-16): https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
@@ -260,11 +277,11 @@ SLIDES_EN = [
             "• CSA AICM v1.1 (2026-07-14 blog); China agent regulation CSA Labs note (enforcement 2026-07-15)",
             "• Vibe coding study: arXiv:2606.23130; OX Security / Georgia Tech CVE radar summaries",
             "• AG-UI production drift analyses (2026); A2UI a2ui.org v0.9.1 / v1.0-rc",
-            "• Contentstack Agentic Enterprise Report 2026; NVD CVE-2026-55443; AIVSS aivss.owasp.org v0.8 + review",
-        ],
+            "• Contentstack Agentic Enterprise Report 2026; NVD CVE-2026-55443; AIVSS aivss.owasp.org v0.8 + review"
+        ]
     },
     {
-        "number": 18,
+        "number": 19,
         "raw_lines": [
             "Closing — Build Agentic AI Securely",
             "• 8 of 10 predictions are Confirmed, Mostly confirmed, or On track as of 2026-09-27",
@@ -272,9 +289,18 @@ SLIDES_EN = [
             "• Security and risk management moved from slideware to CVEs, controls matrices, and regulatory filing",
             "• Next checkpoints: AIVSS v1 publication · A2UI v1.0 · independent RSI replication · open-web agent trust",
             "• Continue the conversation: kenhuangus.substack.com · aivss.owasp.org · CSA AI Safety working groups",
-            "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8",
-        ],
+            "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"
+        ]
     },
+    {
+        "number": 20,
+        "slide_type": "thanks",
+        "raw_lines": [
+            "Thank you",
+            "Graph Engineering for Agentic AI Systems · Harness Engineering",
+            "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
+        ]
+    }
 ]
 
 SLIDES_ZH = {
@@ -286,9 +312,22 @@ SLIDES_ZH = {
         "旧金山大学（USF）客座教授：https://www.usfca.edu/faculty/ken-huang",
         "区域视角：美国 · 中国 · 欧盟",
         "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "来源：CSA 文章与 Substack；研究截止日期 2026-09-27",
+        "来源：CSA 文章与 Substack；研究截止日期 2026-09-27"
     ],
     "2": [
+        "关于演讲者：Ken Huang，CISSP",
+        "• AI 图书作者与演讲者（《Harness Engineering》《MAESTRO》）",
+        "• 旧金山大学（USF）客座教授",
+        "• OWASP AIVSS 项目负责人",
+        "• CSA 院士，并担任两个 CSA AI 安全工作组联合主席",
+        "• OWASP Top 10 for LLM Applications 核心成员",
+        "• AIUC-1 联盟成员",
+        "• Schmidt Sciences 基金评审成员",
+        "• EC-Council 讲师 — 面向网络安全的生成式 AI",
+        "• DistributedApps.ai 首席执行官：https://distributedapps.ai/",
+        "• Substack：kenhuangus.substack.com  ·  LinkedIn：linkedin.com/in/kenhuang8"
+    ],
+    "3": [
         "CSA 原文发布 — 2026 年 1 月 16 日",
         "• 文章：My Top 10 Predictions for Agentic AI in 2026",
         "• 作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
@@ -296,18 +335,18 @@ SLIDES_ZH = {
         "• 打开原文：",
         "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• 下方截图展示已发布的全部 10 条预测",
-        "IMG:assets/images/csa-top-10-predictions-2026.png",
+        "IMG:assets/images/csa-top-10-predictions-2026.png"
     ],
-    "3": [
+    "4": [
         "关于本成绩单",
         "• 出处：Ken Huang —《My Top 10 Predictions for Agentic AI in 2026》（CSA，2026-01-16）",
         "• CSA 链接：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• 方法：将每条预测映射到截至 2026-09-27 的美、中、欧公开证据",
         "• 证据类型：同行评议论文、CVE/NVD、CSA/OWASP/NIST 产物、企业调研、监管文件",
         "• 判定等级：已证实 · 基本证实 · 进展符合预期 · 部分兑现 · 进行中（指向年末）",
-        "• 不是改写预测，而是年中审计：已发生什么 vs 仍未关闭什么",
+        "• 不是改写预测，而是年中审计：已发生什么 vs 仍未关闭什么"
     ],
-    "4": [
+    "5": [
         "成绩单一览 — 2026 年 9 月 27 日",
         "| # | 预测 | 判定 |",
         "|---|---|---|",
@@ -320,9 +359,9 @@ SLIDES_ZH = {
         "| 7 | 企业：内部优先部署 | 基本证实 |",
         "| 8 | 智能体生态更多 CVE | 已证实 |",
         "| 9 | MAESTRO v2 实用版发布 | 已证实（2026-06-22） |",
-        "| 10 | OWASP AIVSS v1 正式发布 | 进行中（公开评审中） |",
+        "| 10 | OWASP AIVSS v1 正式发布 | 进行中（公开评审中） |"
     ],
-    "5": [
+    "6": [
         "预测 1 — 自我改进的智能体 AI 系统",
         "预测（2026 年 1 月）：告别静态智能体；自我改进研究与部分落地增加。",
         "• 判定：进展符合预期 — 一级递归自我改进（RSI）已在研究中演示；生产部署仍受限",
@@ -333,9 +372,9 @@ SLIDES_ZH = {
         "  • 分级授权、可审计决策日志、高影响自主智能体的人类否决",
         "  • 自我修改环比美国开放实验室面临更强备案与测试义务",
         "• 欧盟：AI 法案高风险义务与人类监督延缓开放网络上的 RSI 部署",
-        "  • 研究持续；生产级自我改写智能体在受控沙箱外仍罕见",
+        "  • 研究持续；生产级自我改写智能体在受控沙箱外仍罕见"
     ],
-    "6": [
+    "7": [
         "预测 2 — 自主性 > 智力",
         "预测：业界不再痴迷原始智力分数；自主性（规划、工具、持续目标）成为主指标。",
         "• 判定：进展符合预期 — 2026 年自主性度量与基准大量出现",
@@ -345,9 +384,9 @@ SLIDES_ZH = {
         "• 中国：产品竞争更看重任务完成与工具链，而非 MMLU 类榜单",
         "  • 监管将智能体决策权限视为控制对象，而非模型智商",
         "• 欧盟：合规与监督讨论跟踪自主等级与影响，而非原始能力分",
-        "  • 学术工作（如 arXiv:2602.22519）将自主性与智力区分为不同构念",
+        "  • 学术工作（如 arXiv:2602.22519）将自主性与智力区分为不同构念"
     ],
-    "7": [
+    "8": [
         "预测 3 — 基于 MAESTRO 的新安全基准",
         "预测：基于 MAESTRO 威胁建模的智能体安全基准得到采用。",
         "• 判定：部分兑现 → 符合预期 — MAESTRO 已工程化；统一基准套件仍在成熟",
@@ -356,9 +395,9 @@ SLIDES_ZH = {
         "• 中国：CSA 指南引用 MAESTRO，作为向监管证明智能体边界被工程化的方式",
         "  • 国内评估日益要求分层威胁覆盖，而非仅提示词测试",
         "• 欧盟：经 CSA AICM 映射到 AI 法案 / ISO 42001；MAESTRO 作为威胁生成前端",
-        "  • 缺口：尚无全球统一的「MAESTRO 分数」— 框架与扫描器领先于公共排行榜",
+        "  • 缺口：尚无全球统一的「MAESTRO 分数」— 框架与扫描器领先于公共排行榜"
     ],
-    "8": [
+    "9": [
         "预测 4 — 智能体 AI 风险管理成为焦点",
         "预测：组织对齐 NIST AI RMF、CSA AICM 与 OWASP AIVSS 以管理智能体风险。",
         "• 判定：已证实 — 风险管理是 2026 年智能体治理的中心议题",
@@ -368,9 +407,9 @@ SLIDES_ZH = {
         "  • 备案、测试、分级决策权限，以及对 2/3 级决策的强制人类否决",
         "• 欧盟：AI 法案对高风险系统的透明度、风险评估与人类监督义务",
         "  • AICM v1.1 补充法案本身未规定的运行安全控制",
-        "• 交叉映射：AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP 智能体 Top 10 已发布并进入企业项目",
+        "• 交叉映射：AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP 智能体 Top 10 已发布并进入企业项目"
     ],
-    "9": [
+    "10": [
         "预测 5 — 「氛围编程」安全后遗症",
         "预测：氛围编程加速交付；自然语言生成代码的非确定性加剧 DevSecOps 风险。",
         "• 判定：已证实 — 实证研究显示氛围编程应用不安全是常态",
@@ -381,9 +420,9 @@ SLIDES_ZH = {
         "• 中国：初创快速采用 AI 编程助手；同样失败模式（密钥、IDOR、缺失认证）",
         "  • 国内 AppSec 厂商将 AI 代码扫描纳入 CI；监管关注供应链泄露",
         "• 欧盟：NIS2 / CRA 压力推动对 AI 生成依赖的 SBOM 与构建期门禁",
-        "  • 针对 AI 引入 CWE 的左移 DAST 与「修复或豁免」策略进入企业手册",
+        "  • 针对 AI 引入 CWE 的左移 DAST 与「修复或豁免」策略进入企业手册"
     ],
-    "10": [
+    "11": [
         "预测 6 — 浏览器智能体的艰难之路",
         "预测：在 AG-UI / A2UI 互操作与合同缺口修复前，浏览器智能体将继续艰难。",
         "• 判定：进展符合预期 — 协议前进；生产可靠性仍脆弱",
@@ -394,9 +433,9 @@ SLIDES_ZH = {
         "  • 消费级产品更偏好受约束动作目录，而非开放 DOM 控制",
         "• 欧盟：A2UI（Google 与社区）生产版 v0.9.1；v1.0 为候选（2026 年 6 月更新）",
         "  • 声明式 UI 目录比任意代码更安全；仍需有序投递以免状态损坏",
-        "• 结论：标准已在；「广泛可靠采用」尚未成为默认生产姿态",
+        "• 结论：标准已在；「广泛可靠采用」尚未成为默认生产姿态"
     ],
-    "11": [
+    "12": [
         "预测 7 — 企业部署：内部优先",
         "预测：内部智能体部署显著扩大；因谨慎，面向开放网络的 B2B/B2C 仍有限。",
         "• 判定：基本证实 — 内部仍优先；内部+外部双线项目在增长",
@@ -407,9 +446,9 @@ SLIDES_ZH = {
         "  • 消费向智能体存在，但高影响自主性触发 2026 年 7 月智能体监管义务",
         "• 欧盟：GDPR + AI 法案推动在开放网络自主智能体前完成 HITL 与 DPIA",
         "  • 客服智能体谨慎扩展；后台自动化仍是更稳妥的 ROI 路径",
-        "• 相对 1 月预测的细微差别：「有限 B2B/B2C」方向正确，但美国调研中混合项目已成多数",
+        "• 相对 1 月预测的细微差别：「有限 B2B/B2C」方向正确，但美国调研中混合项目已成多数"
     ],
-    "12": [
+    "13": [
         "预测 8 — 智能体生态出现更多 CVE",
         "预测：智能体框架、浏览器/计算机使用智能体与氛围编程工具将出现更多 CVE，并按传统软件严重度对待。",
         "• 判定：已证实 — 2026 年智能体栈 CVE 持续且严重",
@@ -420,9 +459,9 @@ SLIDES_ZH = {
         "• 中国：CNVD/CNNVD 镜像智能体框架 CVE；国内分支需快速修补 MCP/工具主机",
         "• 欧盟：ENISA / 国家 CERT 在产品安全制度下跟踪智能体供应链 CVE",
         "  • 厂商日益发布带 CVSS 与修复版本的公告 — 与传统软件同等严重度文化",
-        "• 含义：对 LangChain/MCP/智能体 IDE 的 SBOM + 依赖锁定已成为基本要求",
+        "• 含义：对 LangChain/MCP/智能体 IDE 的 SBOM + 依赖锁定已成为基本要求"
     ],
-    "13": [
+    "14": [
         "预测 9 — MAESTRO v2：使之可落地",
         "预测：发布侧重实用说明的 MAESTRO v2，指导厂商如何落地。",
         "• 判定：已证实 — CSA 于 2026-06-22 发布 MAESTRO v2",
@@ -432,9 +471,9 @@ SLIDES_ZH = {
         "• 同日对齐 CSA AI 智能体参考架构 + 智能体控制平面 / 智能体信任框架论文",
         "• 美国：技能、手册与 CI 工具将 L1–L10 威胁 ID 编码进评估",
         "• 中国 / 欧盟：v2 作为从架构 → 控制（AICM）→ 监管证据包的实用桥梁",
-        "• 产物：https://cloudsecurityalliance.org/artifacts/maestro-v2",
+        "• 产物：https://cloudsecurityalliance.org/artifacts/maestro-v2"
     ],
-    "14": [
+    "15": [
         "预测 10 — OWASP AIVSS v1 正式发布",
         "预测：在 aivss.owasp.org 发布 AIVSS v1，作为智能体评分的权威标准。",
         "• 判定：进行中 — 仍在 2026 年路径上；截至 2026-09-27 v1.0 尚未定稿",
@@ -444,9 +483,9 @@ SLIDES_ZH = {
         "• v1.0 公开评审于 2026-04-26 开启；2026-10-01 截止；v1.0 计划 2026 年底前发布",
         "• 美国：RSAC 2026 以 AIVSS 度量智能体风险；企业在 v0.8 上试点评分",
         "• 中国 / 欧盟：在 v1 冻结前，跨国风险项目已使用到 MAESTRO 层与 AIUC-1 的映射",
-        "• 相对预测：实质内容已可用；「正式 v1」仍是 2026 年第四季度交付物",
+        "• 相对预测：实质内容已可用；「正式 v1」仍是 2026 年第四季度交付物"
     ],
-    "15": [
+    "16": [
         "区域格局 — 美国 · 中国 · 欧盟",
         "| 主题 | 美国 | 中国 | 欧盟 |",
         "|---|---|---|---|",
@@ -456,18 +495,18 @@ SLIDES_ZH = {
         "| 氛围编程风险 | 大型实证研究 | 快速采用 + 扫描 | CRA/NIS2 构建门禁 |",
         "| 浏览器智能体 | AG-UI 规模 + 漂移缺陷 | 受约束目录 | A2UI 标准 + 监督 |",
         "| 企业姿态 | 内部优先，53% 双线 | 本地化下的内部运营 | 开放网络前 HITL |",
-        "| CVE 文化 | NVD 跟踪智能体 CVE | CNVD 镜像 + 补丁 | CERT + 产品安全 |",
+        "| CVE 文化 | NVD 跟踪智能体 CVE | CNVD 镜像 + 补丁 | CERT + 产品安全 |"
     ],
-    "16": [
+    "17": [
         "2026 年第四季度仍待关闭的事项",
         "• AIVSS v1.0：完成公开评审（2026-10-01 截止）并发布冻结标准",
         "• 共享 MAESTRO 安全排行榜：从手册/扫描器走向可比较的公共基准",
         "• 浏览器智能体可靠性：AG-UI 默认序号/重同步；A2UI v1.0 批准与更广渲染器",
         "• 超越一级的 RSI：独立复现 AIDE²；自我修改生产智能体的治理",
         "• 开放网络 B2C 智能体：仍是谨慎少数 — 观察双线项目是否转向外部优先",
-        "• 氛围编程控制：左移门禁能否压低生产环境中 91% 的漏洞基线",
+        "• 氛围编程控制：左移门禁能否压低生产环境中 91% 的漏洞基线"
     ],
-    "17": [
+    "18": [
         "主要来源（节选）",
         "• CSA 预测（2026-01-16）：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• AIDE² RSI：weco.ai 博客（2026-07-14）；arXiv:2609.26457",
@@ -476,17 +515,22 @@ SLIDES_ZH = {
         "• CSA AICM v1.1（2026-07-14 博客）；中国智能体监管 CSA Labs 说明（执法 2026-07-15）",
         "• 氛围编程研究：arXiv:2606.23130；OX Security / 佐治亚理工 CVE 雷达摘要",
         "• AG-UI 生产漂移分析（2026）；A2UI a2ui.org v0.9.1 / v1.0-rc",
-        "• Contentstack 2026 智能体企业报告；NVD CVE-2026-55443；AIVSS aivss.owasp.org v0.8 + 评审",
+        "• Contentstack 2026 智能体企业报告；NVD CVE-2026-55443；AIVSS aivss.owasp.org v0.8 + 评审"
     ],
-    "18": [
+    "19": [
         "结语 — 安全地构建智能体 AI",
         "• 截至 2026-09-27，10 条预测中有 8 条为已证实、基本证实或进展符合预期",
         "• 两条按设计仍开放：更广的 MAESTRO 基准采用（部分）与 AIVSS v1 冻结（进行中）",
         "• 安全与风险管理已从幻灯片走向 CVE、控制矩阵与监管备案",
         "• 下一检查点：AIVSS v1 发布 · A2UI v1.0 · 独立 RSI 复现 · 开放网络智能体信任",
         "• 继续对话：kenhuangus.substack.com · aivss.owasp.org · CSA AI 安全工作组",
-        "• 联系：DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8",
+        "• 联系：DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"
     ],
+    "20": [
+        "谢谢",
+        "《Graph Engineering for Agentic AI Systems》·《Harness Engineering》",
+        "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
+    ]
 }
 
 PHRASES = {

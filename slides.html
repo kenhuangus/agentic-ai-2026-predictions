@@ -1677,6 +1677,129 @@
       .brand-title { display: none; }
       select.slide-select { max-width: 200px; }
     }
+  
+    /* Speaker + books gallery (from graph-engineer) */
+    .instructor-slide-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.25fr);
+      gap: 1.25rem;
+      height: 100%;
+      align-items: start;
+    }
+    @media (max-width: 1040px) {
+      .instructor-slide-grid { grid-template-columns: 1fr; height: auto; }
+    }
+    .instructor-info-col {
+      display: flex; flex-direction: column; gap: 0.60rem; min-width: 0;
+    }
+    .instructor-info-col .main-bullets,
+    .instructor-info-col .main-bullets.dense-columns,
+    .instructor-info-col .bullet-list {
+      columns: 1 !important; column-gap: 0 !important;
+      display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.98rem;
+    }
+    .instructor-info-col .primary-bullet { line-height: 1.50; margin-bottom: 0.25rem; }
+    .author-books-card {
+      background: var(--surface); border: 1.5px solid var(--rule); border-radius: 10px;
+      overflow: hidden; display: flex; flex-direction: column;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .author-books-header {
+      background: var(--accent-sf); color: var(--ink); font-family: var(--font-display);
+      font-weight: 750; font-size: 0.88rem; padding: 0.45rem 0.80rem;
+      border-bottom: 1.5px solid var(--rule); display: flex; justify-content: space-between;
+      align-items: center; gap: 0.50rem; white-space: nowrap;
+    }
+    .author-books-header a {
+      font-family: var(--font-body); font-size: 0.76rem; font-weight: 750;
+      color: var(--accent-dk); text-decoration: underline; white-space: nowrap; flex-shrink: 0;
+    }
+    .books-gallery-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.40rem;
+      padding: 0.50rem; background: #FAF8F2;
+    }
+    .book-item-card {
+      display: flex; flex-direction: column; align-items: center; background: var(--surface);
+      border: 1px solid var(--rule); border-radius: 6px; padding: 0.25rem 0.20rem;
+      text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.16s, border-color 0.16s, box-shadow 0.16s;
+    }
+    .book-item-card:hover {
+      transform: translateY(-2px); border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(217, 119, 87, 0.18);
+    }
+    .book-cover-img {
+      width: 100%; height: clamp(80px, 11.5vh, 115px); object-fit: contain;
+      border-radius: 4px; border: 0.5px solid var(--rule);
+    }
+    .book-item-title {
+      font-size: 0.58rem; font-weight: 700; color: var(--ink); text-align: center;
+      line-height: 1.15; margin-top: 0.20rem; white-space: nowrap; overflow: hidden;
+      text-overflow: ellipsis; width: 100%; display: block;
+    }
+    .book-publisher-tag {
+      font-size: 0.52rem; font-weight: 800; letter-spacing: 0.04em; color: var(--accent-dk);
+      margin-top: 0.10rem;
+    }
+
+    /* Thanks / two recent books */
+    .thanks-wrap {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      gap: 0.55rem; min-height: 0;
+    }
+    .thanks-header { text-align: center; flex: 0 0 auto; }
+    .thanks-kicker {
+      font-family: var(--font-code); font-size: 0.72em; font-weight: 750;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dk);
+    }
+    .thanks-lede {
+      font-family: var(--font-display); font-size: 1.15em; font-weight: 750;
+      color: var(--ink); margin-top: 0.20rem; line-height: 1.25;
+    }
+    .thanks-books {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+      flex: 1 1 auto; min-height: 0; align-items: stretch; overflow: hidden;
+    }
+    .thanks-book-card {
+      background: var(--surface); border: 1.5px solid var(--rule); border-radius: 12px;
+      padding: 0.55rem 0.65rem 0.65rem; box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 0.30rem; text-decoration: none; color: inherit;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      min-height: 0; overflow: hidden;
+    }
+    .thanks-book-card:hover {
+      border-color: var(--accent); box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    }
+    .thanks-book-cover {
+      flex: 1 1 auto; min-height: 0; width: 100%;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .thanks-book-cover img {
+      width: auto; height: auto; max-width: 100%; max-height: 100%;
+      object-fit: contain; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+    .thanks-book-tag {
+      font-family: var(--font-code); font-size: 0.62em; font-weight: 750;
+      letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-dk);
+      background: var(--accent-sf); border: 1px solid var(--rule); border-radius: 999px;
+      padding: 0.12rem 0.45rem; flex: 0 0 auto;
+    }
+    .thanks-book-title {
+      font-family: var(--font-display); font-size: 0.88em; font-weight: 750;
+      line-height: 1.15; color: var(--ink); max-width: 17rem; flex: 0 0 auto;
+    }
+    .thanks-book-asin {
+      font-family: var(--font-code); font-size: 0.62em; font-weight: 650;
+      color: var(--ink-muted); line-height: 1.2; flex: 0 0 auto;
+    }
+    .thanks-book-asin span { color: var(--accent-dk); font-weight: 750; }
+    .thanks-footer { text-align: center; flex: 0 0 auto; }
+    .thanks-link a {
+      color: var(--accent-dk); font-weight: 700; font-family: var(--font-code); font-size: 0.82em;
+    }
+    .slide-body:has(.thanks-wrap) { overflow: hidden; }
+
   </style>
 </head>
 <body>
@@ -1731,7 +1854,7 @@
 
   <script src="slides-zh.js"></script>
   <script>
-    const slidesData = [{"number": 1, "raw_lines": ["Top 10 Predictions for Agentic AI in 2026", "Mid-Year Scorecard — as of September 27, 2026", "Original predictions: Cloud Security Alliance, January 16, 2026", "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai", "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang", "Regional lens: United States · China · European Union", "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "Sources: CSA article + Substack; research cut-off 2026-09-27"]}, {"number": 2, "raw_lines": ["Original CSA Publication — January 16, 2026", "• Article: My Top 10 Predictions for Agentic AI in 2026", "• Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai", "• Publisher: Cloud Security Alliance (Industry Insights)", "• Open the original post:", "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• Screenshot below captures the published list of all 10 predictions", "IMG:assets/images/csa-top-10-predictions-2026.png"]}, {"number": 3, "raw_lines": ["About This Scorecard", "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)", "• CSA URL: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27", "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation", "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)", "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open"]}, {"number": 4, "raw_lines": ["Scorecard at a Glance — September 27, 2026", "| # | Prediction | Verdict |", "|---|---|---|", "| 1 | Self-improving / RSI agents | On track (research confirmed) |", "| 2 | Agency > Intelligence | On track |", "| 3 | MAESTRO-based security benchmarks | Partial → On track |", "| 4 | Agentic risk management center stage | Confirmed |", "| 5 | Vibe-coding security hangover | Confirmed |", "| 6 | Browser agents struggle | On track |", "| 7 | Enterprise: internal first | Mostly confirmed |", "| 8 | More CVEs in agentic ecosystem | Confirmed |", "| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |", "| 10 | OWASP AIVSS v1 official release | In progress (review open) |"]}, {"number": 5, "raw_lines": ["P1 — The Self-Improving Agentic AI System", "Prediction (Jan 2026): move past static agents; more research and some real-world self-improving agents.", "• Verdict: On track — Level-1 recursive self-improvement (RSI) demonstrated in research; production still gated", "• United States: Weco AI AIDE² (2026-07-14) — 8-day outer loop, 7 successive harness upgrades; arXiv:2609.26457", "  • AIDE85 beat 2 years of hand-tuned AIDE-human on held-out MLE/ALE/WeatherBench under fixed $ budget", "  • Reward hacking on GPU-kernel task fell ~63% → ~34%; claims Level-1 net-positive RSI, not ignition", "• China: frontier agent regulation entered enforcement 2026-07-15 (CAC joint Implementation Opinions)", "  • Tiered authorization, auditable decision logs, human override for high-impact autonomous agents", "  • Self-modification loops face stronger filing/testing obligations than in open US labs", "• European Union: EU AI Act high-risk oversight + human-oversight duties slow open-web RSI deployment", "  • Research continues; production self-rewriting agents remain rare outside controlled sandboxes"]}, {"number": 6, "raw_lines": ["P2 — Agency > Intelligence", "Prediction: industry stops obsessing over raw intelligence scores; agency (plan, tools, persist) becomes primary.", "• Verdict: On track — agency metrics and benchmarks proliferated in 2026", "• United States: AgencyBench (ACL 2026) — 32 scenarios, ~90 tool calls / 1M tokens / hours of runtime", "  • Closed models 48.4% vs open 32.1%; emphasis on tool use, self-correction, resource efficiency", "  • Autonomous Agency Scale (AAS, Jul 2026) scores Active vs Ambient agency with Idle-Gap Test", "• China: agent products compete on task completion and tool chains more than MMLU-style leaderboards", "  • Regulatory framing treats agent decision authority as the control object, not model IQ", "• European Union: conformity and oversight discussions track autonomy level and impact, not raw capability scores", "  • Academic work (e.g. bipredictability / agency–intelligence theory, arXiv:2602.22519) separates the two constructs"]}, {"number": 7, "raw_lines": ["P3 — New Security Benchmarks via MAESTRO", "Prediction: new agent security benchmarks based on MAESTRO threat modeling get adopted.", "• Verdict: Partial → On track — MAESTRO is operationalized; universal benchmark suites still maturing", "• United States: CSA MAESTRO + ATLAS combined playbooks; TITO CI/CD threat modeling (CSA, 2026-02-11)", "  • Agentic red-team guides map tests to MAESTRO layers; STAR / AIUC-1 assurance paths emerging", "• China: MAESTRO cited in CSA guidance as a way to evidence engineered agent boundaries for regulators", "  • Domestic agent security evaluations increasingly require layer-wise threat coverage, not prompt-only tests", "• European Union: mappings into EU AI Act / ISO 42001 via CSA AICM; MAESTRO used as threat-generation front-end", "  • Gap: no single global numeric \"MAESTRO score\" yet — frameworks + scanners ahead of shared leaderboards"]}, {"number": 8, "raw_lines": ["P4 — Agentic AI Risk Management Takes Center Stage", "Prediction: organizations align with NIST AI RMF, CSA AICM, and OWASP AIVSS for agentic risk.", "• Verdict: Confirmed — risk management is the center of 2026 agentic governance", "• United States: NIST AI RMF remains the risk spine; CSA AICM v1.1 (Jun 23 / Jul Jul 2026) adds AIUC-1 mapping", "  • Five Eyes / CISA careful-adoption guidance for agentic services (May 2026); RSAC 2026 AIVSS panels", "• China: dedicated national AI-agent regulatory category enforceable from 2026-07-15", "  • Filing, testing, tiered decision authority, and mandatory human override for Level 2/3 agent decisions", "• European Union: EU AI Act obligations (transparency, risk assessment, human oversight) for high-risk systems", "  • AICM v1.1 supplies operational security controls the Act itself does not prescribe", "• Crosswalks: AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 now published and used in enterprise programs"]}, {"number": 9, "raw_lines": ["P5 — The \"Vibe Coding\" Security Hangover", "Prediction: vibe coding accelerates shipping; non-deterministic NL→code worsens DevSecOps risk.", "• Verdict: Confirmed — empirical studies show insecurity is the norm for vibe-coded apps", "• United States: arXiv:2606.23130 (v3 Sep 2026) — 9,041 OSS apps; audit of 200 deployed apps → 1,186 vulns", "  • 91.0% of audited apps had ≥1 vulnerability; 65.77% of findings Critical/High (BAC, injection, auth)", "  • Georgia Tech Vibe Security Radar: 74 CVEs traceable to AI coding tools by March 2026", "  • Tool CVEs: Cursor MCP (CVE-2025-54135), Claude Code (CVE-2025-55284 / CVE-2025-59536 class)", "• China: rapid adoption of AI coding assistants in startups; same failure modes (secrets, IDOR, missing auth)", "  • Domestic AppSec vendors shipping AI-code scanners into CI; regulators watch supply-chain leakage", "• European Union: NIS2 / CRA pressure pushes SBOM + build-time gates for AI-generated dependencies", "  • Shift-left DAST and fix-or-waive policies for AI-introduced CWE classes entering enterprise playbooks"]}, {"number": 10, "raw_lines": ["P6 — The Struggle of Browser Agents", "Prediction: browser agents struggle until AG-UI / A2UI interoperability and contractual gaps are fixed.", "• Verdict: On track — protocols advanced; production reliability still fragile", "• United States: AG-UI widely integrated (CopilotKit et al.) but STATE_DELTA silent drift documented (mid-2026)", "  • Main-thread stalls (20s+ structuredClone) and reconnect gap bugs filed on ag-ui-protocol/ag-ui", "  • Computer-use / GUI agents still fail under repeated prompt injection (Anthropic measurements: residual risk)", "• China: browser/desktop agents popular in productivity apps; reliability and permission UX remain pain points", "  • Domestic platforms prefer constrained action catalogs over open DOM control for consumer products", "• European Union: A2UI (Google + community) at v0.9.1 production; v1.0 release candidate (updated Jun 2026)", "  • Declarative UI catalogs improve safety vs arbitrary code; ordered delivery still required to avoid corruption", "• Bottom line: standards exist; \"widespread reliable adoption\" is not yet the default production posture"]}, {"number": 11, "raw_lines": ["P7 — Enterprise Deployment: Internal First", "Prediction: internal agent deployments widen; limited B2B/B2C agents on the open web due to caution.", "• Verdict: Mostly confirmed — internal still preferred; dual internal+external programs growing", "• United States: Contentstack Agentic Enterprise Report (May 2026, n=621)", "  • 37% primarily internal · 10% primarily external · 53% pursuing both", "  • 78% hit content/data readiness issues; 42% cite missing clear owner as a failure mode", "• China: large enterprises push internal ops agents (finance, IT, supply chain) under data-localization rules", "  • Consumer-facing agents exist but high-impact autonomy triggers July 2026 agent-regulation obligations", "• European Union: GDPR + AI Act push human-in-the-loop and DPIA before open-web autonomous agents", "  • Customer-service agents expand carefully; back-office automation remains the safer ROI path", "• Nuance vs Jan prediction: \"limited B2B/B2C\" is directionally right, but hybrid programs are now majority in US survey"]}, {"number": 12, "raw_lines": ["P8 — More CVEs for the Agentic Ecosystem", "Prediction: more CVEs for agent frameworks, browser/CUA agents, and vibe-coding tools — treated like classic vulns.", "• Verdict: Confirmed — 2026 CVE stream for agent stacks is sustained and severe", "• United States / global NVD:", "  • LangChain path traversal / sandbox escape — CVE-2026-55443 (fixed in 1.3.9; NVD Jun 2026)", "  • MCP Python SDK WebSocket Origin bypass — CVE-2026-59950 (HIGH); MCP Inspector RCE class continues", "  • Prior wave still active in ops: Claude Code RCE CVE-2025-59536; LangGrinch CVE-2025-68664; EchoLeak CVE-2025-32711", "• China: CNVD/CNNVD mirroring of agent-framework CVEs; domestic forks must patch MCP/tool hosts quickly", "• European Union: ENISA / national CERTs track agent supply-chain CVEs under product-security regimes", "  • Vendors increasingly issue advisories with CVSS and fixed versions — same severity culture as traditional software", "• Implication: SBOM + dependency pinning for LangChain/MCP/agent IDEs is now table stakes"]}, {"number": 13, "raw_lines": ["P9 — MAESTRO v2: Making It Practical", "Prediction: publish MAESTRO v2 with clear how-to guidance for vendor implementation.", "• Verdict: Confirmed — CSA released MAESTRO v2 on 2026-06-22", "• What shipped: expansion from 7 → 10 layers across three operational domains", "  • Domains: Infrastructure/Intelligence/Knowledge · Environment/Execution · Agency/Governance/Accountability", "  • Horizontal Trust Control Plane: governance, safety, monitoring, identity", "• Aligned with CSA AI Agent Reference Architecture + Agentic Control Plane / Agentic Trust Framework papers (same day)", "• United States: skills, playbooks, and CI tooling encode L1–L10 threat IDs for assessments", "• China / EU: v2 used as a practical bridge from architecture → controls (AICM) → regulatory evidence packs", "• Artifact: https://cloudsecurityalliance.org/artifacts/maestro-v2"]}, {"number": 14, "raw_lines": ["P10 — Official Release of OWASP AIVSS v1", "Prediction: publish AIVSS v1 at aivss.owasp.org as the definitive agentic scoring standard.", "• Verdict: In progress — on the stated 2026 path; v1.0 not final as of 2026-09-27", "• Milestone delivered: AIVSS Scoring System for OWASP Agentic AI Core Security Risks v0.8 (2026-03-19)", "  • Co-publication with AIUC-1, OWASP AI Exchange, Citizen Development Top 10", "  • Interactive AIUC-1 crosswalk live on aivss.owasp.org", "• Public review for v1.0 opened 2026-04-26; closes 2026-10-01; v1.0 slated before end of 2026", "• United States: RSAC 2026 sessions on measuring agentic risk with AIVSS; enterprise pilots on v0.8 scoring", "• China / EU: mappings to MAESTRO layers and AIUC-1 used in multinational risk programs ahead of v1 freeze", "• Status vs prediction: substance is live; \"official v1\" remains a Q4 2026 deliverable"]}, {"number": 15, "raw_lines": ["Regional Pattern — United States · China · European Union", "| Theme | United States | China | European Union |", "|---|---|---|---|", "| RSI / self-improve | Lab evidence (AIDE²) | Regulate frontier agents | Research > open deploy |", "| Agency metrics | AgencyBench, AAS | Task/tool KPIs + filing | Autonomy as risk object |", "| Risk mgmt | NIST RMF + AICM + AIVSS | Agent-specific law (Jul) | AI Act + AICM controls |", "| Vibe-code risk | Large empirical studies | Fast adoption + scanners | CRA/NIS2 build gates |", "| Browser agents | AG-UI scale + drift bugs | Constrained catalogs | A2UI std + oversight |", "| Enterprise posture | Internal-first, 53% both | Internal ops under localization | HITL before open web |", "| CVE culture | NVD-tracked agent CVEs | CNVD mirror + patch | CERT + product security |"]}, {"number": 16, "raw_lines": ["What Remains Open for Q4 2026", "• AIVSS v1.0: finish public review (closes 2026-10-01) and publish the frozen standard", "• Shared MAESTRO security leaderboards: move from playbooks/scanners to comparable public benchmarks", "• Browser-agent reliability: AG-UI sequence/resync defaults; A2UI v1.0 ratification and broader renderers", "• RSI beyond Level-1: independent replication of AIDE²; governance for self-modifying production agents", "• Open-web B2C agents: still the cautious minority — watch whether dual programs tip to external-primary", "• Vibe-coding controls: whether shift-left gates cut the 91% vulnerability baseline in production fleets"]}, {"number": 17, "raw_lines": ["Primary Sources (selected)", "• CSA predictions (2026-01-16): https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• AIDE² RSI: weco.ai blog (2026-07-14); arXiv:2609.26457", "• AgencyBench: ACL 2026; Autonomous Agency Scale arXiv HTML 2607.17947", "• MAESTRO v2 artifact (2026-06-22): cloudsecurityalliance.org/artifacts/maestro-v2", "• CSA AICM v1.1 (2026-07-14 blog); China agent regulation CSA Labs note (enforcement 2026-07-15)", "• Vibe coding study: arXiv:2606.23130; OX Security / Georgia Tech CVE radar summaries", "• AG-UI production drift analyses (2026); A2UI a2ui.org v0.9.1 / v1.0-rc", "• Contentstack Agentic Enterprise Report 2026; NVD CVE-2026-55443; AIVSS aivss.owasp.org v0.8 + review"]}, {"number": 18, "raw_lines": ["Closing — Build Agentic AI Securely", "• 8 of 10 predictions are Confirmed, Mostly confirmed, or On track as of 2026-09-27", "• Two remain open by design: broader MAESTRO benchmark adoption (Partial) and AIVSS v1 freeze (In progress)", "• Security and risk management moved from slideware to CVEs, controls matrices, and regulatory filing", "• Next checkpoints: AIVSS v1 publication · A2UI v1.0 · independent RSI replication · open-web agent trust", "• Continue the conversation: kenhuangus.substack.com · aivss.owasp.org · CSA AI Safety working groups", "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"]}];
+    const slidesData = [{"number": 1, "raw_lines": ["Top 10 Predictions for Agentic AI in 2026", "Mid-Year Scorecard — as of September 27, 2026", "Original predictions: Cloud Security Alliance, January 16, 2026", "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai", "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang", "Regional lens: United States · China · European Union", "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "Sources: CSA article + Substack; research cut-off 2026-09-27"]}, {"number": 2, "slide_type": "speaker", "raw_lines": ["About the Speaker: Ken Huang, CISSP", "• AI book author and speaker (Harness Engineering, MAESTRO)", "• Adjunct Professor, University of San Francisco", "• OWASP AIVSS Project Lead", "• Fellow and co-chair of two CSA AI Safety working groups", "• Core member, OWASP Top 10 for LLM Applications", "• AIUC-1 Consortium Member", "• Grant reviewer, Schmidt Sciences", "• EC-Council instructor — Generative AI for Cyber Security", "• CEO of DistributedApps.ai: https://distributedapps.ai/", "• Substack: kenhuangus.substack.com  ·  LinkedIn: linkedin.com/in/kenhuang8"]}, {"number": 3, "raw_lines": ["Original CSA Publication — January 16, 2026", "• Article: My Top 10 Predictions for Agentic AI in 2026", "• Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai", "• Publisher: Cloud Security Alliance (Industry Insights)", "• Open the original post:", "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• Screenshot below captures the published list of all 10 predictions", "IMG:assets/images/csa-top-10-predictions-2026.png"]}, {"number": 4, "raw_lines": ["About This Scorecard", "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)", "• CSA URL: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27", "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation", "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)", "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open"]}, {"number": 5, "raw_lines": ["Scorecard at a Glance — September 27, 2026", "| # | Prediction | Verdict |", "|---|---|---|", "| 1 | Self-improving / RSI agents | On track (research confirmed) |", "| 2 | Agency > Intelligence | On track |", "| 3 | MAESTRO-based security benchmarks | Partial → On track |", "| 4 | Agentic risk management center stage | Confirmed |", "| 5 | Vibe-coding security hangover | Confirmed |", "| 6 | Browser agents struggle | On track |", "| 7 | Enterprise: internal first | Mostly confirmed |", "| 8 | More CVEs in agentic ecosystem | Confirmed |", "| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |", "| 10 | OWASP AIVSS v1 official release | In progress (review open) |"]}, {"number": 6, "raw_lines": ["P1 — The Self-Improving Agentic AI System", "Prediction (Jan 2026): move past static agents; more research and some real-world self-improving agents.", "• Verdict: On track — Level-1 recursive self-improvement (RSI) demonstrated in research; production still gated", "• United States: Weco AI AIDE² (2026-07-14) — 8-day outer loop, 7 successive harness upgrades; arXiv:2609.26457", "  • AIDE85 beat 2 years of hand-tuned AIDE-human on held-out MLE/ALE/WeatherBench under fixed $ budget", "  • Reward hacking on GPU-kernel task fell ~63% → ~34%; claims Level-1 net-positive RSI, not ignition", "• China: frontier agent regulation entered enforcement 2026-07-15 (CAC joint Implementation Opinions)", "  • Tiered authorization, auditable decision logs, human override for high-impact autonomous agents", "  • Self-modification loops face stronger filing/testing obligations than in open US labs", "• European Union: EU AI Act high-risk oversight + human-oversight duties slow open-web RSI deployment", "  • Research continues; production self-rewriting agents remain rare outside controlled sandboxes"]}, {"number": 7, "raw_lines": ["P2 — Agency > Intelligence", "Prediction: industry stops obsessing over raw intelligence scores; agency (plan, tools, persist) becomes primary.", "• Verdict: On track — agency metrics and benchmarks proliferated in 2026", "• United States: AgencyBench (ACL 2026) — 32 scenarios, ~90 tool calls / 1M tokens / hours of runtime", "  • Closed models 48.4% vs open 32.1%; emphasis on tool use, self-correction, resource efficiency", "  • Autonomous Agency Scale (AAS, Jul 2026) scores Active vs Ambient agency with Idle-Gap Test", "• China: agent products compete on task completion and tool chains more than MMLU-style leaderboards", "  • Regulatory framing treats agent decision authority as the control object, not model IQ", "• European Union: conformity and oversight discussions track autonomy level and impact, not raw capability scores", "  • Academic work (e.g. bipredictability / agency–intelligence theory, arXiv:2602.22519) separates the two constructs"]}, {"number": 8, "raw_lines": ["P3 — New Security Benchmarks via MAESTRO", "Prediction: new agent security benchmarks based on MAESTRO threat modeling get adopted.", "• Verdict: Partial → On track — MAESTRO is operationalized; universal benchmark suites still maturing", "• United States: CSA MAESTRO + ATLAS combined playbooks; TITO CI/CD threat modeling (CSA, 2026-02-11)", "  • Agentic red-team guides map tests to MAESTRO layers; STAR / AIUC-1 assurance paths emerging", "• China: MAESTRO cited in CSA guidance as a way to evidence engineered agent boundaries for regulators", "  • Domestic agent security evaluations increasingly require layer-wise threat coverage, not prompt-only tests", "• European Union: mappings into EU AI Act / ISO 42001 via CSA AICM; MAESTRO used as threat-generation front-end", "  • Gap: no single global numeric \"MAESTRO score\" yet — frameworks + scanners ahead of shared leaderboards"]}, {"number": 9, "raw_lines": ["P4 — Agentic AI Risk Management Takes Center Stage", "Prediction: organizations align with NIST AI RMF, CSA AICM, and OWASP AIVSS for agentic risk.", "• Verdict: Confirmed — risk management is the center of 2026 agentic governance", "• United States: NIST AI RMF remains the risk spine; CSA AICM v1.1 (Jun 23 / Jul Jul 2026) adds AIUC-1 mapping", "  • Five Eyes / CISA careful-adoption guidance for agentic services (May 2026); RSAC 2026 AIVSS panels", "• China: dedicated national AI-agent regulatory category enforceable from 2026-07-15", "  • Filing, testing, tiered decision authority, and mandatory human override for Level 2/3 agent decisions", "• European Union: EU AI Act obligations (transparency, risk assessment, human oversight) for high-risk systems", "  • AICM v1.1 supplies operational security controls the Act itself does not prescribe", "• Crosswalks: AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 now published and used in enterprise programs"]}, {"number": 10, "raw_lines": ["P5 — The \"Vibe Coding\" Security Hangover", "Prediction: vibe coding accelerates shipping; non-deterministic NL→code worsens DevSecOps risk.", "• Verdict: Confirmed — empirical studies show insecurity is the norm for vibe-coded apps", "• United States: arXiv:2606.23130 (v3 Sep 2026) — 9,041 OSS apps; audit of 200 deployed apps → 1,186 vulns", "  • 91.0% of audited apps had ≥1 vulnerability; 65.77% of findings Critical/High (BAC, injection, auth)", "  • Georgia Tech Vibe Security Radar: 74 CVEs traceable to AI coding tools by March 2026", "  • Tool CVEs: Cursor MCP (CVE-2025-54135), Claude Code (CVE-2025-55284 / CVE-2025-59536 class)", "• China: rapid adoption of AI coding assistants in startups; same failure modes (secrets, IDOR, missing auth)", "  • Domestic AppSec vendors shipping AI-code scanners into CI; regulators watch supply-chain leakage", "• European Union: NIS2 / CRA pressure pushes SBOM + build-time gates for AI-generated dependencies", "  • Shift-left DAST and fix-or-waive policies for AI-introduced CWE classes entering enterprise playbooks"]}, {"number": 11, "raw_lines": ["P6 — The Struggle of Browser Agents", "Prediction: browser agents struggle until AG-UI / A2UI interoperability and contractual gaps are fixed.", "• Verdict: On track — protocols advanced; production reliability still fragile", "• United States: AG-UI widely integrated (CopilotKit et al.) but STATE_DELTA silent drift documented (mid-2026)", "  • Main-thread stalls (20s+ structuredClone) and reconnect gap bugs filed on ag-ui-protocol/ag-ui", "  • Computer-use / GUI agents still fail under repeated prompt injection (Anthropic measurements: residual risk)", "• China: browser/desktop agents popular in productivity apps; reliability and permission UX remain pain points", "  • Domestic platforms prefer constrained action catalogs over open DOM control for consumer products", "• European Union: A2UI (Google + community) at v0.9.1 production; v1.0 release candidate (updated Jun 2026)", "  • Declarative UI catalogs improve safety vs arbitrary code; ordered delivery still required to avoid corruption", "• Bottom line: standards exist; \"widespread reliable adoption\" is not yet the default production posture"]}, {"number": 12, "raw_lines": ["P7 — Enterprise Deployment: Internal First", "Prediction: internal agent deployments widen; limited B2B/B2C agents on the open web due to caution.", "• Verdict: Mostly confirmed — internal still preferred; dual internal+external programs growing", "• United States: Contentstack Agentic Enterprise Report (May 2026, n=621)", "  • 37% primarily internal · 10% primarily external · 53% pursuing both", "  • 78% hit content/data readiness issues; 42% cite missing clear owner as a failure mode", "• China: large enterprises push internal ops agents (finance, IT, supply chain) under data-localization rules", "  • Consumer-facing agents exist but high-impact autonomy triggers July 2026 agent-regulation obligations", "• European Union: GDPR + AI Act push human-in-the-loop and DPIA before open-web autonomous agents", "  • Customer-service agents expand carefully; back-office automation remains the safer ROI path", "• Nuance vs Jan prediction: \"limited B2B/B2C\" is directionally right, but hybrid programs are now majority in US survey"]}, {"number": 13, "raw_lines": ["P8 — More CVEs for the Agentic Ecosystem", "Prediction: more CVEs for agent frameworks, browser/CUA agents, and vibe-coding tools — treated like classic vulns.", "• Verdict: Confirmed — 2026 CVE stream for agent stacks is sustained and severe", "• United States / global NVD:", "  • LangChain path traversal / sandbox escape — CVE-2026-55443 (fixed in 1.3.9; NVD Jun 2026)", "  • MCP Python SDK WebSocket Origin bypass — CVE-2026-59950 (HIGH); MCP Inspector RCE class continues", "  • Prior wave still active in ops: Claude Code RCE CVE-2025-59536; LangGrinch CVE-2025-68664; EchoLeak CVE-2025-32711", "• China: CNVD/CNNVD mirroring of agent-framework CVEs; domestic forks must patch MCP/tool hosts quickly", "• European Union: ENISA / national CERTs track agent supply-chain CVEs under product-security regimes", "  • Vendors increasingly issue advisories with CVSS and fixed versions — same severity culture as traditional software", "• Implication: SBOM + dependency pinning for LangChain/MCP/agent IDEs is now table stakes"]}, {"number": 14, "raw_lines": ["P9 — MAESTRO v2: Making It Practical", "Prediction: publish MAESTRO v2 with clear how-to guidance for vendor implementation.", "• Verdict: Confirmed — CSA released MAESTRO v2 on 2026-06-22", "• What shipped: expansion from 7 → 10 layers across three operational domains", "  • Domains: Infrastructure/Intelligence/Knowledge · Environment/Execution · Agency/Governance/Accountability", "  • Horizontal Trust Control Plane: governance, safety, monitoring, identity", "• Aligned with CSA AI Agent Reference Architecture + Agentic Control Plane / Agentic Trust Framework papers (same day)", "• United States: skills, playbooks, and CI tooling encode L1–L10 threat IDs for assessments", "• China / EU: v2 used as a practical bridge from architecture → controls (AICM) → regulatory evidence packs", "• Artifact: https://cloudsecurityalliance.org/artifacts/maestro-v2"]}, {"number": 15, "raw_lines": ["P10 — Official Release of OWASP AIVSS v1", "Prediction: publish AIVSS v1 at aivss.owasp.org as the definitive agentic scoring standard.", "• Verdict: In progress — on the stated 2026 path; v1.0 not final as of 2026-09-27", "• Milestone delivered: AIVSS Scoring System for OWASP Agentic AI Core Security Risks v0.8 (2026-03-19)", "  • Co-publication with AIUC-1, OWASP AI Exchange, Citizen Development Top 10", "  • Interactive AIUC-1 crosswalk live on aivss.owasp.org", "• Public review for v1.0 opened 2026-04-26; closes 2026-10-01; v1.0 slated before end of 2026", "• United States: RSAC 2026 sessions on measuring agentic risk with AIVSS; enterprise pilots on v0.8 scoring", "• China / EU: mappings to MAESTRO layers and AIUC-1 used in multinational risk programs ahead of v1 freeze", "• Status vs prediction: substance is live; \"official v1\" remains a Q4 2026 deliverable"]}, {"number": 16, "raw_lines": ["Regional Pattern — United States · China · European Union", "| Theme | United States | China | European Union |", "|---|---|---|---|", "| RSI / self-improve | Lab evidence (AIDE²) | Regulate frontier agents | Research > open deploy |", "| Agency metrics | AgencyBench, AAS | Task/tool KPIs + filing | Autonomy as risk object |", "| Risk mgmt | NIST RMF + AICM + AIVSS | Agent-specific law (Jul) | AI Act + AICM controls |", "| Vibe-code risk | Large empirical studies | Fast adoption + scanners | CRA/NIS2 build gates |", "| Browser agents | AG-UI scale + drift bugs | Constrained catalogs | A2UI std + oversight |", "| Enterprise posture | Internal-first, 53% both | Internal ops under localization | HITL before open web |", "| CVE culture | NVD-tracked agent CVEs | CNVD mirror + patch | CERT + product security |"]}, {"number": 17, "raw_lines": ["What Remains Open for Q4 2026", "• AIVSS v1.0: finish public review (closes 2026-10-01) and publish the frozen standard", "• Shared MAESTRO security leaderboards: move from playbooks/scanners to comparable public benchmarks", "• Browser-agent reliability: AG-UI sequence/resync defaults; A2UI v1.0 ratification and broader renderers", "• RSI beyond Level-1: independent replication of AIDE²; governance for self-modifying production agents", "• Open-web B2C agents: still the cautious minority — watch whether dual programs tip to external-primary", "• Vibe-coding controls: whether shift-left gates cut the 91% vulnerability baseline in production fleets"]}, {"number": 18, "raw_lines": ["Primary Sources (selected)", "• CSA predictions (2026-01-16): https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026", "• AIDE² RSI: weco.ai blog (2026-07-14); arXiv:2609.26457", "• AgencyBench: ACL 2026; Autonomous Agency Scale arXiv HTML 2607.17947", "• MAESTRO v2 artifact (2026-06-22): cloudsecurityalliance.org/artifacts/maestro-v2", "• CSA AICM v1.1 (2026-07-14 blog); China agent regulation CSA Labs note (enforcement 2026-07-15)", "• Vibe coding study: arXiv:2606.23130; OX Security / Georgia Tech CVE radar summaries", "• AG-UI production drift analyses (2026); A2UI a2ui.org v0.9.1 / v1.0-rc", "• Contentstack Agentic Enterprise Report 2026; NVD CVE-2026-55443; AIVSS aivss.owasp.org v0.8 + review"]}, {"number": 19, "raw_lines": ["Closing — Build Agentic AI Securely", "• 8 of 10 predictions are Confirmed, Mostly confirmed, or On track as of 2026-09-27", "• Two remain open by design: broader MAESTRO benchmark adoption (Partial) and AIVSS v1 freeze (In progress)", "• Security and risk management moved from slideware to CVEs, controls matrices, and regulatory filing", "• Next checkpoints: AIVSS v1 publication · A2UI v1.0 · independent RSI replication · open-web agent trust", "• Continue the conversation: kenhuangus.substack.com · aivss.owasp.org · CSA AI Safety working groups", "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"]}, {"number": 20, "slide_type": "thanks", "raw_lines": ["Thank you", "Graph Engineering for Agentic AI Systems · Harness Engineering", "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"]}];
     const svgMap = {};
 
     let currentIdx = 0;
@@ -2197,6 +2320,126 @@
       return html;
     }
 
+
+    function renderSpeaker(slide) {
+      const rest = (slide.raw_lines || []).slice(1);
+      const booksLabel = uiText(
+        '📚 AI Books & Academic Publications (Springer · Cambridge · Wiley · Packt)',
+        '📚 AI 图书与学术出版（Springer · Cambridge · Wiley · Packt）'
+      );
+      const amazonLabel = uiText('Amazon Author Page ➔', 'Amazon 作者页 ➔');
+      return `
+        <div id="slide-content-wrap" class="instructor-slide-grid">
+          <div class="instructor-info-col">
+            ${formatBullets(rest)}
+          </div>
+          <div class="author-books-card">
+            <div class="author-books-header">
+              <span>${booksLabel}</span>
+              <a href="https://www.amazon.com/stores/author/B0D3J7L7GN" target="_blank" rel="noopener noreferrer">${amazonLabel}</a>
+            </div>
+            <div class="books-gallery-grid">
+              <a href="https://www.amazon.com/dp/3031900251" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Agentic AI: Theories and Practices (Springer)">
+                <img src="assets/images/books/springer_agentic_ai.jpg" alt="Agentic AI (Springer)" class="book-cover-img" />
+                <div class="book-item-title">Agentic AI</div>
+                <div class="book-publisher-tag">SPRINGER</div>
+              </a>
+              <a href="https://www.amazon.com/dp/3031448839" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Beyond AI (Springer)">
+                <img src="assets/images/books/springer_beyond_ai.jpg" alt="Beyond AI (Springer)" class="book-cover-img" />
+                <div class="book-item-title">Beyond AI</div>
+                <div class="book-publisher-tag">SPRINGER</div>
+              </a>
+              <a href="https://www.amazon.com/dp/3031542517" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Generative AI Security (Springer)">
+                <img src="assets/images/books/springer_generative_ai_security.jpg" alt="GenAI Security (Springer)" class="book-cover-img" />
+                <div class="book-item-title">GenAI Security</div>
+                <div class="book-publisher-tag">SPRINGER</div>
+              </a>
+              <a href="https://www.amazon.com/dp/3031901002" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Securing AI Agents (Springer)">
+                <img src="assets/images/books/springer_securing_ai_agents.jpg" alt="Securing AI Agents" class="book-cover-img" />
+                <div class="book-item-title">Securing Agents</div>
+                <div class="book-publisher-tag">SPRINGER</div>
+              </a>
+              <a href="https://www.amazon.com/dp/1009384467" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Web3 (Cambridge)">
+                <img src="assets/images/books/cambridge_web3.jpg" alt="Web3 (Cambridge UP)" class="book-cover-img" />
+                <div class="book-item-title">Web3 &amp; Economy</div>
+                <div class="book-publisher-tag">CAMBRIDGE</div>
+              </a>
+              <a href="https://www.amazon.com/dp/1394186524" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Blockchain and Web3 (Wiley)">
+                <img src="assets/images/books/wiley_blockchain_web3.jpg" alt="Blockchain & Web3 (Wiley)" class="book-cover-img" />
+                <div class="book-item-title">Blockchain Web3</div>
+                <div class="book-publisher-tag">WILEY</div>
+              </a>
+              <a href="https://www.amazon.com/dp/B0HF3F86YM" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Harness Engineering">
+                <img src="assets/images/books/harness_engineering.jpg" alt="Harness Engineering" class="book-cover-img" />
+                <div class="book-item-title">Harness Eng.</div>
+                <div class="book-publisher-tag">BEST SELLER</div>
+              </a>
+              <a href="https://www.amazon.com/dp/1807785017" target="_blank" rel="noopener noreferrer" class="book-item-card" title="OpenClaw AI in Production">
+                <img src="assets/images/books/openclaw_ai_in_production.jpg" alt="OpenClaw AI in Production" class="book-cover-img" />
+                <div class="book-item-title">OpenClaw AI</div>
+                <div class="book-publisher-tag">PACKT</div>
+              </a>
+              <a href="https://www.amazon.com/dp/B0H8JW9XFN" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Engineering Agentic AI with Claude">
+                <img src="assets/images/books/engineering_agentic_ai_claude.jpg" alt="Engineering Agentic AI with Claude" class="book-cover-img" />
+                <div class="book-item-title">Agentic Claude</div>
+                <div class="book-publisher-tag">CLAUDE AI</div>
+              </a>
+              <a href="https://www.amazon.com/dp/1836207034" target="_blank" rel="noopener noreferrer" class="book-item-card" title="LLM Design Patterns">
+                <img src="assets/images/books/llm_design_patterns.jpg" alt="LLM Design Patterns" class="book-cover-img" />
+                <div class="book-item-title">LLM Patterns</div>
+                <div class="book-publisher-tag">PACKT</div>
+              </a>
+              <a href="https://www.amazon.com/dp/B0H13XWS8W" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Agentic AI Harness Pattern">
+                <img src="assets/images/books/agentic_ai_harness_pattern.jpg" alt="Agentic AI Harness Pattern" class="book-cover-img" />
+                <div class="book-item-title">AI Harness</div>
+                <div class="book-publisher-tag">PATTERNS</div>
+              </a>
+              <a href="https://www.amazon.com/dp/B0HHZVDQQY" target="_blank" rel="noopener noreferrer" class="book-item-card" title="Graph Engineering for Agentic AI Systems">
+                <img src="assets/images/graph_engineering_book.jpg" alt="Graph Engineering" class="book-cover-img" />
+                <div class="book-item-title">Graph Eng.</div>
+                <div class="book-publisher-tag">PACKT</div>
+              </a>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderThanks(slide) {
+      const kicker = uiText('Further reading · Recent books', '延伸阅读 · 新近著作');
+      const lede = uiText('Two companion Kindle books by Ken Huang', 'Ken Huang 两本配套 Kindle 著作');
+      return `
+        <div id="slide-content-wrap" class="thanks-wrap idea-slide">
+          <div class="thanks-header">
+            <div class="thanks-kicker">${kicker}</div>
+            <div class="thanks-lede">${lede}</div>
+          </div>
+          <div class="thanks-books">
+            <a class="thanks-book-card" href="https://www.amazon.com/dp/B0HHZVDQQY" target="_blank" rel="noopener noreferrer" title="Graph Engineering for Agentic AI Systems on Amazon">
+              <div class="thanks-book-cover">
+                <img src="assets/images/graph_engineering_book.jpg" alt="Graph Engineering for Agentic AI Systems book cover" />
+              </div>
+              <div class="thanks-book-tag">Kindle · B0HHZVDQQY</div>
+              <div class="thanks-book-title">Graph Engineering for Agentic AI Systems</div>
+              <div class="thanks-book-asin"><span>Amazon ↗</span></div>
+            </a>
+            <a class="thanks-book-card" href="https://www.amazon.com/dp/B0HF3F86YM" target="_blank" rel="noopener noreferrer" title="Harness Engineering on Amazon">
+              <div class="thanks-book-cover">
+                <img src="assets/images/harness_engineering_book.jpg" alt="Harness Engineering book cover" />
+              </div>
+              <div class="thanks-book-tag">Kindle · B0HF3F86YM</div>
+              <div class="thanks-book-title">Harness Engineering</div>
+              <div class="thanks-book-asin"><span>Amazon ↗</span></div>
+            </a>
+          </div>
+          <div class="thanks-footer thanks-link">
+            <a href="https://distributedapps.ai/" target="_blank" rel="noopener noreferrer">distributedapps.ai ↗</a>
+            &nbsp;·&nbsp;
+            <a href="https://kenhuangus.substack.com/" target="_blank" rel="noopener noreferrer">kenhuangus.substack.com ↗</a>
+          </div>
+        </div>`;
+    }
+
+
     function renderSlide(idx) {
       if (idx < 0) idx = 0;
       if (idx >= slidesData.length) idx = slidesData.length - 1;
@@ -2230,7 +2473,11 @@
 
       let bodyHtml = '';
 
-      if (isSkill) {
+      if (slide.slide_type === 'speaker') {
+        bodyHtml += renderSpeaker(slide);
+      } else if (slide.slide_type === 'thanks') {
+        bodyHtml += renderThanks(slide);
+      } else if (isSkill) {
         bodyHtml += renderSkillSlide(slide);
       } else if (isCode && slide.highlighted_code) {
         const fileTag = slide.code_filename || 'source.py';
