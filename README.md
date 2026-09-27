@@ -1,6 +1,8 @@
 # Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard
 
-Interactive bilingual (EN / 中文) GitHub Pages site auditing Ken Huang’s January 16, 2026 Cloud Security Alliance predictions against public evidence in the **United States**, **China**, and the **European Union** as of **September 27, 2026**.
+Interactive bilingual (EN / 中文) GitHub Pages site. **Current `main`:** investor thesis scorecard — up to **3 investable theses per CSA trend**, grounded in **United States / China / EU** evidence as of **September 27, 2026**.
+
+**Archived status-only mid-year audit** (before the investor rewrite): tag [`v1-midyear-scorecard`](https://github.com/kenhuangus/agentic-ai-2026-predictions/tree/v1-midyear-scorecard) · branch [`archive/v1-midyear-scorecard`](https://github.com/kenhuangus/agentic-ai-2026-predictions/tree/archive/v1-midyear-scorecard).
 
 ## Links
 
