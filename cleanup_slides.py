@@ -44,16 +44,23 @@ t = t.replace('alt="Harness Engineering Logo"', 'alt="Ken Huang"')
 
 # Simplify: keep slide 1 branch, drop slide 2+ special cases, default to bullets
 start = t.find("} else if (slide.number === 1) {")
-if start < 0:
-    raise SystemExit("slide 1 branch not found")
+s2 = t.find("} else if (slide.number === 2) {", start) if start >= 0 else -1
+if start < 0 or s2 < 0:
+    print("cleanup already applied (no Packt slide-2 branch); skipping renderSlide rewrite")
+    path.write_text(t, encoding="utf-8")
+    docs = ROOT / "docs"
+    docs.mkdir(exist_ok=True)
+    (docs / "slides.html").write_text(t, encoding="utf-8")
+    zh = ROOT / "slides-zh.js"
+    if zh.exists():
+        (docs / "slides-zh.js").write_bytes(zh.read_bytes())
+    print("Saved slides.html and docs/slides.html")
+    raise SystemExit(0)
+
 end_marker = "bodyEl.innerHTML = bodyHtml;"
 end = t.find(end_marker, start)
 if end < 0:
     raise SystemExit("slide-body assignment not found")
-
-s2 = t.find("} else if (slide.number === 2) {", start)
-if s2 < 0:
-    raise SystemExit("slide 2 branch not found")
 
 # Truncate slide 1 content: keep only through pillars row closing, drop books / thesis leftovers
 slide1 = t[start:s2]

@@ -21,23 +21,37 @@ SLIDES_EN = [
             "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang",
             "Regional lens: United States · China · European Union",
+            "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
             "Sources: CSA article + Substack; research cut-off 2026-09-27",
         ],
     },
     {
         "number": 2,
         "raw_lines": [
-            "About This Scorecard",
-            "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)",
-            "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27",
-            "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation",
-            "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)",
-            "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open",
-            "• CSA original: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+            "Original CSA Publication — January 16, 2026",
+            "• Article: My Top 10 Predictions for Agentic AI in 2026",
+            "• Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
+            "• Publisher: Cloud Security Alliance (Industry Insights)",
+            "• Open the original post:",
+            "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+            "• Screenshot below captures the published list of all 10 predictions",
+            "IMG:assets/images/csa-top-10-predictions-2026.png",
         ],
     },
     {
         "number": 3,
+        "raw_lines": [
+            "About This Scorecard",
+            "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)",
+            "• CSA URL: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+            "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27",
+            "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation",
+            "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)",
+            "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open",
+        ],
+    },
+    {
+        "number": 4,
         "raw_lines": [
             "Scorecard at a Glance — September 27, 2026",
             "| # | Prediction | Verdict |",
@@ -55,7 +69,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 4,
+        "number": 5,
         "raw_lines": [
             "P1 — The Self-Improving Agentic AI System",
             "Prediction (Jan 2026): move past static agents; more research and some real-world self-improving agents.",
@@ -71,7 +85,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 5,
+        "number": 6,
         "raw_lines": [
             "P2 — Agency > Intelligence",
             "Prediction: industry stops obsessing over raw intelligence scores; agency (plan, tools, persist) becomes primary.",
@@ -86,7 +100,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 6,
+        "number": 7,
         "raw_lines": [
             "P3 — New Security Benchmarks via MAESTRO",
             "Prediction: new agent security benchmarks based on MAESTRO threat modeling get adopted.",
@@ -100,7 +114,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 7,
+        "number": 8,
         "raw_lines": [
             "P4 — Agentic AI Risk Management Takes Center Stage",
             "Prediction: organizations align with NIST AI RMF, CSA AICM, and OWASP AIVSS for agentic risk.",
@@ -115,7 +129,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 8,
+        "number": 9,
         "raw_lines": [
             "P5 — The \"Vibe Coding\" Security Hangover",
             "Prediction: vibe coding accelerates shipping; non-deterministic NL→code worsens DevSecOps risk.",
@@ -131,7 +145,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 9,
+        "number": 10,
         "raw_lines": [
             "P6 — The Struggle of Browser Agents",
             "Prediction: browser agents struggle until AG-UI / A2UI interoperability and contractual gaps are fixed.",
@@ -147,7 +161,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 10,
+        "number": 11,
         "raw_lines": [
             "P7 — Enterprise Deployment: Internal First",
             "Prediction: internal agent deployments widen; limited B2B/B2C agents on the open web due to caution.",
@@ -163,7 +177,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 11,
+        "number": 12,
         "raw_lines": [
             "P8 — More CVEs for the Agentic Ecosystem",
             "Prediction: more CVEs for agent frameworks, browser/CUA agents, and vibe-coding tools — treated like classic vulns.",
@@ -179,7 +193,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 12,
+        "number": 13,
         "raw_lines": [
             "P9 — MAESTRO v2: Making It Practical",
             "Prediction: publish MAESTRO v2 with clear how-to guidance for vendor implementation.",
@@ -194,7 +208,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 13,
+        "number": 14,
         "raw_lines": [
             "P10 — Official Release of OWASP AIVSS v1",
             "Prediction: publish AIVSS v1 at aivss.owasp.org as the definitive agentic scoring standard.",
@@ -209,7 +223,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 14,
+        "number": 15,
         "raw_lines": [
             "Regional Pattern — United States · China · European Union",
             "| Theme | United States | China | European Union |",
@@ -224,7 +238,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 15,
+        "number": 16,
         "raw_lines": [
             "What Remains Open for Q4 2026",
             "• AIVSS v1.0: finish public review (closes 2026-10-01) and publish the frozen standard",
@@ -236,10 +250,10 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 16,
+        "number": 17,
         "raw_lines": [
             "Primary Sources (selected)",
-            "• CSA predictions (2026-01-16): cloudsecurityalliance.org — My Top 10 Predictions for Agentic AI in 2026",
+            "• CSA predictions (2026-01-16): https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
             "• AIDE² RSI: weco.ai blog (2026-07-14); arXiv:2609.26457",
             "• AgencyBench: ACL 2026; Autonomous Agency Scale arXiv HTML 2607.17947",
             "• MAESTRO v2 artifact (2026-06-22): cloudsecurityalliance.org/artifacts/maestro-v2",
@@ -250,7 +264,7 @@ SLIDES_EN = [
         ],
     },
     {
-        "number": 17,
+        "number": 18,
         "raw_lines": [
             "Closing — Build Agentic AI Securely",
             "• 8 of 10 predictions are Confirmed, Mostly confirmed, or On track as of 2026-09-27",
@@ -271,18 +285,29 @@ SLIDES_ZH = {
         "作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "旧金山大学（USF）客座教授：https://www.usfca.edu/faculty/ken-huang",
         "区域视角：美国 · 中国 · 欧盟",
+        "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "来源：CSA 文章与 Substack；研究截止日期 2026-09-27",
     ],
     "2": [
+        "CSA 原文发布 — 2026 年 1 月 16 日",
+        "• 文章：My Top 10 Predictions for Agentic AI in 2026",
+        "• 作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
+        "• 发布方：云安全联盟（Industry Insights）",
+        "• 打开原文：",
+        "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+        "• 下方截图展示已发布的全部 10 条预测",
+        "IMG:assets/images/csa-top-10-predictions-2026.png",
+    ],
+    "3": [
         "关于本成绩单",
         "• 出处：Ken Huang —《My Top 10 Predictions for Agentic AI in 2026》（CSA，2026-01-16）",
+        "• CSA 链接：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• 方法：将每条预测映射到截至 2026-09-27 的美、中、欧公开证据",
         "• 证据类型：同行评议论文、CVE/NVD、CSA/OWASP/NIST 产物、企业调研、监管文件",
         "• 判定等级：已证实 · 基本证实 · 进展符合预期 · 部分兑现 · 进行中（指向年末）",
         "• 不是改写预测，而是年中审计：已发生什么 vs 仍未关闭什么",
-        "• CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
     ],
-    "3": [
+    "4": [
         "成绩单一览 — 2026 年 9 月 27 日",
         "| # | 预测 | 判定 |",
         "|---|---|---|",
@@ -297,7 +322,7 @@ SLIDES_ZH = {
         "| 9 | MAESTRO v2 实用版发布 | 已证实（2026-06-22） |",
         "| 10 | OWASP AIVSS v1 正式发布 | 进行中（公开评审中） |",
     ],
-    "4": [
+    "5": [
         "预测 1 — 自我改进的智能体 AI 系统",
         "预测（2026 年 1 月）：告别静态智能体；自我改进研究与部分落地增加。",
         "• 判定：进展符合预期 — 一级递归自我改进（RSI）已在研究中演示；生产部署仍受限",
@@ -310,7 +335,7 @@ SLIDES_ZH = {
         "• 欧盟：AI 法案高风险义务与人类监督延缓开放网络上的 RSI 部署",
         "  • 研究持续；生产级自我改写智能体在受控沙箱外仍罕见",
     ],
-    "5": [
+    "6": [
         "预测 2 — 自主性 > 智力",
         "预测：业界不再痴迷原始智力分数；自主性（规划、工具、持续目标）成为主指标。",
         "• 判定：进展符合预期 — 2026 年自主性度量与基准大量出现",
@@ -322,7 +347,7 @@ SLIDES_ZH = {
         "• 欧盟：合规与监督讨论跟踪自主等级与影响，而非原始能力分",
         "  • 学术工作（如 arXiv:2602.22519）将自主性与智力区分为不同构念",
     ],
-    "6": [
+    "7": [
         "预测 3 — 基于 MAESTRO 的新安全基准",
         "预测：基于 MAESTRO 威胁建模的智能体安全基准得到采用。",
         "• 判定：部分兑现 → 符合预期 — MAESTRO 已工程化；统一基准套件仍在成熟",
@@ -333,7 +358,7 @@ SLIDES_ZH = {
         "• 欧盟：经 CSA AICM 映射到 AI 法案 / ISO 42001；MAESTRO 作为威胁生成前端",
         "  • 缺口：尚无全球统一的「MAESTRO 分数」— 框架与扫描器领先于公共排行榜",
     ],
-    "7": [
+    "8": [
         "预测 4 — 智能体 AI 风险管理成为焦点",
         "预测：组织对齐 NIST AI RMF、CSA AICM 与 OWASP AIVSS 以管理智能体风险。",
         "• 判定：已证实 — 风险管理是 2026 年智能体治理的中心议题",
@@ -345,7 +370,7 @@ SLIDES_ZH = {
         "  • AICM v1.1 补充法案本身未规定的运行安全控制",
         "• 交叉映射：AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP 智能体 Top 10 已发布并进入企业项目",
     ],
-    "8": [
+    "9": [
         "预测 5 — 「氛围编程」安全后遗症",
         "预测：氛围编程加速交付；自然语言生成代码的非确定性加剧 DevSecOps 风险。",
         "• 判定：已证实 — 实证研究显示氛围编程应用不安全是常态",
@@ -358,7 +383,7 @@ SLIDES_ZH = {
         "• 欧盟：NIS2 / CRA 压力推动对 AI 生成依赖的 SBOM 与构建期门禁",
         "  • 针对 AI 引入 CWE 的左移 DAST 与「修复或豁免」策略进入企业手册",
     ],
-    "9": [
+    "10": [
         "预测 6 — 浏览器智能体的艰难之路",
         "预测：在 AG-UI / A2UI 互操作与合同缺口修复前，浏览器智能体将继续艰难。",
         "• 判定：进展符合预期 — 协议前进；生产可靠性仍脆弱",
@@ -371,7 +396,7 @@ SLIDES_ZH = {
         "  • 声明式 UI 目录比任意代码更安全；仍需有序投递以免状态损坏",
         "• 结论：标准已在；「广泛可靠采用」尚未成为默认生产姿态",
     ],
-    "10": [
+    "11": [
         "预测 7 — 企业部署：内部优先",
         "预测：内部智能体部署显著扩大；因谨慎，面向开放网络的 B2B/B2C 仍有限。",
         "• 判定：基本证实 — 内部仍优先；内部+外部双线项目在增长",
@@ -384,7 +409,7 @@ SLIDES_ZH = {
         "  • 客服智能体谨慎扩展；后台自动化仍是更稳妥的 ROI 路径",
         "• 相对 1 月预测的细微差别：「有限 B2B/B2C」方向正确，但美国调研中混合项目已成多数",
     ],
-    "11": [
+    "12": [
         "预测 8 — 智能体生态出现更多 CVE",
         "预测：智能体框架、浏览器/计算机使用智能体与氛围编程工具将出现更多 CVE，并按传统软件严重度对待。",
         "• 判定：已证实 — 2026 年智能体栈 CVE 持续且严重",
@@ -397,7 +422,7 @@ SLIDES_ZH = {
         "  • 厂商日益发布带 CVSS 与修复版本的公告 — 与传统软件同等严重度文化",
         "• 含义：对 LangChain/MCP/智能体 IDE 的 SBOM + 依赖锁定已成为基本要求",
     ],
-    "12": [
+    "13": [
         "预测 9 — MAESTRO v2：使之可落地",
         "预测：发布侧重实用说明的 MAESTRO v2，指导厂商如何落地。",
         "• 判定：已证实 — CSA 于 2026-06-22 发布 MAESTRO v2",
@@ -409,7 +434,7 @@ SLIDES_ZH = {
         "• 中国 / 欧盟：v2 作为从架构 → 控制（AICM）→ 监管证据包的实用桥梁",
         "• 产物：https://cloudsecurityalliance.org/artifacts/maestro-v2",
     ],
-    "13": [
+    "14": [
         "预测 10 — OWASP AIVSS v1 正式发布",
         "预测：在 aivss.owasp.org 发布 AIVSS v1，作为智能体评分的权威标准。",
         "• 判定：进行中 — 仍在 2026 年路径上；截至 2026-09-27 v1.0 尚未定稿",
@@ -421,7 +446,7 @@ SLIDES_ZH = {
         "• 中国 / 欧盟：在 v1 冻结前，跨国风险项目已使用到 MAESTRO 层与 AIUC-1 的映射",
         "• 相对预测：实质内容已可用；「正式 v1」仍是 2026 年第四季度交付物",
     ],
-    "14": [
+    "15": [
         "区域格局 — 美国 · 中国 · 欧盟",
         "| 主题 | 美国 | 中国 | 欧盟 |",
         "|---|---|---|---|",
@@ -433,7 +458,7 @@ SLIDES_ZH = {
         "| 企业姿态 | 内部优先，53% 双线 | 本地化下的内部运营 | 开放网络前 HITL |",
         "| CVE 文化 | NVD 跟踪智能体 CVE | CNVD 镜像 + 补丁 | CERT + 产品安全 |",
     ],
-    "15": [
+    "16": [
         "2026 年第四季度仍待关闭的事项",
         "• AIVSS v1.0：完成公开评审（2026-10-01 截止）并发布冻结标准",
         "• 共享 MAESTRO 安全排行榜：从手册/扫描器走向可比较的公共基准",
@@ -442,9 +467,9 @@ SLIDES_ZH = {
         "• 开放网络 B2C 智能体：仍是谨慎少数 — 观察双线项目是否转向外部优先",
         "• 氛围编程控制：左移门禁能否压低生产环境中 91% 的漏洞基线",
     ],
-    "16": [
+    "17": [
         "主要来源（节选）",
-        "• CSA 预测（2026-01-16）：cloudsecurityalliance.org — My Top 10 Predictions for Agentic AI in 2026",
+        "• CSA 预测（2026-01-16）：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• AIDE² RSI：weco.ai 博客（2026-07-14）；arXiv:2609.26457",
         "• AgencyBench：ACL 2026；自主代理量表 arXiv HTML 2607.17947",
         "• MAESTRO v2 产物（2026-06-22）：cloudsecurityalliance.org/artifacts/maestro-v2",
@@ -453,7 +478,7 @@ SLIDES_ZH = {
         "• AG-UI 生产漂移分析（2026）；A2UI a2ui.org v0.9.1 / v1.0-rc",
         "• Contentstack 2026 智能体企业报告；NVD CVE-2026-55443；AIVSS aivss.owasp.org v0.8 + 评审",
     ],
-    "17": [
+    "18": [
         "结语 — 安全地构建智能体 AI",
         "• 截至 2026-09-27，10 条预测中有 8 条为已证实、基本证实或进展符合预期",
         "• 两条按设计仍开放：更广的 MAESTRO 基准采用（部分）与 AIVSS v1 冻结（进行中）",
@@ -523,7 +548,7 @@ def main() -> None:
     for old, new in replacements:
         text2 = text2.replace(old, new)
 
-    # Title slide hero customization (slide 1 special case)
+    # Title slide hero / pillars — only replace if still on the Packt originals
     old_hero = """          <div id="slide-content-wrap" class="slide-1-container">
             <div class="slide-1-hero-card">
               <div class="slide-1-hero-tagline">
@@ -542,13 +567,12 @@ def main() -> None:
               <div class="slide-1-hero-desc">
                 ${slideLang === 'zh'
                   ? '原始预测发表于云安全联盟（2026-01-16）。本成绩单审计截至 2026-09-27 在美国、中国与欧盟的公开证据兑现情况。'
-                  : 'Original predictions published by the Cloud Security Alliance (2026-01-16). This scorecard audits public evidence in the United States, China, and the EU through 2026-09-27.'}
+                  : 'Original predictions published by the Cloud Security Alliance (2026-01-16): https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026 — this scorecard audits US, China, and EU evidence through 2026-09-27.'}
               </div>
             </div>"""
 
-    if old_hero not in text2:
-        raise SystemExit("Hero block not found for replacement")
-    text2 = text2.replace(old_hero, new_hero)
+    if old_hero in text2:
+        text2 = text2.replace(old_hero, new_hero)
 
     # Pillars on title slide
     old_pillars = """            <div class="slide-1-pillars-row">
@@ -589,9 +613,8 @@ def main() -> None:
               </div>
             </div>"""
 
-    if old_pillars not in text2:
-        raise SystemExit("Pillars block not found")
-    text2 = text2.replace(old_pillars, new_pillars)
+    if old_pillars in text2:
+        text2 = text2.replace(old_pillars, new_pillars)
 
     # Hide packt logo badge if present — keep structure, point away from packt
     text2 = text2.replace(
