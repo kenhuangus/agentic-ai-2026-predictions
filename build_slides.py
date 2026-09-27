@@ -71,114 +71,114 @@ SLIDES_EN = [
         "number": 5,
         "raw_lines": [
             "Thesis Map at a Glance — September 27, 2026",
-            "| # | Trend | Primary investable surface |",
+            "| # | Trend | Invest / avoid snapshot |",
             "|---|---|---|",
-            "| 1 | Self-improving / RSI | Eval harnesses · governed self-mod · vertical RSI |",
-            "| 2 | Agency > Intelligence | Agency scores · long-horizon agents · ambient agents |",
-            "| 3 | MAESTRO benchmarks | CI threat modeling · red-team SaaS · assurance |",
-            "| 4 | Agentic risk mgmt | Agent GRC · runtime policy · AI insurance tech |",
-            "| 5 | Vibe-coding hangover | AI AppSec · secure builders · auto-remediation |",
-            "| 6 | Browser agents | Protocol reliability · action catalogs · CUA defense |",
-            "| 7 | Internal-first enterprise | Internal platforms · back-office ROI · controlled B2B |",
-            "| 8 | Agentic CVEs | Agent SBOM · MCP gateways · secure vendors |",
-            "| 9 | MAESTRO v2 | Implementation suites · trust plane · training |",
-            "| 10 | AIVSS v1 | Scoring engines · crosswalks · release gates |"
+            "| 1 | RSI | Eval + governed self-mod + ML-ops RSI / avoid public AGI self-rewrite |",
+            "| 2 | Agency | Procurement scores + long-horizon agents / avoid chat labeled as agents |",
+            "| 3 | MAESTRO bench | CI checks + red-team sub + assurance reports / avoid PDF badges |",
+            "| 4 | Risk mgmt | Agent GRC + runtime allow-deny + insurer workbench / avoid doc-only GRC |",
+            "| 5 | Vibe coding | AppSec + secure builders + remediation / avoid demo-first builders |",
+            "| 6 | Browser agents | Protocol reliability + action catalogs + CUA controls / avoid pay-send bots |",
+            "| 7 | Internal-first | Internal platforms + KPI back-office + controlled B2B / avoid premature B2C |",
+            "| 8 | Agentic CVEs | SBOM firewall + MCP gateway + patchable vendors / avoid unauth MCP |",
+            "| 9 | MAESTRO v2 | Implementation software + trust plane + listed training / avoid renamed IAM |",
+            "| 10 | AIVSS v1 | Scoring + crosswalk + release gates / avoid proprietary unmapped scores |"
         ]
     },
     {
         "number": 6,
         "raw_lines": [
             "P1 — Self-Improving / RSI Agents — Investor theses",
-            "Evidence so far: Level-1 RSI demos (e.g. AIDE²); production still gated by eval + governance.",
-            "• Thesis 1 — Evaluation infrastructure: bet on hidden-eval harnesses, reward-hacking detectors, and RSI regression suites sold to frontier labs and AI R&D teams",
-            "• Thesis 2 — Governed self-modification: platforms that allow agents to rewrite tools/prompts only behind policy gates, audit logs, and human kill-switches (US labs + CN filing regimes)",
-            "• Thesis 3 — Vertical RSI for code/ML ops: auto-research agents that improve training/inference pipelines under a fixed $ budget — not open-web general RSI",
-            "• Pitfall — Treating Level-1 RSI demos as an intelligence explosion; ignition is unproven and eval gaming is common",
-            "• Do not invest — Open-web “self-improving AGI” apps with no hidden evals, no kill-switch, and no budget ceiling"
+            "Evidence so far: AIDE² is Level-1 RSI (net-positive R&D under a fixed budget); production still needs hidden evals and governance.",
+            "• Thesis 1 — Evaluation infrastructure: hidden-eval harnesses, reward-hacking detectors, and RSI regression suites sold to frontier labs and AI R&D teams",
+            "• Thesis 2 — Governed self-modification: agents may rewrite tools or prompts only after policy approval, audit logs, and a human stop (US labs; China filing plus human override)",
+            "• Thesis 3 — Vertical RSI for ML ops: auto-research agents that improve a training or inference pipeline under a fixed dollar budget; buyer is the AI infrastructure team",
+            "• Pitfall — Treating Level-1 (faster than a human baseline on a fixed budget) as Level-2 (the improver gets better at improving); Level-2 is not shown, and reward hacking is common",
+            "• Do not invest — Public-web apps marketed as self-improving AGI that rewrite their own code with no hidden eval and no dollar cap"
         ]
     },
     {
         "number": 7,
         "raw_lines": [
             "P2 — Agency > Intelligence — Investor theses",
-            "Evidence so far: AgencyBench, AAS, enterprise buyers scoring tool-use and persistence over raw IQ.",
-            "• Thesis 1 — Agency measurement layer: startups that productize agency scores (plan/tool/persist) for model selection, vendor RFP, and insurance underwriting",
-            "• Thesis 2 — Long-horizon task agents: invest in products that win on multi-hour tool workflows and self-correction, not chatbot leaderboard deltas",
-            "• Thesis 3 — Ambient / always-on agents: scarce Ambient agency (Idle-Gap) is the next premium — companions and ops agents that act between user prompts under hard scopes",
-            "• Pitfall — Paying for IQ/MMLU wrapper startups while buyers already score agency (tools, persistence, correction)",
-            "• Do not invest — Chatbots marketed as agents without durable goals, tool contracts, or Idle-Gap ambient behavior"
+            "Evidence so far: AgencyBench (multi-hour tool tasks, ACL 2026) and AAS (Active vs Ambient bands).",
+            "• Thesis 1 — Agency scores for procurement: plan, tool-use, and persistence scores sold into model selection and vendor RFPs",
+            "• Thesis 2 — Long-horizon task agents: software that finishes multi-hour tool workflows and self-corrects; buyer is ops or engineering, not a chat leaderboard",
+            "• Thesis 3 — Scoped idle-period agents: enterprise ops agents that act between user prompts only inside a written permission boundary (high AAS Ambient scores remain uncommon)",
+            "• Pitfall — Paying for MMLU or IQ-score wrappers while buyers already score tools, persistence, and correction",
+            "• Do not invest — Chat products labeled as agents with no cross-session goal, no tool contract, and no multi-hour task completion"
         ]
     },
     {
         "number": 8,
         "raw_lines": [
             "P3 — MAESTRO Security Benchmarks — Investor theses",
-            "Evidence so far: MAESTRO operationalized in playbooks/CI; shared public leaderboards still maturing.",
-            "• Thesis 1 — Continuous threat modeling in CI: TITO-class scanners that map PRs to MAESTRO layers and block risky agent merges",
-            "• Thesis 2 — Agent red-team as a service: recurring layer-mapped attack packs + ATLAS crosswalks sold to banks, SaaS, and AI platforms",
-            "• Thesis 3 — Assurance products: STAR / AIUC-1 style attestations that package MAESTRO evidence for buyers, insurers, and regulators",
-            "• Pitfall — Funding another static PDF checklist; buyers need CI enforcement and evidence packs, not slideware",
-            "• Do not invest — “MAESTRO-compliant” badges with no layer tests, no ATLAS mapping, and no scanner output"
+            "Evidence so far: MAESTRO is in playbooks and CI; shared public leaderboards are still maturing.",
+            "• Thesis 1 — CI layer checks: scanners that map a pull request to MAESTRO layers and block high-risk agent merges; buyer is the platform security team",
+            "• Thesis 2 — Agent red-team subscription: recurring attack packs mapped to layers, plus a MITRE ATLAS crosswalk, sold to banks, SaaS, and AI platforms",
+            "• Thesis 3 — Assurance reports: third-party reports that package MAESTRO layer evidence for procurement and regulators (same buyers as CSA STAR and AIUC-1)",
+            "• Pitfall — Paying for another static PDF checklist; buyers pay for a CI block and an evidence pack",
+            "• Do not invest — \"MAESTRO-compliant\" badges with no layer tests, no ATLAS mapping, and no scanner output"
         ]
     },
     {
         "number": 9,
         "raw_lines": [
             "P4 — Agentic Risk Management — Investor theses",
-            "Evidence so far: AICM v1.1, NIST AI RMF, China agent law, EU AI Act — risk is the buying center.",
-            "• Thesis 1 — GRC for agents: control catalogs + questionnaires that map once to NIST / AICM / EU AI Act / CN filing and export auditor packs",
-            "• Thesis 2 — Runtime risk engines: policy decision points on tool calls, autonomy tier, and human override — priced per agent-action",
-            "• Thesis 3 — AI insurance & underwriting tech: AIUC-1 / AIVSS scoring feeds that let carriers price agent deployments",
-            "• Pitfall — Building US-only GRC that cannot export EU AI Act / CN filing evidence — multinationals will churn",
-            "• Do not invest — Policy docs generators with no runtime control plane and no priced decision on tool calls"
+            "Evidence so far: AICM v1.1, NIST AI RMF, China agent regulation (enforceable 2026-07-15), EU AI Act — risk and compliance teams are the buyer.",
+            "• Thesis 1 — Agent GRC: one control catalog and questionnaire mapped to NIST, AICM, the EU AI Act, and China filing, exported as an auditor pack for the compliance team",
+            "• Thesis 2 — Runtime risk engines: allow or deny on tool calls, autonomy tier, and human override, priced per agent action",
+            "• Thesis 3 — Insurance underwriting workbenches: carrier tools that turn an AIUC-1 control result and an AIVSS score into a premium and an exclusion",
+            "• Pitfall — US-only GRC that cannot export EU AI Act or China filing evidence; multinational buyers will leave",
+            "• Do not invest — Policy-document generators with no runtime allow or deny on tool calls"
         ]
     },
     {
         "number": 10,
         "raw_lines": [
             "P5 — Vibe Coding Security Hangover — Investor theses",
-            "Evidence so far: ~91% of audited vibe-coded apps vulnerable; tool CVEs and secrets sprawl rising.",
-            "• Thesis 1 — AI-native AppSec for generated code: shift-left SAST/DAST tuned to AI failure modes (BAC, IDOR, hardcoded secrets)",
-            "• Thesis 2 — Secure vibe platforms: IDEs/builders that ship with auth defaults, secret vaults, and fix-or-waive gates before deploy",
-            "• Thesis 3 — Managed remediation: services/products that auto-patch AI-introduced CWE classes and prove exploitability pre-merge",
-            "• Pitfall — Generic SAST rebranded as “AI security” without covering AI-specific failure modes (BAC/IDOR/secrets)",
-            "• Do not invest — Vibe builders that optimize time-to-demo while shipping debug CORS, hardcoded keys, and no auth on APIs"
+            "Evidence so far: about 91% of audited vibe-coded apps had vulnerabilities (arXiv:2606.23130); tool CVEs and exposed secrets continue to increase.",
+            "• Thesis 1 — AppSec for generated code: pre-merge SAST/DAST sold to AppSec teams, tuned for flaws these apps ship (broken access control, IDOR, hardcoded secrets)",
+            "• Thesis 2 — Secure vibe platforms: IDEs and app builders with default authentication, a secrets store, and a fix-or-waive gate before deploy",
+            "• Thesis 3 — Managed remediation: a service that patches those CWE classes and attaches a proof of exploitability before merge",
+            "• Pitfall — Generic SAST renamed \"AI security\" that does not test broken access control, IDOR, or hardcoded secrets",
+            "• Do not invest — Vibe builders that optimize demo speed and ship debug CORS, hardcoded keys, and APIs with no authentication"
         ]
     },
     {
         "number": 11,
         "raw_lines": [
             "P6 — Browser Agents Struggle — Investor theses",
-            "Evidence so far: AG-UI drift/perf issues; A2UI maturing; computer-use still injection-fragile.",
-            "• Thesis 1 — Protocol reliability layer: sequence/resync, durable state, and snapshot-tax control for AG-UI / A2UI production stacks",
-            "• Thesis 2 — Constrained action catalogs: browser/desktop agents that only call approved UI actions (safer than open DOM) for enterprise RPA replacement",
-            "• Thesis 3 — Defense for computer-use: injection detection, session isolation, and human-in-the-loop for high-impact clicks (payments, email send)",
-            "• Pitfall — Betting on full open-DOM computer-use reliability before protocol resync and injection defense mature",
-            "• Do not invest — Consumer browser agents with payments/email send and no human approval or session isolation"
+            "Evidence so far: AG-UI drift and performance issues; A2UI at v0.9.1 / v1.0-rc; computer-use is still exposed to prompt injection.",
+            "• Thesis 1 — Protocol reliability: sequence numbers, resync, persistent session state, and limits on full-UI snapshot size and frequency for AG-UI / A2UI production stacks",
+            "• Thesis 2 — Approved action catalogs: browser and desktop agents that call only an approved action list, not an open DOM, sold as an enterprise RPA replacement",
+            "• Thesis 3 — Computer-use controls: injection detection, session isolation, and human approval for payment and email-send clicks",
+            "• Pitfall — Funding open-DOM computer-use as production-ready before resync and injection checks exist",
+            "• Do not invest — Consumer browser agents that can pay or send email with no human approval and no session isolation"
         ]
     },
     {
         "number": 12,
         "raw_lines": [
             "P7 — Enterprise Internal-First — Investor theses",
-            "Evidence so far: internal ops preferred; dual programs growing; open-web B2C still cautious.",
-            "• Thesis 1 — Internal agent platforms: secure connectors to ERP/ITSM/finance with data-ready pipelines (the 78% readiness gap)",
-            "• Thesis 2 — Agentic back-office ROI: finance/ops automation with measurable P&L payback (fastest ROI categories in 2026 surveys)",
-            "• Thesis 3 — Controlled externalization: products that graduate internal agents to B2B with DPIA, HITL, and tenant isolation — not consumer viral agents first",
-            "• Pitfall — Skipping data readiness; 78% of enterprises hit content/data blockers that kill agent ROI narratives",
-            "• Do not invest — Open-web B2C agent plays that burn trust capital before internal ops has a measurable P&L win"
+            "Evidence so far: Contentstack 2026 — 37% internal-primary, 10% external-primary, 53% both; 78% of leaders with a production program hit content or data rework.",
+            "• Thesis 1 — Internal agent platforms: secure ERP, ITSM, and finance connectors plus content and data pipelines; buyer is central IT",
+            "• Thesis 2 — Back-office workflow agents: approvals and routing for ops leaders who track a finance-audited KPI (Contentstack: 94% of KPI-measured internal programs reported a positive return)",
+            "• Thesis 3 — Controlled B2B release: software that publishes an internal agent to a business customer only with a DPIA, human approval, and tenant isolation",
+            "• Pitfall — Deploying agents before content and data are ready; that rework is what delayed production programs in the same survey",
+            "• Do not invest — Public-web consumer agents funded before an internal workflow has a KPI finance can audit"
         ]
     },
     {
         "number": 13,
         "raw_lines": [
             "P8 — Agentic Ecosystem CVEs — Investor theses",
-            "Evidence so far: LangChain/MCP/coding-agent CVEs treated like classic software severity.",
-            "• Thesis 1 — Agent SBOM + dependency firewall: pin/patch LangChain, MCP SDKs, IDE plugins with CVE streaming to SecOps",
-            "• Thesis 2 — Secure MCP gateways: Host/Origin auth, least-privilege tool scopes, and sandbox escape prevention as infrastructure",
-            "• Thesis 3 — Vendor security brands: agent-framework vendors that win enterprise on response time, CVSS clarity, and signed releases",
-            "• Pitfall — Assuming model vendors absorb framework/MCP CVE risk; blast radius sits in the app’s dependency tree",
-            "• Do not invest — Unauthenticated MCP servers, god-token tool hosts, and agent stacks without SBOM/pinning discipline"
+            "Evidence so far: LangChain CVE-2026-55443, MCP CVE-2026-59950, and coding-agent RCEs are scored like other software CVEs.",
+            "• Thesis 1 — Agent SBOM and dependency firewall: version-pin and patch LangChain, MCP SDKs, and IDE plugins, and stream CVEs to the security operations team",
+            "• Thesis 2 — Secure MCP gateways: Host and Origin authentication, least-privilege tool scopes, and sandbox-escape controls, sold as infrastructure",
+            "• Thesis 3 — Framework vendors that pass procurement: publish time-to-patch, CVSS, and signed releases; buyer is enterprise security",
+            "• Pitfall — Assuming the model vendor covers framework and MCP CVEs; the vulnerable code is in the application dependency tree",
+            "• Do not invest — MCP servers with no authentication, tool hosts that use one token for every tool, and agent stacks with no SBOM or version pin"
         ]
     },
     {
@@ -186,11 +186,11 @@ SLIDES_EN = [
         "raw_lines": [
             "P9 — MAESTRO v2 Practical Adoption — Investor theses",
             "Evidence so far: CSA MAESTRO v2 shipped 2026-06-22 (10 layers + Trust Control Plane).",
-            "• Thesis 1 — MAESTRO implementation suites: templates, L1–L10 threat IDs, and SSRM ownership matrices sold as consulting + software",
-            "• Thesis 2 — Trust Control Plane startups: identity, monitoring, and safety as horizontal control planes aligned to v2 domains",
-            "• Thesis 3 — Training & certification: courses/cert paths that make MAESTRO the default hiring skill for agent security engineers",
-            "• Pitfall — Consulting-only MAESTRO decks that never encode L1–L10 into tools — frameworks without software stall",
-            "• Do not invest — “Trust plane” shells that rename IAM/observability without agency-specific identity or interrupt paths"
+            "• Thesis 1 — Implementation software: layer templates, L1–L10 threat IDs, and a matrix of who owns each layer, sold to the security engineering team",
+            "• Thesis 2 — Trust Control Plane products: agent identity, action monitoring, and an interrupt path mapped to v2 domains; buyer is the agent-platform owner",
+            "• Thesis 3 — Training and certification: paid courses that security hiring managers can list for agent-security roles",
+            "• Pitfall — Workshops that never put L1–L10 checks into a tool the customer runs",
+            "• Do not invest — Products that rename IAM or observability \"trust plane\" and omit agent identity and an interrupt path"
         ]
     },
     {
@@ -198,11 +198,11 @@ SLIDES_EN = [
         "raw_lines": [
             "P10 — OWASP AIVSS v1 — Investor theses",
             "Evidence so far: v0.8 live; v1.0 public review through 2026-10-01; freeze targeted before year-end.",
-            "• Thesis 1 — Scoring engines: products that compute AIVSS for agent releases and feed ticketing / SSVC prioritization",
-            "• Thesis 2 — Crosswalk platforms: one risk graph across AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 for multinational buyers",
-            "• Thesis 3 — Compliance acceleration: EU/US/CN programs that treat AIVSS scores as release gates and insurer inputs once v1 freezes",
-            "• Pitfall — Shipping scoring UX before v1 freeze; methodology churn will force rework and buyer distrust",
-            "• Do not invest — Proprietary “AI risk scores” that refuse AIVSS/AIUC-1/MAESTRO crosswalks once v1 is the standard"
+            "• Thesis 1 — Scoring engines: products that compute AIVSS for an agent release and send the score to ticketing and SSVC priority queues",
+            "• Thesis 2 — Crosswalk software: one mapping across AIVSS, AIUC-1, MAESTRO, and OWASP Agentic Top 10 for multinational security buyers",
+            "• Thesis 3 — Release gates: after the v1 freeze, block a release when the AIVSS score crosses a set threshold; buyer is the release owner in US, EU, and China programs",
+            "• Pitfall — Shipping a scoring interface before the v1 freeze; method changes force rework, and buyers will not trust the number",
+            "• Do not invest — Proprietary \"AI risk scores\" that, after v1 is the published standard, still refuse a mapping to AIVSS, AIUC-1, and MAESTRO"
         ]
     },
     {
@@ -312,108 +312,108 @@ SLIDES_ZH = {
     ],
     "5": [
         "投资论点地图一览 — 2026 年 9 月 27 日",
-        "| # | 趋势 | 主要可投资表面 |",
+        "| # | 趋势 | 宜投 / 不宜投速览 |",
         "|---|---|---|",
-        "| 1 | 自我改进 / RSI | 评估 harness · 受治自我修改 · 垂直 RSI |",
-        "| 2 | 自主性 > 智力 | 自主性分数 · 长时程智能体 · Ambient 智能体 |",
-        "| 3 | MAESTRO 基准 | CI 威胁建模 · 红队 SaaS · 保障证明 |",
-        "| 4 | 智能体风险管理 | 智能体 GRC · 运行时策略 · AI 保险科技 |",
-        "| 5 | 氛围编程后遗症 | AI AppSec · 安全构建器 · 自动修复 |",
-        "| 6 | 浏览器智能体 | 协议可靠性 · 动作目录 · 计算机使用防御 |",
-        "| 7 | 企业内部优先 | 内部平台 · 后台 ROI · 受控 B2B |",
-        "| 8 | 智能体 CVE | 智能体 SBOM · MCP 网关 · 安全厂商 |",
-        "| 9 | MAESTRO v2 | 实施套件 · 信任平面 · 培训认证 |",
-        "| 10 | AIVSS v1 | 评分引擎 · 交叉映射 · 发布门禁 |"
+        "| 1 | RSI | 评测 + 受控自改 + ML 运维 RSI / 不宜投公网自称 AGI 自改 |",
+        "| 2 | 自主性 | 采购分数 + 长时程智能体 / 不宜投聊天冒充智能体 |",
+        "| 3 | MAESTRO 基准 | CI 检查 + 红队订阅 + 鉴证报告 / 不宜投 PDF 徽章 |",
+        "| 4 | 风险管理 | 智能体 GRC + 运行时放行拒绝 + 核保工作台 / 不宜投纯文档 GRC |",
+        "| 5 | Vibe coding | 应用安全 + 安全构建器 + 托管修复 / 不宜投演示优先构建器 |",
+        "| 6 | 浏览器智能体 | 协议可靠 + 动作目录 + 计算机操作控制 / 不宜投可支付发信机器人 |",
+        "| 7 | 内部优先 | 内部平台 + KPI 后台 + 受控 B2B / 不宜投过早消费级 |",
+        "| 8 | 智能体 CVE | SBOM 防火墙 + MCP 网关 + 能过采购厂商 / 不宜投无认证 MCP |",
+        "| 9 | MAESTRO v2 | 落地软件 + 信任平面 + 可写进 JD 的培训 / 不宜投改名 IAM |",
+        "| 10 | AIVSS v1 | 评分 + 对照 + 发布门禁 / 不宜投拒绝对照的专有分 |"
     ],
     "6": [
         "预测 1 — 自我改进 / RSI 智能体 — 投资论点",
-        "现有证据：一级 RSI 演示（如 AIDE²）；生产仍受评估与治理约束。",
-        "• 论点 1 — 评估基础设施：押注隐藏评估 harness、奖励作弊检测与 RSI 回归套件，卖给前沿实验室与 AI 研发团队",
-        "• 论点 2 — 受治理的自我修改：仅在策略门禁、审计日志与人类急停之后允许智能体改写工具/提示（适配美国实验室与中国备案制度）",
-        "• 论点 3 — 面向代码/ML Ops 的垂直 RSI：在固定美元预算下改进训练/推理管线的自动研究智能体 — 而非开放网络通用 RSI",
-        "• 陷阱 — 把一级 RSI 演示当成智能爆炸；点火未证实，且评估作弊常见",
-        "• 不宜投 — 无隐藏评估、无急停、无预算上限的开放网络「自我改进 AGI」应用"
+        "现有证据：AIDE² 属于一级 RSI（固定预算下研发效率高于人工基线）；生产仍需要隐藏评测与治理。",
+        "• 论点 1 — 评测基础设施：向前沿实验室和 AI 研发团队销售隐藏评测框架、奖励作弊检测和 RSI 回归测试套件",
+        "• 论点 2 — 受控自我修改：智能体只有在策略审批、审计日志和人工急停之后才能改写工具或提示词（美国实验室；中国备案加人工接管）",
+        "• 论点 3 — ML 运维的垂直 RSI：在固定美元预算内改进训练或推理管线的自动研究智能体；买方是 AI 基础设施团队",
+        "• 陷阱 — 把一级（固定预算下高于人工基线）当成二级（改进者自己变得更会改进）；二级尚未被实验证实，奖励作弊常见",
+        "• 不宜投 — 面向公网、宣传「自我改进 AGI」、且在无隐藏评测、无美元上限下自行改代码的应用"
     ],
     "7": [
         "预测 2 — 自主性 > 智力 — 投资论点",
-        "现有证据：AgencyBench、AAS；企业买方更看重工具使用与持续执行，而非原始智商。",
-        "• 论点 1 — 自主性度量层：将规划/工具/持续目标分数产品化，用于模型选型、供应商 RFP 与保险核保",
-        "• 论点 2 — 长时程任务智能体：投资能赢多数小时工具工作流与自我纠错的产品，而非聊天机器人榜单分差",
-        "• 论点 3 — Ambient / 常驻智能体：稀缺的 Ambient 自主性（Idle-Gap）将成为溢价 — 在硬范围下于用户提示之间行动的伙伴与运维智能体",
-        "• 陷阱 — 为 IQ/MMLU 包装创业公司买单，而买方已在用自主性（工具、持续、纠错）打分",
-        "• 不宜投 — 被宣传为智能体、却无耐久目标、无工具契约、无 Idle-Gap Ambient 行为的聊天机器人"
+        "现有证据：AgencyBench（数小时工具任务，ACL 2026）与 AAS（任务执行带 vs 空闲带）。",
+        "• 论点 1 — 用于采购的自主性分数：把规划、工具使用和持续执行分数卖进模型选型和供应商招标",
+        "• 论点 2 — 长时程任务智能体：能完成数小时工具流程并自我纠错的软件；买方是运营或工程团队，不是聊天榜单",
+        "• 论点 3 — 限定空闲期智能体：只在书面权限范围内、于两次用户指令之间行动的企业运维智能体（AAS 空闲带高分仍少见）",
+        "• 陷阱 — 为包装 MMLU 或智商分数的创业公司付钱，而买方已经在为工具、持续执行和纠错打分",
+        "• 不宜投 — 自称智能体、但没有跨会话目标、没有工具调用合同、也不能完成数小时任务的聊天产品"
     ],
     "8": [
         "预测 3 — MAESTRO 安全基准 — 投资论点",
-        "现有证据：MAESTRO 已进入手册/CI；共享公共排行榜仍在成熟。",
-        "• 论点 1 — CI 中的持续威胁建模：将 PR 映射到 MAESTRO 层并阻断高风险智能体合并的 TITO 类扫描器",
-        "• 论点 2 — 智能体红队即服务：面向银行、SaaS 与 AI 平台的分层攻击包 + ATLAS 对照，按周期订阅",
-        "• 论点 3 — 保障产品：将 MAESTRO 证据打包给买方、保险公司与监管的 STAR / AIUC-1 类证明",
-        "• 陷阱 — 再投一份静态 PDF 清单；买方需要的是 CI 强制执行与证据包，而非幻灯片",
-        "• 不宜投 — 无分层测试、无 ATLAS 映射、无扫描输出的「MAESTRO 合规」徽章"
+        "现有证据：MAESTRO 已进入操作手册和 CI；共享的公开排行榜仍在形成。",
+        "• 论点 1 — CI 分层检查：把合并请求映射到 MAESTRO 各层并阻断高风险智能体合并的扫描器；买方是平台安全团队",
+        "• 论点 2 — 智能体红队订阅：按层编写的周期性攻击包，附 MITRE ATLAS 对照，卖给银行、SaaS 和 AI 平台",
+        "• 论点 3 — 鉴证报告：把 MAESTRO 分层证据打包给采购和监管机构的第三方报告（买方与 CSA STAR、AIUC-1 相同）",
+        "• 陷阱 — 再为一份不能执行的静态 PDF 清单付钱；买方付钱买的是 CI 阻断和证据包",
+        "• 不宜投 — 没有分层测试、没有 ATLAS 对照、没有扫描输出的「MAESTRO 合规」徽章"
     ],
     "9": [
         "预测 4 — 智能体风险管理 — 投资论点",
-        "现有证据：AICM v1.1、NIST AI RMF、中国智能体法规、欧盟 AI 法案 — 风险是采购中心。",
-        "• 论点 1 — 面向智能体的 GRC：一次映射 NIST / AICM / 欧盟 AI 法案 / 中国备案并导出审计包的控制目录与问卷",
-        "• 论点 2 — 运行时风险引擎：对工具调用、自主等级与人类否决的策略决策点 — 按智能体动作计费",
-        "• 论点 3 — AI 保险与核保技术：让承保方为智能体部署定价的 AIUC-1 / AIVSS 评分供给",
-        "• 陷阱 — 只做美国 GRC、无法导出欧盟 AI 法案/中国备案证据 — 跨国客户会流失",
-        "• 不宜投 — 只会生成政策文档、没有运行时控制平面、不对工具调用做计价决策的产品"
+        "现有证据：AICM v1.1、NIST AI RMF、中国智能体监管（2026-07-15 起施行）、欧盟 AI 法案 — 风险与合规团队是买方。",
+        "• 论点 1 — 智能体 GRC：一套控制目录和问卷，一次映射 NIST、AICM、欧盟 AI 法案和中国备案，并导出给合规团队的审计包",
+        "• 论点 2 — 运行时风险引擎：对工具调用、自主等级和人工接管做允许或拒绝，按智能体动作收费",
+        "• 论点 3 — 保险核保工作台：把 AIUC-1 控制结果和 AIVSS 分数转成保费与除外责任的承保工具",
+        "• 陷阱 — 只能覆盖美国、导不出欧盟 AI 法案或中国备案证据的 GRC；跨国买方会流失",
+        "• 不宜投 — 只会生成制度文档、不能在工具调用上做允许或拒绝的产品"
     ],
     "10": [
-        "预测 5 — 氛围编程安全后遗症 — 投资论点",
-        "现有证据：约 91% 被审计的氛围编程应用存在漏洞；工具 CVE 与密钥扩散上升。",
-        "• 论点 1 — 面向生成代码的 AI 原生 AppSec：针对 AI 失败模式（访问控制、IDOR、硬编码密钥）调优的左移 SAST/DAST",
-        "• 论点 2 — 安全的氛围编程平台：默认认证、密钥保险库与部署前「修复或豁免」门禁的 IDE/构建器",
-        "• 论点 3 — 托管修复：自动修补 AI 引入的 CWE 类别并在合并前证明可利用性的服务/产品",
-        "• 陷阱 — 把通用 SAST 改名「AI 安全」，却不覆盖 AI 特有失败模式（访问控制/IDOR/密钥）",
-        "• 不宜投 — 优化演示速度、却交付调试 CORS、硬编码密钥、API 无认证的氛围构建器"
+        "预测 5 — Vibe Coding 安全后遗症 — 投资论点",
+        "现有证据：被审计的 vibe coding 应用约 91% 有漏洞（arXiv:2606.23130）；工具 CVE 和泄露的密钥在增加。",
+        "• 论点 1 — 生成代码的应用安全：卖给应用安全团队的合并前 SAST/DAST，针对这些应用高频出现的缺陷（访问控制失效、IDOR、硬编码密钥）",
+        "• 论点 2 — 安全的 vibe coding 平台：默认带认证、密钥库，以及部署前「修复或书面豁免」门禁的 IDE 和应用生成器",
+        "• 论点 3 — 托管修复：修补上述 CWE 类别，并在合并前附上可利用性证明的服务",
+        "• 陷阱 — 把通用 SAST 改名为「AI 安全」，却不检测访问控制失效、IDOR 或硬编码密钥",
+        "• 不宜投 — 追求演示速度，并交付调试用 CORS、硬编码密钥和无认证 API 的 vibe coding 生成器"
     ],
     "11": [
-        "预测 6 — 浏览器智能体艰难之路 — 投资论点",
-        "现有证据：AG-UI 漂移/性能问题；A2UI 成熟中；计算机使用仍易受注入影响。",
-        "• 论点 1 — 协议可靠性层：为 AG-UI / A2UI 生产栈提供序号/重同步、耐久状态与快照税控制",
-        "• 论点 2 — 受约束动作目录：仅调用已批准 UI 动作的浏览器/桌面智能体（比开放 DOM 更安全），替代企业 RPA",
-        "• 论点 3 — 计算机使用防御：注入检测、会话隔离，以及对高影响点击（支付、发信）的人类在环",
-        "• 陷阱 — 在协议重同步与注入防御成熟前，押注开放 DOM 计算机使用的全面可靠",
-        "• 不宜投 — 可支付/发信且无人审批、无会话隔离的消费级浏览器智能体"
+        "预测 6 — 浏览器智能体仍难落地 — 投资论点",
+        "现有证据：AG-UI 有状态漂移和性能问题；A2UI 处于 v0.9.1 / v1.0-rc；计算机操作仍易被提示注入。",
+        "• 论点 1 — 协议可靠性：为 AG-UI / A2UI 生产系统提供消息序号、断线重同步、持久会话状态，并限制整页界面快照的大小和发送频率",
+        "• 论点 2 — 已批准动作目录：只调用批准动作清单、不操作开放 DOM 的浏览器和桌面智能体，作为企业 RPA 替代品出售",
+        "• 论点 3 — 计算机操作控制：注入检测、会话隔离，以及支付和发邮件点击前的人工审批",
+        "• 陷阱 — 在重同步和注入检测尚未具备时，就把开放 DOM 的计算机操作当成可投产能力",
+        "• 不宜投 — 可以支付或发邮件，但没有人工审批、也没有会话隔离的消费级浏览器智能体"
     ],
     "12": [
         "预测 7 — 企业内部优先 — 投资论点",
-        "现有证据：内部运营优先；双线项目增长；开放网络 B2C 仍谨慎。",
-        "• 论点 1 — 内部智能体平台：通向 ERP/ITSM/财务的安全连接器与数据就绪管线（填补 78% 就绪缺口）",
-        "• 论点 2 — 智能体后台 ROI：具有可度量损益回收的财务/运营自动化（2026 调研中最快回收类别）",
-        "• 论点 3 — 受控外部化：以 DPIA、HITL 与租户隔离将内部智能体升级到 B2B 的产品 — 而非先做消费级病毒式智能体",
-        "• 陷阱 — 跳过数据就绪；78% 企业卡在内容/数据阻断，会杀死智能体 ROI 叙事",
-        "• 不宜投 — 在内部运营尚无可度量损益胜利前，就燃烧信任资本的开放网络 B2C 智能体"
+        "现有证据：Contentstack 2026 — 37% 以内部分为主、10% 以对外为主、53% 两者并行；已有生产项目的负责人中，78% 遇到内容或数据返工。",
+        "• 论点 1 — 内部智能体平台：连接 ERP、ITSM 和财务系统的安全连接器，加上内容与数据管线；买方是中央 IT",
+        "• 论点 2 — 后台流程智能体：面向已跟踪财务可审计 KPI 的运营负责人，做审批和路由（Contentstack：有 KPI 的内部项目中 94% 报告正收益）",
+        "• 论点 3 — 受控的 B2B 发布：只有在 DPIA、人工审批和租户隔离齐备后，才把内部智能体开放给企业客户的软件",
+        "• 陷阱 — 在内容和数据就绪之前部署智能体；同一调研里，生产项目会因此返工并推迟",
+        "• 不宜投 — 内部流程还没有财务可审计的 KPI 之前就融资的公网消费级智能体"
     ],
     "13": [
         "预测 8 — 智能体生态 CVE — 投资论点",
-        "现有证据：LangChain/MCP/编程智能体 CVE 已按传统软件严重度对待。",
-        "• 论点 1 — 智能体 SBOM + 依赖防火墙：钉死/修补 LangChain、MCP SDK、IDE 插件，并向 SecOps 流式推送 CVE",
-        "• 论点 2 — 安全 MCP 网关：Host/Origin 认证、最小权限工具范围与防沙箱逃逸，作为基础设施出售",
-        "• 论点 3 — 厂商安全品牌：以响应速度、CVSS 清晰度与签名发布赢得企业的智能体框架厂商",
-        "• 陷阱 — 认为模型厂商会吞下框架/MCP CVE 风险；爆炸半径在应用的依赖树里",
-        "• 不宜投 — 无认证的 MCP 服务器、上帝令牌工具主机、以及无 SBOM/钉死纪律的智能体栈"
+        "现有证据：LangChain CVE-2026-55443、MCP CVE-2026-59950，以及编程智能体远程代码执行，已按普通软件 CVE 评级。",
+        "• 论点 1 — 智能体 SBOM 与依赖防火墙：锁定并修补 LangChain、MCP SDK 和 IDE 插件版本，并把 CVE 推送给安全运营团队",
+        "• 论点 2 — 安全 MCP 网关：Host 与 Origin 认证、最小权限的工具范围、沙箱逃逸防护，作为基础设施出售",
+        "• 论点 3 — 能过采购的框架厂商：公开修补时长、CVSS 和签名发布包；买方是企业安全部门",
+        "• 陷阱 — 以为模型厂商会承担框架和 MCP 的 CVE；有漏洞的代码在应用依赖库里",
+        "• 不宜投 — 无认证的 MCP 服务器、用一把令牌调用全部工具的工具主机，以及没有 SBOM 或版本锁定的智能体栈"
     ],
     "14": [
         "预测 9 — MAESTRO v2 落地采用 — 投资论点",
         "现有证据：CSA MAESTRO v2 已于 2026-06-22 发布（10 层 + 信任控制平面）。",
-        "• 论点 1 — MAESTRO 实施套件：以咨询 + 软件形式出售的模板、L1–L10 威胁 ID 与 SSRM 责任矩阵",
-        "• 论点 2 — 信任控制平面创业公司：对齐 v2 域的身份、监控与安全横向控制平面",
-        "• 论点 3 — 培训与认证：使 MAESTRO 成为智能体安全工程师默认招聘技能的课程/认证路径",
-        "• 陷阱 — 只有咨询式 MAESTRO 幻灯、从不把 L1–L10 编进工具 — 无软件的框架会停滞",
-        "• 不宜投 — 只是改名 IAM/可观测性、却无智能体身份与中断路径的「信任平面」空壳"
+        "• 论点 1 — 落地软件：分层模板、L1–L10 威胁编号，以及各层责任人矩阵，卖给安全工程团队",
+        "• 论点 2 — 信任控制平面产品：对齐 v2 域的智能体身份、动作监控和中断路径；买方是智能体平台负责人",
+        "• 论点 3 — 培训与认证：安全招聘负责人可以写进智能体安全岗位要求的付费课程",
+        "• 陷阱 — 只办研讨班，从不把 L1–L10 检查放进客户能运行的工具",
+        "• 不宜投 — 把身份与访问管理或可观测性改名为「信任平面」，却没有智能体身份和中断路径的产品"
     ],
     "15": [
         "预测 10 — OWASP AIVSS v1 — 投资论点",
-        "现有证据：v0.8 已上线；v1.0 公开评审至 2026-10-01；计划年底前冻结。",
-        "• 论点 1 — 评分引擎：为智能体发布计算 AIVSS 并馈入工单 / SSVC 优先级的产品",
-        "• 论点 2 — 交叉映射平台：覆盖 AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP 智能体 Top 10 的单一风险图，服务跨国买方",
-        "• 论点 3 — 合规加速：一旦 v1 冻结，将 AIVSS 分数作为发布门禁与保险输入的美欧中项目",
-        "• 陷阱 — 在 v1 冻结前就上线评分 UX；方法变更会迫使返工并损害买方信任",
-        "• 不宜投 — 在 v1 成为标准后仍拒绝 AIVSS/AIUC-1/MAESTRO 对照的专有「AI 风险分」"
+        "现有证据：v0.8 已上线；v1.0 公开评审至 2026-10-01；目标在年底前冻结。",
+        "• 论点 1 — 评分引擎：为智能体发布计算 AIVSS，并把分数送入工单和 SSVC 处置队列的产品",
+        "• 论点 2 — 对照软件：为跨国安全买方提供 AIVSS、AIUC-1、MAESTRO 与 OWASP 智能体 Top 10 的同一套映射",
+        "• 论点 3 — 发布门禁：v1 冻结后，AIVSS 分数超过设定阈值就阻断发布；买方是美、欧、中项目的发布负责人",
+        "• 陷阱 — 在 v1 冻结前交付评分界面；方法一改就要返工，买方不会采信这个分数",
+        "• 不宜投 — v1 成为公开标准后，仍拒绝对照 AIVSS、AIUC-1 和 MAESTRO 的专有「AI 风险分」"
     ],
     "16": [
         "区域资本视角 — 美国 · 中国 · 欧盟",
