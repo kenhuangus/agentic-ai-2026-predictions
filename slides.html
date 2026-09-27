@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F0EEE6;
+      --surface: #FAF9F5;
+      --surface-alt: #F5E6DF;
+      --ink: #141413;
+      --ink-muted: #6B6B63;
+      --rule: #E3E0D6;
+      --accent: #D97757;
+      --accent-dk: #BD5D3A;
+      --accent-sf: #F5E6DF;
+      --code-bg: #1A1A18;
+      --code-rule: #333330;
+      --font-display: ui-serif, Georgia, "Times New Roman", serif;
+      --font-body: -apple-system, "Segoe UI", Inter, system-ui, sans-serif;
+      --font-code: ui-monospace, "JetBrains Mono", Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--ink);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      height: 46px;
+      flex: 0 0 46px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.0rem;
+      z-index: 50;
+      gap: 0.75rem;
+      overflow-x: auto;
+    }
+    .header-left { display: flex; align-items: center; gap: 0.7rem; flex: 0 0 auto; }
+    .brand-logo {
+      width: 30px; height: 30px;
+      background: var(--accent-sf); color: var(--ink); border: 1px solid var(--rule);
+      border-radius: 8px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+    .brand-title { font-weight: 650; font-size: 0.90rem; white-space: nowrap; }
+
+    .lang-switch { display: flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; flex: 0 0 auto; }
+    .lang-btn { border: none; border-radius: 0; min-width: 3.1rem; }
+    .lang-btn.is-active { background: var(--accent); border-color: var(--accent); }
+    body.lang-zh, body.lang-zh .slide-title, body.lang-zh .slide-body, body.lang-zh .slide-select, body.lang-zh .brand-title {
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", var(--font-body);
+    }
+    body.lang-zh .slide-title { letter-spacing: 0; }
+
+    .controls { display: flex; align-items: center; gap: 0.40rem; flex: 0 0 auto; }
+    .btn {
+      background: var(--surface); border: 1px solid var(--rule); color: var(--ink);
+      padding: 0.35rem 0.65rem; border-radius: 8px; font-weight: 600; font-size: 0.80rem;
+      cursor: pointer; transition: background-color 0.16s, border-color 0.16s; text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn:hover { background: var(--accent-sf); border-color: var(--accent); }
+    .btn:focus-visible, .slide-select:focus-visible, .goto-input:focus-visible { outline: 2px solid var(--accent-dk); outline-offset: 2px; }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--ink); font-weight: 700; }
+    .btn-primary:hover { background: var(--accent-sf); border-color: var(--accent-dk); color: var(--ink); }
+    
+    .goto-group {
+      display: flex;
+      align-items: center;
+      gap: 0.22rem;
+      background: var(--bg);
+      padding: 0.12rem 0.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+    }
+    .goto-input {
+      width: 48px;
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--rule);
+      padding: 0.25rem 0.35rem;
+      border-radius: 6px;
+      font-family: var(--font-code);
+      font-size: 0.80rem;
+      font-weight: 750;
+      text-align: center;
+      -moz-appearance: textfield;
+    }
+    .goto-input::-webkit-outer-spin-button,
+    .goto-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .btn-goto {
+      padding: 0.26rem 0.50rem;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+
+    select.slide-select {
+      background: var(--surface); color: var(--ink); border: 1px solid var(--rule);
+      padding: 0.35rem 0.55rem; border-radius: 8px; font-family: var(--font-body);
+      font-size: 0.80rem; font-weight: 600;
+      max-width: 290px;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-viewport {
+      width: 100%; height: 100%;
+      display: flex; justify-content: center; align-items: center;
+      padding: clamp(0.30rem, 0.8vw, 0.70rem);
+    }
+    .slide-card {
+      width: 100%; max-width: 1380px; height: 100%;
+      background: var(--surface); border: 1px solid var(--rule);
+      border-radius: 12px; padding: clamp(0.80rem, 1.5vw, 1.40rem); display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+    }
+    .slide-header {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 0.8rem; margin-bottom: 0.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.35rem;
+      flex: 0 0 auto;
+    }
+    .slide-title-wrap { min-width: 0; }
+    .slide-title {
+      font-family: var(--font-display); font-size: clamp(1.40rem, 2.2vw, 1.95rem);
+      font-weight: 700; line-height: 1.15; letter-spacing: -0.015em; color: var(--ink);
+    }
+    .slide-header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.60rem;
+      flex: 0 0 auto;
+    }
+    .packt-logo-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.18rem 0.50rem;
+      background: #FAF8F2;
+      border: 1.2px solid var(--rule);
+      border-radius: 6px;
+      transition: all 0.16s ease-in-out;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .packt-logo-link:hover {
+      background: var(--accent-sf);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .packt-title-logo {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+    .slide-num-badge {
+      background: var(--accent-sf); color: var(--ink); border: 1px solid var(--rule);
+      padding: 0.22rem 0.60rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 750; white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .slide-body {
+      --fit-scale: 1;
+      --slide-body-base-size: 1.30rem;
+      flex: 1; min-height: 0; overflow-y: auto; padding-right: 0.20rem;
+      font-size: calc(var(--slide-body-base-size) * var(--fit-scale));
+      line-height: 1.50; color: var(--ink);
+    }
+
+    code {
+      font-family: var(--font-code);
+      background: var(--accent-sf);
+      color: var(--accent-dk);
+      padding: 0.08rem 0.32rem;
+      border-radius: 4px;
+      font-size: 0.90em;
+      white-space: nowrap;
+      border: 1px solid var(--rule);
+    }
+    pre code, .tree-block code, .code-editor-body code {
+      white-space: pre !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      color: inherit !important;
+    }
+    .slide-content-wrapper {
+      width: 100%;
+      display: block;
+    }
+    .slide-body > svg, .slide-svg {
+      display: block; width: 100% !important; height: auto; max-width: 100%;
+      margin: 0.35rem 0 0.65rem 0;
+    }
+
+    /* Comparison Table Styling */
+    .slide-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.35rem 0 0.60rem 0;
+      font-size: 0.88rem;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .slide-table th {
+      background: var(--accent-sf);
+      color: var(--ink);
+      font-weight: 750;
+      text-align: left;
+      padding: 0.45rem 0.70rem;
+      border-bottom: 1.5px solid var(--rule);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+    }
+    .slide-table td {
+      padding: 0.40rem 0.70rem;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink);
+      line-height: 1.38;
+      vertical-align: middle;
+    }
+    .slide-table tr:last-child td {
+      border-bottom: none;
+    }
+    .slide-table tr:nth-child(even) td {
+      background: rgba(245, 230, 223, 0.25);
+    }
+
+    /* Enhanced Code Slide Layout with Line-Level Highlights */
+    .code-slide-container {
+      display: grid;
+      grid-template-columns: minmax(0, 1.32fr) minmax(0, 1.08fr);
+      gap: 1.05rem;
+      height: 100%;
+      align-items: start;
+    }
+    @media (max-width: 1020px) {
+      .code-slide-container {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+
+    .code-editor-window {
+      background: var(--code-bg);
+      border: 1px solid var(--code-rule);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+      max-height: calc(100vh - 135px);
+    }
+    .code-editor-header {
+      background: #242320;
+      border-bottom: 1px solid var(--code-rule);
+      padding: 0.40rem 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .code-dots {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    .code-dot {
+      width: 9px; height: 9px; border-radius: 50%;
+    }
+    .dot-red { background: #E06C75; }
+    .dot-yellow { background: #E5C07B; }
+    .dot-green { background: #98C379; }
+    .code-file-tag {
+      font-family: var(--font-code);
+      font-size: 0.78rem;
+      color: #A0A09A;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .code-lang-tag {
+      background: #333330;
+      color: #D97757;
+      font-family: var(--font-code);
+      font-size: 0.70rem;
+      padding: 0.12rem 0.45rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .code-block {
+      background: var(--code-bg);
+      color: #FAF9F5;
+      font-family: var(--font-code);
+      font-size: 0.86rem;
+      line-height: 1.42;
+      padding: 0.45rem 0;
+      margin: 0;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+
+    .code-line {
+      display: flex;
+      align-items: baseline;
+      padding: 0.06rem 0.55rem;
+      transition: background-color 0.15s;
+    }
+    .code-line:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .code-line-hl {
+      background: rgba(217, 119, 87, 0.22);
+      border-left: 3.5px solid var(--accent);
+      padding-left: calc(0.55rem - 3.5px);
+    }
+    .line-num {
+      color: #5C5C56;
+      width: 24px;
+      flex: 0 0 24px;
+      text-align: right;
+      margin-right: 8px;
+      font-size: 0.78rem;
+      user-select: none;
+    }
+    .code-line-hl .line-num {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .key-badge {
+      background: var(--accent);
+      color: #FAF9F5;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 0.05rem 0.35rem;
+      border-radius: 3px;
+      margin-right: 8px;
+      letter-spacing: 0.03em;
+      user-select: none;
+      flex: 0 0 auto;
+    }
+    .line-code {
+      flex: 1;
+      white-space: pre;
+    }
+
+    /* Syntax Highlighting Colors */
+    .tok-kw { color: #E58A6D; font-weight: 600; }
+    .tok-str { color: #89CA78; }
+    .tok-com { color: #7F7F78; font-style: italic; }
+    .tok-dec { color: #E5C07B; font-weight: 600; }
+    .tok-typ { color: #61AFEF; font-weight: 600; }
+    .tok-fn { color: #61AFEF; font-weight: 600; }
+    .tok-cls { color: #E5C07B; font-weight: 700; }
+
+    /* Code Slide Dedicated Concepts Column */
+    .code-concepts-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.60rem;
+      overflow-y: auto;
+      max-height: calc(100vh - 135px);
+      padding-right: 0.20rem;
+    }
+    .code-concepts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .code-concept-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.65rem 0.90rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .concept-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.25rem;
+      flex-wrap: wrap;
+    }
+    .concept-tag {
+      background: var(--accent);
+      color: #FAF9F5;
+      font-size: 0.70rem;
+      font-weight: 750;
+      padding: 0.10rem 0.42rem;
+      border-radius: 4px;
+      font-family: var(--font-code);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .concept-name {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .concept-card-text {
+      font-size: 0.92rem;
+      color: var(--ink);
+      line-height: 1.42;
+    }
+
+    .invariant-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid var(--accent-dk);
+      border-radius: 8px;
+      padding: 0.65rem 0.90rem;
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.40;
+    }
+    .invariant-title {
+      font-family: var(--font-display);
+      font-size: 1.00rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.22rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Dedicated Skill Slide Layout */
+    .skill-slide-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.0fr) minmax(0, 1.15fr);
+      gap: 1.25rem;
+      height: 100%;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .skill-slide-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .skill-meta-card {
+      background: var(--surface);
+      border: 1.5px solid var(--accent);
+      border-radius: 10px;
+      padding: 1.10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.70rem;
+      box-shadow: 0 4px 14px rgba(217, 119, 87, 0.08);
+    }
+    .skill-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-sf);
+      color: var(--accent-dk);
+      border: 1px solid var(--accent);
+      font-family: var(--font-code);
+      font-weight: 800;
+      font-size: 0.84rem;
+      padding: 0.24rem 0.60rem;
+      border-radius: 6px;
+      width: fit-content;
+    }
+    .skill-name-heading {
+      font-family: var(--font-code);
+      font-size: 1.30rem;
+      font-weight: 800;
+      color: var(--ink);
+      word-break: break-all;
+    }
+    .skill-desc-box {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid var(--accent);
+      border-radius: 6px;
+      padding: 0.70rem 0.90rem;
+      font-size: 0.96rem;
+      line-height: 1.46;
+      color: var(--ink);
+    }
+    .skill-tools-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .skill-links-box {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      margin-top: 0.3rem;
+      line-height: 1.46;
+      display: flex;
+      flex-direction: column;
+      gap: 0.38rem;
+      border-top: 1px dashed var(--rule);
+      padding-top: 0.55rem;
+    }
+    .skill-details-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.70rem;
+      overflow-y: auto;
+      max-height: calc(100vh - 135px);
+    }
+    .skill-detail-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid var(--accent-dk);
+      border-radius: 8px;
+      padding: 0.75rem 1.00rem;
+    }
+    .skill-detail-title {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 750;
+      color: var(--ink);
+      margin-bottom: 0.30rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .skill-detail-body {
+      font-size: 0.94rem;
+      color: var(--ink);
+      line-height: 1.44;
+    }
+
+    /* Monospace Tree Display for Structure Slides */
+    .tree-block {
+      background: var(--code-bg);
+      color: #FAF9F5;
+      font-family: var(--font-code);
+      font-size: 0.86rem;
+      line-height: 1.44;
+      padding: 0.80rem 1.05rem;
+      border-radius: 8px;
+      border: 1px solid var(--code-rule);
+      margin: 0.45rem 0;
+      overflow-x: auto;
+    }
+
+    /* Visual Hierarchy: Parent vs Sub Bullets */
+    .main-bullets { list-style-type: none; padding-left: 0; margin-top: 0.30rem; }
+    .main-bullets.dense-columns {
+      column-count: 2; column-gap: clamp(1.2rem, 3vw, 2.5rem); column-fill: balance;
+    }
+    .bullet-group, .primary-bullet, .sub-bullets, .sub-bullet {
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    .primary-bullet {
+      font-family: var(--font-display); font-size: 1.04em; font-weight: 650; color: var(--ink);
+      margin-top: 0.35em; margin-bottom: 0.18em; position: relative; padding-left: 1.25em; line-height: 1.46;
+    }
+    .primary-bullet::before {
+      content: "◆"; color: var(--accent); font-size: 0.72em; line-height: 1; position: absolute; left: 0; top: 0.18em;
+    }
+    .sub-bullets {
+      list-style-type: none; padding-left: 1.25em; border-left: 2px solid var(--rule);
+      margin-left: 0.40em; margin-top: 0.20em; margin-bottom: 0.40em; display: flex; flex-direction: column; gap: 0.22em;
+    }
+    .sub-bullet {
+      font-size: 0.92em; color: var(--ink); margin-bottom: 0.15em; position: relative; padding-left: 1.15em;
+      line-height: 1.42;
+    }
+    .sub-bullet::before {
+      content: "›"; position: absolute; left: 0; top: -0.05em; color: var(--accent-dk); font-weight: 900; font-size: 1.25em; line-height: 1;
+    }
+    .slide-lead-header {
+      font-family: var(--font-display);
+      font-size: 1.15em;
+      font-weight: 750;
+      color: var(--accent-dk);
+      margin-top: 0.15em;
+      margin-bottom: 0.40em;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    /* Capstone Slide 83 Two-Column Grid */
+    .capstone-layout-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 0.90rem;
+      height: 100%;
+      align-items: stretch;
+    }
+    @media (max-width: 1040px) {
+      .capstone-layout-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .capstone-info-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .capstone-info-body {
+      padding: 0.60rem 0.80rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.50rem;
+      font-size: 0.84rem;
+      background: var(--surface);
+      flex: 1;
+    }
+    .capstone-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+    }
+    .capstone-section-title {
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+      font-weight: 750;
+      color: var(--accent-dk);
+    }
+    .capstone-cmd-box {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.35rem 0.55rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+      font-size: 0.77rem;
+    }
+    .capstone-cmd-box code {
+      font-size: 0.78rem;
+      padding: 0.08rem 0.28rem;
+    }
+    .cmd-note {
+      color: var(--ink-muted);
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
+    }
+    .capstone-providers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+      font-size: 0.75rem;
+    }
+    .provider-pill {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: 0.22rem 0.40rem;
+      line-height: 1.25;
+    }
+    .capstone-text-desc {
+      font-size: 0.78rem;
+      line-height: 1.38;
+      color: var(--ink);
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.35rem 0.55rem;
+    }
+
+    /* Slide 3 Course Master Map: Two-Column Part 1 (Left) & Part 2 (Right) */
+    .course-map-slide-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .course-map-columns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.10rem;
+      flex: 1;
+      align-items: stretch;
+    }
+    .course-map-part-col {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 8px;
+      padding: 0.85rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .course-map-part-header {
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--accent-dk);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.40rem;
+      border-bottom: 1.5px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .course-map-module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 1.02rem;
+      color: var(--ink);
+    }
+    .course-map-module-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.55rem;
+      line-height: 1.40;
+    }
+    .course-map-module-list .mod-bullet {
+      color: var(--accent);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    /* Reference Slide with Two-Table Layout (Links Table + Screenshot Table) */
+    .reference-tables-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.28fr) minmax(0, 1.02fr);
+      gap: 1.10rem;
+      height: 100%;
+      align-items: start;
+    }
+    @media (max-width: 1040px) {
+      .reference-tables-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .ref-table-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .ref-table-card-header {
+      background: var(--accent-sf);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 750;
+      font-size: 1.02rem;
+      padding: 0.50rem 0.85rem;
+      border-bottom: 1.5px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 0.40rem;
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 !important;
+      background: var(--surface);
+    }
+    .ref-table th {
+      background: #F0EEE6;
+      color: var(--ink);
+      font-weight: 750;
+      text-align: left;
+      padding: 0.45rem 0.70rem;
+      border-bottom: 1.5px solid var(--rule);
+      font-size: 0.88rem;
+    }
+    .ref-table td {
+      padding: 0.45rem 0.70rem;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.86rem;
+      line-height: 1.38;
+      vertical-align: middle;
+    }
+    .ref-table tr:last-child td {
+      border-bottom: none;
+    }
+    .ref-table tr:nth-child(even) td {
+      background: rgba(245, 230, 223, 0.22);
+    }
+    .book-screenshot-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 0.45rem;
+      text-decoration: none;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+      max-height: calc(100vh - 170px);
+    }
+    .book-screenshot-link:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(217, 119, 87, 0.18);
+    }
+    .book-screenshot-img {
+      max-width: 100%;
+      max-height: calc(100vh - 220px);
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--rule);
+      object-fit: contain;
+    }
+    .book-screenshot-badge {
+      margin-top: 0.40rem;
+      font-size: 0.80rem;
+      font-weight: 750;
+      color: var(--accent-dk);
+      display: flex;
+      align-items: center;
+      gap: 0.30rem;
+    }
+
+    /* Instructor Slide with 8-Book Gallery Grid */
+    .instructor-slide-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.25fr);
+      gap: 1.25rem;
+      height: 100%;
+      align-items: start;
+    }
+    @media (max-width: 1040px) {
+      .instructor-slide-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .instructor-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.60rem;
+      min-width: 0;
+    }
+    .instructor-info-col .main-bullets,
+    .instructor-info-col .main-bullets.dense-columns,
+    .instructor-info-col .bullet-list {
+      columns: 1 !important;
+      column-gap: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.98rem;
+    }
+    .instructor-info-col .primary-bullet {
+      line-height: 1.50;
+      margin-bottom: 0.25rem;
+    }
+    .author-books-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .author-books-header {
+      background: var(--accent-sf);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 750;
+      font-size: 0.88rem;
+      padding: 0.45rem 0.80rem;
+      border-bottom: 1.5px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.50rem;
+      white-space: nowrap;
+    }
+    .author-books-header a {
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 750;
+      color: var(--accent-dk);
+      text-decoration: underline;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Slide 1 Hero & Instructor Cover Layout */
+    .slide-1-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.85rem;
+    }
+    .slide-1-hero-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-left: 5px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.10rem 1.50rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .slide-1-hero-tagline {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-dk);
+      line-height: 1.35;
+    }
+    .slide-1-hero-desc {
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    .slide-1-instructor-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 12px;
+      padding: 1.15rem 1.50rem;
+      display: flex;
+      align-items: center;
+      gap: 1.50rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .slide-1-avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .slide-1-avatar-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(217, 119, 87, 0.25);
+      background: var(--surface-alt);
+    }
+    .slide-1-instructor-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+    .slide-1-instructor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--accent-sf);
+      color: var(--accent-dk);
+      border: 1px solid var(--accent);
+      font-family: var(--font-code);
+      font-size: 0.75rem;
+      font-weight: 750;
+      padding: 0.18rem 0.55rem;
+      border-radius: 6px;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .slide-1-instructor-name {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+    .slide-1-instructor-titles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+    }
+    .slide-1-title-item {
+      display: flex;
+      align-items: center;
+      gap: 0.50rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .slide-1-title-item .title-icon {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .slide-1-org-link {
+      color: var(--accent-dk);
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease-in-out;
+    }
+    .slide-1-org-link:hover {
+      color: var(--accent);
+    }
+    .slide-1-social-links {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-top: 0.35rem;
+      flex-wrap: wrap;
+    }
+    .slide-1-social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.40rem;
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.88rem;
+      color: var(--ink);
+    }
+    .slide-1-social-pill .social-icon {
+      font-size: 0.95rem;
+    }
+    .slide-1-social-pill .social-label {
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+    .slide-1-social-link {
+      color: var(--accent-dk);
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 2.5px;
+      transition: color 0.15s ease-in-out;
+    }
+    .slide-1-social-link:hover {
+      color: var(--accent);
+    }
+    .slide-1-social-link .ext-arrow {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.85em;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .slide-1-pillars-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+    @media (max-width: 900px) {
+      .slide-1-pillars-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .slide-1-instructor-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .slide-1-instructor-badge {
+        margin: 0 auto;
+      }
+      .slide-1-title-item {
+        justify-content: center;
+      }
+    }
+    .slide-1-pillar-pill {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .slide-1-pillar-title {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 750;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .slide-1-pillar-desc {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      line-height: 1.30;
+    }
+    .books-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.40rem;
+      padding: 0.50rem;
+      background: #FAF8F2;
+    }
+    .book-item-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.25rem 0.20rem;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.16s, border-color 0.16s, box-shadow 0.16s;
+    }
+    .book-item-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(217, 119, 87, 0.18);
+    }
+    .book-cover-img {
+      width: 100%;
+      height: clamp(80px, 11.5vh, 115px);
+      object-fit: contain;
+      border-radius: 4px;
+      border: 0.5px solid var(--rule);
+    }
+    .book-item-title {
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.15;
+      margin-top: 0.20rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      display: block;
+    }
+    .book-publisher-tag {
+      font-size: 0.48rem;
+      font-weight: 800;
+      color: var(--accent-dk);
+      background: var(--accent-sf);
+      padding: 0.05rem 0.20rem;
+      border-radius: 3px;
+      margin-top: 0.12rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      line-height: 1.1;
+    }
+
+    .slide-body a {
+      color: var(--accent-dk);
+      font-weight: 650;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .slide-body a:hover { color: var(--accent); }
+
+    code {
+      background: var(--accent-sf); border: 1px solid var(--rule);
+      color: var(--ink); padding: 0.1rem 0.35rem; border-radius: 5px;
+      font-family: var(--font-code); font-size: 0.88em; font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    /* Slide 3: Course Core Thesis (Traditional SE vs Harness Engineering) */
+    .thesis-slide-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .thesis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      flex: 1;
+      align-items: stretch;
+    }
+    @media (max-width: 1040px) {
+      .thesis-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .thesis-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 9px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .thesis-card.trad-card {
+      border-top: 3.5px solid #2563eb;
+    }
+    .thesis-card.harn-card {
+      border-top: 3.5px solid #059669;
+    }
+    .thesis-card-header {
+      padding: 0.40rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      border-bottom: 1.5px solid var(--rule);
+    }
+    .thesis-card-header.trad-header {
+      background: #F0F5FE;
+    }
+    .thesis-card-header.harn-header {
+      background: #E8F8F2;
+    }
+    .thesis-icon {
+      font-size: 1.15rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .thesis-title {
+      font-family: var(--font-display);
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.20;
+    }
+    .thesis-subtitle {
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      font-weight: 500;
+      margin-top: 0.05rem;
+    }
+    .thesis-badge {
+      margin-left: auto;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 0.10rem 0.38rem;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .thesis-badge.trad-badge {
+      background: #DBEAFE;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+    .thesis-badge.harn-badge {
+      background: #D1FAE5;
+      color: #065F46;
+      border: 1px solid #a7f3d0;
+    }
+    .thesis-card-body {
+      padding: 0.45rem 0.70rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+      font-size: 0.82rem;
+      line-height: 1.38;
+      color: var(--ink);
+      background: var(--surface);
+    }
+    .thesis-point {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: 0.32rem 0.55rem;
+      line-height: 1.34;
+      font-size: 0.79rem;
+    }
+    .trad-card .thesis-point {
+      border-left: 3px solid #3b82f6;
+    }
+    .harn-card .thesis-point {
+      border-left: 3px solid #10b981;
+    }
+
+    /* Slide 6: Universal Environment Setup & Command Blocks with Copy Buttons */
+    .setup-slide-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.54fr);
+      gap: 1.00rem;
+      height: auto;
+      align-items: start;
+    }
+    @media (max-width: 1040px) {
+      .setup-slide-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+    .setup-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.50rem;
+      min-height: 0;
+    }
+    .failure-mode-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .failure-mode-header {
+      background: var(--accent-sf);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 750;
+      font-size: 1.08em;
+      padding: 0.50em 0.80em;
+      border-bottom: 1.5px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 0.40rem;
+    }
+    .failure-mode-body {
+      padding: 0.70em 0.85em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55em;
+      font-size: 0.98em;
+      color: var(--ink);
+      flex: 1;
+    }
+    .failure-hazard-box {
+      background: #FFF5F2;
+      border: 1px solid #F5C6BA;
+      border-left: 3.5px solid #E06C75;
+      border-radius: 6px;
+      padding: 0.40rem 0.60rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+    }
+    .hazard-title {
+      font-weight: 750;
+      color: #BD5D3A;
+      font-size: 0.82rem;
+    }
+    .hazard-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.18rem;
+      font-size: 0.80rem;
+    }
+    .hazard-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      line-height: 1.32;
+    }
+    .hazard-list li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+      font-size: 0.72rem;
+      top: 0.05rem;
+    }
+    .defense-box {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid #059669;
+      border-radius: 6px;
+      padding: 0.40rem 0.60rem;
+      font-size: 0.80rem;
+      line-height: 1.38;
+    }
+    .defense-title {
+      font-weight: 750;
+      color: #059669;
+      margin-bottom: 0.18rem;
+      font-size: 0.82rem;
+    }
+    .setup-links-box {
+      font-size: 0.96em;
+      color: var(--ink-muted);
+      line-height: 1.42;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55em;
+      border-top: none;
+      padding-top: 0;
+    }
+    .setup-links-box a {
+      color: var(--accent-dk);
+      font-weight: 650;
+      text-decoration: underline;
+      word-break: normal;
+      overflow-wrap: break-word;
+      hyphens: none;
+    }
+    .setup-links-box a:hover {
+      color: var(--accent);
+    }
+    .setup-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .setup-steps-container {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      padding: 0.70em 0.85em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.50em;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .setup-steps-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      border-bottom: 1.5px solid var(--rule);
+      padding-bottom: 0.38em;
+      flex-wrap: wrap;
+    }
+    .setup-steps-header span:first-child {
+      font-family: var(--font-display);
+      font-weight: 750;
+      font-size: 1.10em;
+      color: var(--accent-dk);
+    }
+    .setup-steps-sub {
+      font-size: 0.84em;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+    .cmd-step-card {
+      background: #FAF8F2;
+      border: 1px solid var(--rule);
+      border-left: 3.5px solid var(--accent);
+      border-radius: 7px;
+      padding: 0.42em 0.62em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.24em;
+    }
+    .cmd-step-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .cmd-step-title {
+      font-family: var(--font-display);
+      font-size: 1.02em;
+      font-weight: 750;
+      color: var(--ink);
+    }
+    .cmd-step-badge {
+      font-size: 0.78em;
+      font-weight: 750;
+      color: var(--accent-dk);
+      background: var(--accent-sf);
+      border: 1px solid var(--rule);
+      padding: 0.08em 0.34em;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .cmd-step-desc {
+      font-size: 0.90em;
+      color: var(--ink-muted);
+      line-height: 1.34;
+    }
+    .cmd-code-row {
+      display: flex;
+      align-items: center;
+      background: var(--code-bg);
+      border: 1px solid var(--code-rule);
+      border-radius: 5px;
+      padding: 0.32em 0.55em;
+      gap: 0.45rem;
+      position: relative;
+    }
+    .cmd-code-prompt {
+      color: #D97757;
+      font-family: var(--font-code);
+      font-size: 0.84em;
+      font-weight: 750;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    .cmd-code-text {
+      flex: 1;
+      font-family: var(--font-code) !important;
+      font-size: 0.84em !important;
+      color: #FAF9F5 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      white-space: nowrap !important;
+      word-break: normal;
+      overflow-x: auto;
+      line-height: 1.30;
+    }
+    .cmd-copy-btn {
+      background: #2D2C28;
+      color: #FAF9F5;
+      border: 1px solid #444440;
+      border-radius: 4px;
+      padding: 0.22em 0.50em;
+      font-family: var(--font-code);
+      font-size: 0.80em;
+      font-weight: 650;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.22rem;
+      transition: all 0.16s ease;
+      user-select: none;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+    .cmd-copy-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FAF9F5;
+      transform: translateY(-1px);
+    }
+    .cmd-copy-btn:active {
+      transform: translateY(0);
+    }
+    .cmd-copy-btn.copied {
+      background: #2e7d32 !important;
+      border-color: #4caf50 !important;
+      color: #ffffff !important;
+    }
+    .copy-icon {
+      font-size: 0.84em;
+      line-height: 1;
+    }
+    .os-cmd-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.22em;
+      margin-top: 0.12em;
+    }
+    .os-cmd-label {
+      font-size: 0.84em;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .memory-slide-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      width: 100%;
+      height: 100%;
+    }
+    .memory-grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      flex: 1;
+      min-height: 0;
+    }
+    .memory-card {
+      background: var(--surface);
+      border: 1.5px solid var(--rule);
+      border-radius: 9px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .memory-card-header {
+      padding: 0.40rem 0.70rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+    }
+    .memory-card-body {
+      padding: 0.55rem 0.70rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+    .memory-comp-table th, .memory-comp-table td {
+      border: 1px solid var(--rule);
+      padding: 0.25rem 0.45rem;
+      font-size: 0.76rem;
+      line-height: 1.30;
+    }
+
+    .grid-viewport {
+      width: 100%; height: 100%; overflow-y: auto; padding: clamp(1rem, 2.5vw, 1.8rem);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1rem;
+    }
+    .grid-slide-card {
+      background: var(--surface); border: 1px solid var(--rule);
+      border-radius: 10px; padding: 1.15rem; height: 260px; display: flex; flex-direction: column;
+      cursor: pointer; transition: border-color 0.16s, background-color 0.16s;
+    }
+    .grid-slide-card:hover { background: var(--accent-sf); border-color: var(--accent); }
+    .grid-slide-title {
+      font-family: var(--font-display); font-size: 1.1rem; line-height: 1.15;
+      font-weight: 650; margin-bottom: 0.45rem; color: var(--ink);
+    }
+    .grid-slide-body { flex: 1; overflow: hidden; font-size: 0.8rem; line-height: 1.45; color: var(--ink-muted); }
+
+    .progress-bar { height: 3px; background: var(--rule); width: 100%; }
+    .progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; }
+
+    @media (max-width: 980px) {
+      header { padding: 0 0.6rem; }
+      .brand-title { display: none; }
+      select.slide-select { max-width: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="assets/images/ken-head-shot.png" alt="Ken Huang" style="width:28px; height:28px; border-radius:6px; object-fit:cover; display:inline-block;" />
+      <div id="brand-title" class="brand-title">Agentic AI 2026 Predictions</div>
+    </div>
+    <div class="controls">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="btn-lang-en" class="btn lang-btn is-active" onclick="setSlideLang('en')">EN</button>
+        <button type="button" id="btn-lang-zh" class="btn lang-btn" onclick="setSlideLang('zh')">中文</button>
+      </div>
+      <a id="btn-home" href="index.html" class="btn">🏠 Home Site</a>
+      <button id="btn-grid" class="btn" onclick="toggleMode()"><span id="mode-icon">📜</span> <span id="mode-text">Grid View</span></button>
+      <button id="btn-prev" class="btn" onclick="prevSlide()">❮ Prev</button>
+      <select id="slide-select" class="slide-select" onchange="goToSlide(this.value)"></select>
+      <div class="goto-group">
+        <input type="number" id="goto-input" min="1" max="47" placeholder="#" class="goto-input" title="Enter slide number (1-47)" onkeydown="if(event.key==='Enter') jumpToEnteredSlide()">
+        <button id="btn-goto" class="btn btn-goto" onclick="jumpToEnteredSlide()" title="Jump to entered slide number">Go ➔</button>
+      </div>
+      <button id="btn-next" class="btn" onclick="nextSlide()">Next ❯</button>
+      <button id="btn-fullscreen" class="btn btn-primary" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+    </div>
+  </header>
+
+  <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+
+  <main>
+    <div id="presentation-mode" class="slide-viewport">
+      <div class="slide-card">
+        <div class="slide-header">
+          <div class="slide-title-wrap">
+            <div id="slide-title" class="slide-title">Slide Title</div>
+          </div>
+          <div class="slide-header-right">
+            <div id="slide-packt-badge" style="display:none;">
+              <a href="https://www.packtpub.com/" target="_blank" rel="noopener noreferrer" class="packt-logo-link" title="Packt Publishing">
+                <img src="assets/images/packt_logo.svg" alt="Packt Publishing" class="packt-title-logo" />
+              </a>
+            </div>
+            <div id="slide-num-badge" class="slide-num-badge">Slide 1 / 47</div>
+          </div>
+        </div>
+        <div id="slide-body" class="slide-body"></div>
+      </div>
+    </div>
+
+    <div id="grid-mode" class="grid-viewport" style="display:none;"></div>
+  </main>
+
+  <script src="slides-zh.js"></script>
+  <script>
+    const slidesData = [{"number": 1, "raw_lines": ["Top 10 Predictions for Agentic AI in 2026", "Mid-Year Scorecard — as of September 27, 2026", "Original predictions: Cloud Security Alliance, January 16, 2026", "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai", "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang", "Regional lens: United States · China · European Union", "Sources: CSA article + Substack; research cut-off 2026-09-27"]}, {"number": 2, "raw_lines": ["About This Scorecard", "• Origin: Ken Huang — My Top 10 Predictions for Agentic AI in 2026 (CSA, 2026-01-16)", "• Method: map each prediction to public evidence in US, China, and EU through 2026-09-27", "• Evidence classes: peer-reviewed papers, CVE/NVD, CSA/OWASP/NIST artifacts, enterprise surveys, regulation", "• Verdict scale: Confirmed · Mostly confirmed · On track · Partial · In progress (toward year-end)", "• Not a forecast rewrite — a mid-year audit of what already happened vs what remains open", "• CSA original: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"]}, {"number": 3, "raw_lines": ["Scorecard at a Glance — September 27, 2026", "| # | Prediction | Verdict |", "|---|---|---|", "| 1 | Self-improving / RSI agents | On track (research confirmed) |", "| 2 | Agency > Intelligence | On track |", "| 3 | MAESTRO-based security benchmarks | Partial → On track |", "| 4 | Agentic risk management center stage | Confirmed |", "| 5 | Vibe-coding security hangover | Confirmed |", "| 6 | Browser agents struggle | On track |", "| 7 | Enterprise: internal first | Mostly confirmed |", "| 8 | More CVEs in agentic ecosystem | Confirmed |", "| 9 | MAESTRO v2 practical release | Confirmed (2026-06-22) |", "| 10 | OWASP AIVSS v1 official release | In progress (review open) |"]}, {"number": 4, "raw_lines": ["P1 — The Self-Improving Agentic AI System", "Prediction (Jan 2026): move past static agents; more research and some real-world self-improving agents.", "• Verdict: On track — Level-1 recursive self-improvement (RSI) demonstrated in research; production still gated", "• United States: Weco AI AIDE² (2026-07-14) — 8-day outer loop, 7 successive harness upgrades; arXiv:2609.26457", "  • AIDE85 beat 2 years of hand-tuned AIDE-human on held-out MLE/ALE/WeatherBench under fixed $ budget", "  • Reward hacking on GPU-kernel task fell ~63% → ~34%; claims Level-1 net-positive RSI, not ignition", "• China: frontier agent regulation entered enforcement 2026-07-15 (CAC joint Implementation Opinions)", "  • Tiered authorization, auditable decision logs, human override for high-impact autonomous agents", "  • Self-modification loops face stronger filing/testing obligations than in open US labs", "• European Union: EU AI Act high-risk oversight + human-oversight duties slow open-web RSI deployment", "  • Research continues; production self-rewriting agents remain rare outside controlled sandboxes"]}, {"number": 5, "raw_lines": ["P2 — Agency > Intelligence", "Prediction: industry stops obsessing over raw intelligence scores; agency (plan, tools, persist) becomes primary.", "• Verdict: On track — agency metrics and benchmarks proliferated in 2026", "• United States: AgencyBench (ACL 2026) — 32 scenarios, ~90 tool calls / 1M tokens / hours of runtime", "  • Closed models 48.4% vs open 32.1%; emphasis on tool use, self-correction, resource efficiency", "  • Autonomous Agency Scale (AAS, Jul 2026) scores Active vs Ambient agency with Idle-Gap Test", "• China: agent products compete on task completion and tool chains more than MMLU-style leaderboards", "  • Regulatory framing treats agent decision authority as the control object, not model IQ", "• European Union: conformity and oversight discussions track autonomy level and impact, not raw capability scores", "  • Academic work (e.g. bipredictability / agency–intelligence theory, arXiv:2602.22519) separates the two constructs"]}, {"number": 6, "raw_lines": ["P3 — New Security Benchmarks via MAESTRO", "Prediction: new agent security benchmarks based on MAESTRO threat modeling get adopted.", "• Verdict: Partial → On track — MAESTRO is operationalized; universal benchmark suites still maturing", "• United States: CSA MAESTRO + ATLAS combined playbooks; TITO CI/CD threat modeling (CSA, 2026-02-11)", "  • Agentic red-team guides map tests to MAESTRO layers; STAR / AIUC-1 assurance paths emerging", "• China: MAESTRO cited in CSA guidance as a way to evidence engineered agent boundaries for regulators", "  • Domestic agent security evaluations increasingly require layer-wise threat coverage, not prompt-only tests", "• European Union: mappings into EU AI Act / ISO 42001 via CSA AICM; MAESTRO used as threat-generation front-end", "  • Gap: no single global numeric \"MAESTRO score\" yet — frameworks + scanners ahead of shared leaderboards"]}, {"number": 7, "raw_lines": ["P4 — Agentic AI Risk Management Takes Center Stage", "Prediction: organizations align with NIST AI RMF, CSA AICM, and OWASP AIVSS for agentic risk.", "• Verdict: Confirmed — risk management is the center of 2026 agentic governance", "• United States: NIST AI RMF remains the risk spine; CSA AICM v1.1 (Jun 23 / Jul Jul 2026) adds AIUC-1 mapping", "  • Five Eyes / CISA careful-adoption guidance for agentic services (May 2026); RSAC 2026 AIVSS panels", "• China: dedicated national AI-agent regulatory category enforceable from 2026-07-15", "  • Filing, testing, tiered decision authority, and mandatory human override for Level 2/3 agent decisions", "• European Union: EU AI Act obligations (transparency, risk assessment, human oversight) for high-risk systems", "  • AICM v1.1 supplies operational security controls the Act itself does not prescribe", "• Crosswalks: AIVSS ↔ AIUC-1 ↔ MAESTRO ↔ OWASP Agentic Top 10 now published and used in enterprise programs"]}, {"number": 8, "raw_lines": ["P5 — The \"Vibe Coding\" Security Hangover", "Prediction: vibe coding accelerates shipping; non-deterministic NL→code worsens DevSecOps risk.", "• Verdict: Confirmed — empirical studies show insecurity is the norm for vibe-coded apps", "• United States: arXiv:2606.23130 (v3 Sep 2026) — 9,041 OSS apps; audit of 200 deployed apps → 1,186 vulns", "  • 91.0% of audited apps had ≥1 vulnerability; 65.77% of findings Critical/High (BAC, injection, auth)", "  • Georgia Tech Vibe Security Radar: 74 CVEs traceable to AI coding tools by March 2026", "  • Tool CVEs: Cursor MCP (CVE-2025-54135), Claude Code (CVE-2025-55284 / CVE-2025-59536 class)", "• China: rapid adoption of AI coding assistants in startups; same failure modes (secrets, IDOR, missing auth)", "  • Domestic AppSec vendors shipping AI-code scanners into CI; regulators watch supply-chain leakage", "• European Union: NIS2 / CRA pressure pushes SBOM + build-time gates for AI-generated dependencies", "  • Shift-left DAST and fix-or-waive policies for AI-introduced CWE classes entering enterprise playbooks"]}, {"number": 9, "raw_lines": ["P6 — The Struggle of Browser Agents", "Prediction: browser agents struggle until AG-UI / A2UI interoperability and contractual gaps are fixed.", "• Verdict: On track — protocols advanced; production reliability still fragile", "• United States: AG-UI widely integrated (CopilotKit et al.) but STATE_DELTA silent drift documented (mid-2026)", "  • Main-thread stalls (20s+ structuredClone) and reconnect gap bugs filed on ag-ui-protocol/ag-ui", "  • Computer-use / GUI agents still fail under repeated prompt injection (Anthropic measurements: residual risk)", "• China: browser/desktop agents popular in productivity apps; reliability and permission UX remain pain points", "  • Domestic platforms prefer constrained action catalogs over open DOM control for consumer products", "• European Union: A2UI (Google + community) at v0.9.1 production; v1.0 release candidate (updated Jun 2026)", "  • Declarative UI catalogs improve safety vs arbitrary code; ordered delivery still required to avoid corruption", "• Bottom line: standards exist; \"widespread reliable adoption\" is not yet the default production posture"]}, {"number": 10, "raw_lines": ["P7 — Enterprise Deployment: Internal First", "Prediction: internal agent deployments widen; limited B2B/B2C agents on the open web due to caution.", "• Verdict: Mostly confirmed — internal still preferred; dual internal+external programs growing", "• United States: Contentstack Agentic Enterprise Report (May 2026, n=621)", "  • 37% primarily internal · 10% primarily external · 53% pursuing both", "  • 78% hit content/data readiness issues; 42% cite missing clear owner as a failure mode", "• China: large enterprises push internal ops agents (finance, IT, supply chain) under data-localization rules", "  • Consumer-facing agents exist but high-impact autonomy triggers July 2026 agent-regulation obligations", "• European Union: GDPR + AI Act push human-in-the-loop and DPIA before open-web autonomous agents", "  • Customer-service agents expand carefully; back-office automation remains the safer ROI path", "• Nuance vs Jan prediction: \"limited B2B/B2C\" is directionally right, but hybrid programs are now majority in US survey"]}, {"number": 11, "raw_lines": ["P8 — More CVEs for the Agentic Ecosystem", "Prediction: more CVEs for agent frameworks, browser/CUA agents, and vibe-coding tools — treated like classic vulns.", "• Verdict: Confirmed — 2026 CVE stream for agent stacks is sustained and severe", "• United States / global NVD:", "  • LangChain path traversal / sandbox escape — CVE-2026-55443 (fixed in 1.3.9; NVD Jun 2026)", "  • MCP Python SDK WebSocket Origin bypass — CVE-2026-59950 (HIGH); MCP Inspector RCE class continues", "  • Prior wave still active in ops: Claude Code RCE CVE-2025-59536; LangGrinch CVE-2025-68664; EchoLeak CVE-2025-32711", "• China: CNVD/CNNVD mirroring of agent-framework CVEs; domestic forks must patch MCP/tool hosts quickly", "• European Union: ENISA / national CERTs track agent supply-chain CVEs under product-security regimes", "  • Vendors increasingly issue advisories with CVSS and fixed versions — same severity culture as traditional software", "• Implication: SBOM + dependency pinning for LangChain/MCP/agent IDEs is now table stakes"]}, {"number": 12, "raw_lines": ["P9 — MAESTRO v2: Making It Practical", "Prediction: publish MAESTRO v2 with clear how-to guidance for vendor implementation.", "• Verdict: Confirmed — CSA released MAESTRO v2 on 2026-06-22", "• What shipped: expansion from 7 → 10 layers across three operational domains", "  • Domains: Infrastructure/Intelligence/Knowledge · Environment/Execution · Agency/Governance/Accountability", "  • Horizontal Trust Control Plane: governance, safety, monitoring, identity", "• Aligned with CSA AI Agent Reference Architecture + Agentic Control Plane / Agentic Trust Framework papers (same day)", "• United States: skills, playbooks, and CI tooling encode L1–L10 threat IDs for assessments", "• China / EU: v2 used as a practical bridge from architecture → controls (AICM) → regulatory evidence packs", "• Artifact: https://cloudsecurityalliance.org/artifacts/maestro-v2"]}, {"number": 13, "raw_lines": ["P10 — Official Release of OWASP AIVSS v1", "Prediction: publish AIVSS v1 at aivss.owasp.org as the definitive agentic scoring standard.", "• Verdict: In progress — on the stated 2026 path; v1.0 not final as of 2026-09-27", "• Milestone delivered: AIVSS Scoring System for OWASP Agentic AI Core Security Risks v0.8 (2026-03-19)", "  • Co-publication with AIUC-1, OWASP AI Exchange, Citizen Development Top 10", "  • Interactive AIUC-1 crosswalk live on aivss.owasp.org", "• Public review for v1.0 opened 2026-04-26; closes 2026-10-01; v1.0 slated before end of 2026", "• United States: RSAC 2026 sessions on measuring agentic risk with AIVSS; enterprise pilots on v0.8 scoring", "• China / EU: mappings to MAESTRO layers and AIUC-1 used in multinational risk programs ahead of v1 freeze", "• Status vs prediction: substance is live; \"official v1\" remains a Q4 2026 deliverable"]}, {"number": 14, "raw_lines": ["Regional Pattern — United States · China · European Union", "| Theme | United States | China | European Union |", "|---|---|---|---|", "| RSI / self-improve | Lab evidence (AIDE²) | Regulate frontier agents | Research > open deploy |", "| Agency metrics | AgencyBench, AAS | Task/tool KPIs + filing | Autonomy as risk object |", "| Risk mgmt | NIST RMF + AICM + AIVSS | Agent-specific law (Jul) | AI Act + AICM controls |", "| Vibe-code risk | Large empirical studies | Fast adoption + scanners | CRA/NIS2 build gates |", "| Browser agents | AG-UI scale + drift bugs | Constrained catalogs | A2UI std + oversight |", "| Enterprise posture | Internal-first, 53% both | Internal ops under localization | HITL before open web |", "| CVE culture | NVD-tracked agent CVEs | CNVD mirror + patch | CERT + product security |"]}, {"number": 15, "raw_lines": ["What Remains Open for Q4 2026", "• AIVSS v1.0: finish public review (closes 2026-10-01) and publish the frozen standard", "• Shared MAESTRO security leaderboards: move from playbooks/scanners to comparable public benchmarks", "• Browser-agent reliability: AG-UI sequence/resync defaults; A2UI v1.0 ratification and broader renderers", "• RSI beyond Level-1: independent replication of AIDE²; governance for self-modifying production agents", "• Open-web B2C agents: still the cautious minority — watch whether dual programs tip to external-primary", "• Vibe-coding controls: whether shift-left gates cut the 91% vulnerability baseline in production fleets"]}, {"number": 16, "raw_lines": ["Primary Sources (selected)", "• CSA predictions (2026-01-16): cloudsecurityalliance.org — My Top 10 Predictions for Agentic AI in 2026", "• AIDE² RSI: weco.ai blog (2026-07-14); arXiv:2609.26457", "• AgencyBench: ACL 2026; Autonomous Agency Scale arXiv HTML 2607.17947", "• MAESTRO v2 artifact (2026-06-22): cloudsecurityalliance.org/artifacts/maestro-v2", "• CSA AICM v1.1 (2026-07-14 blog); China agent regulation CSA Labs note (enforcement 2026-07-15)", "• Vibe coding study: arXiv:2606.23130; OX Security / Georgia Tech CVE radar summaries", "• AG-UI production drift analyses (2026); A2UI a2ui.org v0.9.1 / v1.0-rc", "• Contentstack Agentic Enterprise Report 2026; NVD CVE-2026-55443; AIVSS aivss.owasp.org v0.8 + review"]}, {"number": 17, "raw_lines": ["Closing — Build Agentic AI Securely", "• 8 of 10 predictions are Confirmed, Mostly confirmed, or On track as of 2026-09-27", "• Two remain open by design: broader MAESTRO benchmark adoption (Partial) and AIVSS v1 freeze (In progress)", "• Security and risk management moved from slideware to CVEs, controls matrices, and regulatory filing", "• Next checkpoints: AIVSS v1 publication · A2UI v1.0 · independent RSI replication · open-web agent trust", "• Continue the conversation: kenhuangus.substack.com · aivss.owasp.org · CSA AI Safety working groups", "• Contact: DistributedApps.ai · LinkedIn linkedin.com/in/kenhuang8"]}];
+    const svgMap = {};
+
+    let currentIdx = 0;
+    let isGridMode = false;
+
+    let slideLang = 'en';
+
+    function initSlideLang() {
+      const queryLang = new URLSearchParams(location.search).get('lang');
+      const stored = localStorage.getItem('predictions-slides-lang');
+      slideLang = queryLang === 'zh' || queryLang === 'en' ? queryLang : (stored === 'zh' ? 'zh' : 'en');
+      applySlideLangChrome();
+    }
+
+    function localizedSlide(slide) {
+      const pack = window.SLIDES_ZH;
+      if (slideLang !== 'zh' || !pack || !pack.lines) return slide;
+      const lines = pack.lines[String(slide.number)];
+      if (!lines || lines.length !== (slide.raw_lines || []).length) return slide;
+      return Object.assign({}, slide, { raw_lines: lines });
+    }
+
+    function uiText(en, zh) {
+      return slideLang === 'zh' ? zh : en;
+    }
+
+    function translateDom(root) {
+      const pack = window.SLIDES_ZH;
+      if (!root || slideLang !== 'zh' || !pack || !pack.phrases) return;
+      const map = pack.phrases;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      let node;
+      while ((node = walker.nextNode())) nodes.push(node);
+      nodes.forEach((textNode) => {
+        const raw = textNode.nodeValue;
+        if (!raw || !raw.trim()) return;
+        const trimmed = raw.trim();
+        if (!Object.prototype.hasOwnProperty.call(map, trimmed)) return;
+        textNode.nodeValue = raw.replace(trimmed, map[trimmed]);
+      });
+    }
+
+    function applySlideLangChrome() {
+      document.documentElement.lang = slideLang === 'zh' ? 'zh-CN' : 'en';
+      document.body.classList.toggle('lang-zh', slideLang === 'zh');
+      const enBtn = document.getElementById('btn-lang-en');
+      const zhBtn = document.getElementById('btn-lang-zh');
+      if (enBtn) enBtn.classList.toggle('is-active', slideLang === 'en');
+      if (zhBtn) zhBtn.classList.toggle('is-active', slideLang === 'zh');
+      const brand = document.getElementById('brand-title');
+      if (brand) brand.textContent = uiText('Agentic AI 2026 Predictions', '智能体驾驭工程大师课');
+      const home = document.getElementById('btn-home');
+      if (home) home.textContent = uiText('🏠 Home Site', '🏠 站点主页');
+      const mode = document.getElementById('mode-text');
+      if (mode) {
+        mode.textContent = isGridMode
+          ? uiText('Presentation Mode', '放映模式')
+          : uiText('Grid View', '网格视图');
+      }
+      const prev = document.getElementById('btn-prev');
+      if (prev) prev.textContent = uiText('❮ Prev', '❮ 上一页');
+      const next = document.getElementById('btn-next');
+      if (next) next.textContent = uiText('Next ❯', '下一页 ❯');
+      const go = document.getElementById('btn-goto');
+      if (go) go.textContent = uiText('Go ➔', '跳转 ➔');
+      const full = document.getElementById('btn-fullscreen');
+      if (full) full.textContent = uiText('⛶ Fullscreen', '⛶ 全屏');
+      document.title = uiText(
+        'Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard',
+        '2026 智能体 AI 十大预测 — 年中成绩单'
+      );
+    }
+
+    function setSlideLang(lang) {
+      slideLang = lang === 'zh' ? 'zh' : 'en';
+      localStorage.setItem('predictions-slides-lang', slideLang);
+      const url = new URL(location.href);
+      url.searchParams.set('lang', slideLang);
+      history.replaceState(null, '', url.pathname + url.search + location.hash);
+      applySlideLangChrome();
+      rebuildSlideSelect();
+      if (isGridMode) renderGrid();
+      renderSlide(currentIdx);
+    }
+
+    function rebuildSlideSelect() {
+      if (!selectEl) return;
+      selectEl.innerHTML = '';
+      slidesData.forEach((s, idx) => {
+        const view = localizedSlide(s);
+        const opt = document.createElement('option');
+        opt.value = idx;
+        const title = view.raw_lines && view.raw_lines[0] ? view.raw_lines[0] : `Slide ${s.number}`;
+        opt.innerText = slideLang === 'zh' ? `第 ${s.number} 张：${title}` : `Slide ${s.number}: ${title}`;
+        selectEl.appendChild(opt);
+      });
+      selectEl.value = String(currentIdx);
+    }
+
+
+    const DENSE_BULLET_MIN_LINES = 9;
+    const bodyEl = document.getElementById('slide-body');
+
+    const selectEl = document.getElementById('slide-select');
+    rebuildSlideSelect();
+
+    function cleanNumbers(text) {
+      if (/^\d{1,2}:\d{2}/.test(text.trim())) return text.trim();
+      text = text.replace(/^(\d+[\.\)\:]|\d+\s*&\s*\d+[\.\)\:])\s+/, '');
+      return text.trim();
+    }
+
+    function formatTextWithCode(text) {
+      const keywords = ['CLAUDE.md', 'AGENTS.md', 'SPEC.md', 'MEMORY.md', 'CLAUDE.local.md', 'pytest', 'events.jsonl', 'telemetry.jsonl', 'rm -rf', 'write_file', 'read_file', '.claude-plugin/plugin.json', 'SKILL.md', 'mcp_client_runner.py', 'mcp_server_demo.py', 'core_harness_stack.py', 'guardrails_engine.py', 'spec_driven_verifier.py', 'tda_reliability_pipeline.py', 'multi_agent_team_simulator.py', 'five_step_sop_pipeline.py', 'production_harness_audit.py', 'is_relative_to()', 'ast.parse()', 'PreToolUse', 'PostToolUse', 'MCPServer', 'permissionDecision', 'approvals.json', 'ZeroDivisionError', 'pending_push.json', 'scripts/', 'references/', 'assets/', '.claude/workflows/'];
+      
+      text = text.replace(
+        /\[(.*?)\]\(((?:https?:\/\/|file:\/\/\/)[^\s<>"']+)\)/g,
+        (match, label, url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`
+      );
+
+      text = text.replace(
+        /(https?:\/\/[^\s<>"']+|file:\/\/\/[^\s<>"']+)/g,
+        (match) => {
+          let url = match.replace(/[.,;:)]+$/, '');
+          let trailing = match.slice(url.length);
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>${trailing}`;
+        }
+      );
+      
+      keywords.forEach(kw => {
+        text = text.replaceAll(kw, `<code>${kw}</code>`);
+      });
+      return text;
+    }
+
+    function copyCommand(btn, text) {
+      if (!btn) return;
+      const originalHtml = btn.innerHTML;
+      
+      function setSuccess() {
+        btn.classList.add('copied');
+        btn.innerHTML = slideLang === 'zh' ? '<span class="copy-icon">✓</span> 已复制' : '<span class="copy-icon">✓</span> Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = originalHtml;
+        }, 1800);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(setSuccess).catch(() => {
+          fallbackCopy(text, setSuccess);
+        });
+      } else {
+        fallbackCopy(text, setSuccess);
+      }
+    }
+
+    function fallbackCopy(text, cb) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      textArea.style.top = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        const successful = document.execCommand('copy');
+        if (successful && cb) cb();
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function copyCodeFromSlide(btn, slideIdx) {
+      const slide = slidesData[slideIdx];
+      if (slide && slide.code_block) {
+        copyCommand(btn, slide.code_block);
+      }
+    }
+
+    function formatCodeConcepts(lines) {
+      if (!lines || lines.length === 0) return '';
+      let html = '<div class="code-concepts-list">';
+      
+      lines.forEach(line => {
+        let trimmed = line.trim();
+        if (!trimmed) return;
+        if (trimmed.startsWith('File:')) return;
+        
+        trimmed = trimmed.replace(/^[•\-\ufffd]\s*/, '').trim();
+        
+        const lineMatch = trimmed.match(/^\[(Lines?\s+[\d\-,\s]+)\]\s*([^:]+):\s*(.*)$/i);
+        if (lineMatch) {
+          const lineTag = lineMatch[1];
+          const title = lineMatch[2];
+          const desc = formatTextWithCode(lineMatch[3]);
+          html += `
+            <div class="code-concept-card">
+              <div class="concept-card-head">
+                <span class="concept-tag">📌 ${lineTag}</span>
+                <span class="concept-name">${formatTextWithCode(title)}</span>
+              </div>
+              <div class="concept-card-text">${desc}</div>
+            </div>
+          `;
+        } else {
+          const colonIdx = trimmed.indexOf(':');
+          if (colonIdx !== -1 && colonIdx < 40) {
+            const title = trimmed.slice(0, colonIdx);
+            const desc = formatTextWithCode(trimmed.slice(colonIdx + 1));
+            html += `
+              <div class="code-concept-card">
+                <div class="concept-card-head">
+                  <span class="concept-tag" style="background:var(--accent-sf); color:var(--accent-dk); border:1px solid var(--accent-dk);">🛡️ VERIFIED</span>
+                  <span class="concept-name">${formatTextWithCode(title)}</span>
+                </div>
+                <div class="concept-card-text">${desc}</div>
+              </div>
+            `;
+          } else {
+            html += `
+              <div class="code-concept-card">
+                <div class="concept-card-text">${formatTextWithCode(trimmed)}</div>
+              </div>
+            `;
+          }
+        }
+      });
+      
+      html += '</div>';
+      return html;
+    }
+
+    function renderSkillSlide(slide) {
+      const name = slide.skill_name || 'harness-skill';
+      const tools = slide.allowed_tools || 'Read, Write, Bash';
+      const skillFolderUrl = slide.skill_folder_url || `https://github.com/kenhuangus/agentic-ai-2026-predictions/tree/main/.claude/skills/${name}/`;
+      const manifestUrl = slide.skill_manifest_url || `https://github.com/kenhuangus/agentic-ai-2026-predictions/blob/main/.claude/skills/${name}/SKILL.md`;
+      
+      let desc = '';
+      let whenToUse = '';
+      let howToUse = '';
+      
+      slide.raw_lines.forEach(line => {
+        const trimmed = line.trim().replace(/^[•\-\ufffd]\s*/, '');
+        if (trimmed.startsWith('Skill Description:')) {
+          desc = trimmed.replace('Skill Description:', '').trim();
+        } else if (trimmed.startsWith('When to Use:')) {
+          whenToUse = trimmed.replace('When to Use:', '').trim();
+        } else if (trimmed.startsWith('How to Use:')) {
+          howToUse = trimmed.replace('How to Use:', '').trim();
+        }
+      });
+
+      return `
+        <div class="skill-slide-layout">
+          <div class="skill-meta-card">
+            <div class="skill-meta-badge">🤖 CLAUDE CODE / AGENT SKILL</div>
+            <div class="skill-name-heading">${name}</div>
+            <div class="skill-desc-box">
+              <strong>Description:</strong> ${formatTextWithCode(desc)}
+            </div>
+            <div class="skill-tools-box">
+              <span>🛠️ Allowed Tools:</span> <code>${tools}</code>
+            </div>
+            <div class="skill-links-box">
+              <div>📂 <strong>Skill Directory on GitHub:</strong><br>
+                <a href="${skillFolderUrl}" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-code); font-size:0.82rem; word-break:break-all;">${skillFolderUrl}</a>
+              </div>
+              <div>📄 <strong>Skill Playbook Manifest (SKILL.md):</strong><br>
+                <a href="${manifestUrl}" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-code); font-size:0.82rem; word-break:break-all;">${manifestUrl}</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-details-column">
+            <div class="skill-detail-card">
+              <div class="skill-detail-title">🎯 When to Use (Trigger Scenarios)</div>
+              <div class="skill-detail-body">${formatTextWithCode(whenToUse)}</div>
+            </div>
+            <div class="skill-detail-card">
+              <div class="skill-detail-title">⚡ How to Use (Execution Playbook)</div>
+              <div class="skill-detail-body">${formatTextWithCode(howToUse)}</div>
+            </div>
+            <div class="skill-detail-card">
+              <div class="skill-detail-title">📦 Progressive Disclosure Structure</div>
+              <div class="skill-detail-body" style="display:flex; flex-direction:column; gap:0.40rem;">
+                <div>• <code>scripts/</code>: Standalone executable CLI helpers and validation scripts.</div>
+                <div>• <code>references/</code>: Architecture manuals, policy matrices, and rules.</div>
+                <div>• <code>assets/</code>: Machine-readable JSON schemas, templates, and state configs.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMarkdownTable(tableLines, tableClass = 'slide-table') {
+      if (!tableLines || tableLines.length < 2) return '';
+      const rows = tableLines.map(l => l.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1));
+      if (rows.length < 2) return '';
+      
+      const header = rows[0];
+      const dataRows = rows.slice(2); // skip separator row
+      
+      let html = `<table class="${tableClass}"><thead><tr>`;
+      header.forEach(h => {
+        html += `<th>${formatTextWithCode(h)}</th>`;
+      });
+      html += '</tr></thead><tbody>';
+      
+      dataRows.forEach(r => {
+        html += '<tr>';
+        r.forEach((cell, idx) => {
+          const isFirstCol = idx === 0;
+          const formattedCell = formatTextWithCode(cell);
+          html += `<td>${isFirstCol ? '<strong>' + formattedCell + '</strong>' : formattedCell}</td>`;
+        });
+        html += '</tr>';
+      });
+      
+      html += '</tbody></table>';
+      return html;
+    }
+
+    function formatBullets(lines) {
+      if (!lines || lines.length === 0) return '';
+      
+      const hasTree = lines.some(l => l.includes('├──') || l.includes('└──') || l.includes('custom-agent-skill/'));
+      const hasTable = lines.some(l => l.trim().startsWith('|') && l.trim().endsWith('|'));
+      
+      if (hasTree) {
+        let beforeTree = [];
+        let treeLines = [];
+        let afterTree = [];
+        let state = 'before';
+        
+        lines.forEach(l => {
+          const trimmed = l.trim();
+          if (trimmed.startsWith('custom-agent-skill/') || trimmed.startsWith('├──') || trimmed.startsWith('│') || trimmed.startsWith('└──')) {
+            state = 'tree';
+            treeLines.push(l);
+          } else if (state === 'tree') {
+            state = 'after';
+            afterTree.push(l);
+          } else {
+            beforeTree.push(l);
+          }
+        });
+        
+        let html = '';
+        if (beforeTree.length > 0) html += formatBullets(beforeTree);
+        if (treeLines.length > 0) {
+          html += `<pre class="tree-block"><code>${treeLines.join('\n')}</code></pre>`;
+        }
+        if (afterTree.length > 0) html += formatBullets(afterTree);
+        return html;
+      }
+
+      if (hasTable) {
+        let beforeTable = [];
+        let tableLines = [];
+        let afterTable = [];
+        let state = 'before';
+        
+        lines.forEach(l => {
+          const trimmed = l.trim();
+          if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+            state = 'table';
+            tableLines.push(trimmed);
+          } else if (state === 'table') {
+            state = 'after';
+            afterTable.push(l);
+          } else {
+            beforeTable.push(l);
+          }
+        });
+        
+        let html = '';
+        if (beforeTable.length > 0) html += formatBullets(beforeTable);
+        if (tableLines.length > 0) html += renderMarkdownTable(tableLines);
+        if (afterTable.length > 0) html += formatBullets(afterTable);
+        return html;
+      }
+
+      const populatedLines = lines.filter(line => line.trim());
+      if (populatedLines.length === 0) return '';
+
+      const hasIndented = populatedLines.some(l => /^\s{2,}|\t/.test(l));
+      const denseClass = (!hasIndented && populatedLines.length >= DENSE_BULLET_MIN_LINES) ? ' dense-columns' : '';
+      let html = '';
+      let listOpen = false;
+      let groupOpen = false;
+      let subListOpen = false;
+
+      populatedLines.forEach((line, idx) => {
+        const isIndented = /^\s{2,}|\t/.test(line);
+        const trimmed = line.trim();
+        const hasBullet = /^[•\-\*\ufffd]/.test(trimmed);
+
+        let cleanText = trimmed.replace(/^[•\-\*\ufffd]\s*/, '').trim();
+        cleanText = cleanNumbers(cleanText);
+
+        const labUrl = cleanText.match(/^Lab demo:\s*(https:\/\/[^\s]+)/i);
+        if (labUrl) {
+          cleanText = `<a href="${labUrl[1]}" target="_blank" rel="noopener noreferrer">${uiText("🔗 Lab demo: open this module in GitHub", "🔗 实验演示：在 GitHub 打开本模块")}</a>`;
+        } else {
+          cleanText = formatTextWithCode(cleanText);
+        }
+
+        if (!cleanText) return;
+
+        if (!hasBullet && !isIndented) {
+          if (subListOpen) { html += '</ul>'; subListOpen = false; }
+          if (groupOpen) { html += '</li>'; groupOpen = false; }
+          if (listOpen) { html += '</ul>'; listOpen = false; }
+          html += `<div class="slide-lead-header">${cleanText}</div>`;
+          return;
+        }
+
+        if (!listOpen) {
+          html += `<ul class="main-bullets${denseClass}">`;
+          listOpen = true;
+        }
+
+        if (isIndented && hasBullet) {
+          if (!groupOpen) {
+            html += '<li class="bullet-group">';
+            groupOpen = true;
+          }
+          if (!subListOpen) {
+            html += '<ul class="sub-bullets">';
+            subListOpen = true;
+          }
+          html += `<li class="sub-bullet">${cleanText}</li>`;
+        } else {
+          if (subListOpen) {
+            html += '</ul>';
+            subListOpen = false;
+          }
+          if (groupOpen) {
+            html += '</li>';
+          }
+          html += `<li class="bullet-group"><div class="primary-bullet">${cleanText}</div>`;
+          groupOpen = true;
+        }
+      });
+
+      if (subListOpen) html += '</ul>';
+      if (groupOpen) html += '</li>';
+      if (listOpen) html += '</ul>';
+      return html;
+    }
+
+    function renderSlide(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= slidesData.length) idx = slidesData.length - 1;
+      currentIdx = idx;
+
+      const sourceSlide = slidesData[idx];
+      const slide = localizedSlide(sourceSlide);
+      selectEl.value = idx;
+      
+      const gotoInput = document.getElementById('goto-input');
+      if (gotoInput) {
+        gotoInput.placeholder = String(slide.number);
+      }
+
+      const title = slide.raw_lines[0] || `Slide ${slide.number}`;
+      document.getElementById('slide-title').innerText = title;
+      document.getElementById('slide-num-badge').innerText = slideLang === 'zh' ? `第 ${slide.number} 张 / 共 ${slidesData.length} 张` : `Slide ${slide.number} of ${slidesData.length}`;
+
+      const packtBadge = document.getElementById('slide-packt-badge');
+      if (packtBadge) {
+        packtBadge.style.display = 'none';
+      }
+
+      if (window.location.hash !== '#' + slide.number) {
+        history.replaceState(null, '', location.pathname + location.search + '#' + slide.number);
+      }
+
+      const restLines = slide.raw_lines ? slide.raw_lines.slice(1) : [];
+      const isSkill = slide.slide_type === 'skill';
+      const isCode = slide.slide_type === 'code';
+
+      let bodyHtml = '';
+
+      if (isSkill) {
+        bodyHtml += renderSkillSlide(slide);
+      } else if (isCode && slide.highlighted_code) {
+        const fileTag = slide.code_filename || 'source.py';
+        const rawBullets = slide.raw_lines.slice(1);
+        
+        const primaryFile = fileTag.split(' & ')[0].trim();
+        const fileGithubUrl = `https://github.com/kenhuangus/agentic-ai-2026-predictions/blob/main/${primaryFile}`;
+        
+        bodyHtml += `
+          <div class="code-slide-container">
+            <div class="code-editor-window">
+              <div class="code-editor-header">
+                <div class="code-dots">
+                  <div class="code-dot dot-red"></div>
+                  <div class="code-dot dot-yellow"></div>
+                  <div class="code-dot dot-green"></div>
+                </div>
+                <a href="${fileGithubUrl}" target="_blank" rel="noopener noreferrer" class="code-file-tag" title="Open ${primaryFile} on GitHub" style="color:#A0A09A; text-decoration:none;">
+                  📄 ${fileTag} ↗
+                </a>
+                <div style="display:flex; align-items:center; gap:0.45rem;">
+                  <button class="cmd-copy-btn" onclick="copyCodeFromSlide(this, ${idx})" title="Copy Python code">
+                    <span class="copy-icon">📋</span> Copy
+                  </button>
+                  <div class="code-lang-tag">${slide.code_language || 'PYTHON'}</div>
+                </div>
+              </div>
+              <div class="code-block">${slide.highlighted_code}</div>
+            </div>
+            <div class="code-concepts-column">
+              ${formatCodeConcepts(rawBullets)}
+              <div class="invariant-card">
+                <div class="invariant-title">🛡️ Deterministic Control Architecture</div>
+                <div style="margin-bottom:0.35rem; color:var(--ink); font-size:0.86rem;">Verified directly against runnable tests in GitHub:</div>
+                <div style="display:flex; flex-direction:column; gap:0.25rem; font-size:0.84rem;">
+                  <div>📄 <strong>Source File:</strong> <a href="${fileGithubUrl}" target="_blank" rel="noopener noreferrer"><code>${primaryFile}</code> ↗</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (slide.number === 1) {
+        bodyHtml += `
+          <div id="slide-content-wrap" class="slide-1-container">
+            <div class="slide-1-hero-card">
+              <div class="slide-1-hero-tagline">
+                ${slideLang === 'zh' ? '2026 智能体 AI 十大预测 · 年中成绩单' : 'Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard'}
+              </div>
+              <div class="slide-1-hero-desc">
+                ${slideLang === 'zh'
+                  ? '原始预测发表于云安全联盟（2026-01-16）。本成绩单审计截至 2026-09-27 在美国、中国与欧盟的公开证据兑现情况。'
+                  : 'Original predictions published by the Cloud Security Alliance (2026-01-16). This scorecard audits public evidence in the United States, China, and the EU through 2026-09-27.'}
+              </div>
+            </div>
+
+            <div class="slide-1-instructor-card">
+              <div class="slide-1-avatar-wrap">
+                <img src="assets/images/ken-head-shot.png" alt="Ken Huang" class="slide-1-avatar-img" />
+              </div>
+              <div class="slide-1-instructor-info">
+                <div class="slide-1-instructor-badge">
+                  <span>${slideLang === 'zh' ? '🎓 作者' : '🎓 Author'}</span>
+                </div>
+                <div class="slide-1-instructor-name">Ken Huang</div>
+                <div class="slide-1-instructor-titles">
+                  <div class="slide-1-title-item">
+                    <span class="title-icon">🏛️</span>
+                    <span>Adjunct Professor, <a href="https://www.usfca.edu/faculty/ken-huang" target="_blank" rel="noopener noreferrer" class="slide-1-org-link" title="View Ken Huang's Faculty Profile at University of San Francisco">University of San Francisco ↗</a></span>
+                  </div>
+                  <div class="slide-1-title-item">
+                    <span class="title-icon">🚀</span>
+                    <span>CEO, <a href="https://distributedapps.ai/" target="_blank" rel="noopener noreferrer" class="slide-1-org-link" title="Visit DistributedApps.ai">DistributedApps.ai ↗</a></span>
+                  </div>
+                </div>
+
+                <div class="slide-1-social-links">
+                  <div class="slide-1-social-pill">
+                    <span class="social-icon">✍️</span>
+                    <span class="social-label">Substack:</span>
+                    <a href="https://kenhuangus.substack.com/" target="_blank" rel="noopener noreferrer" class="slide-1-social-link" title="Read Ken Huang's Substack">kenhuangus.substack.com <span class="ext-arrow">↗</span></a>
+                  </div>
+                  <div class="slide-1-social-pill">
+                    <span class="social-icon">💼</span>
+                    <span class="social-label">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/kenhuang8/" target="_blank" rel="noopener noreferrer" class="slide-1-social-link" title="Connect with Ken Huang on LinkedIn">linkedin.com/in/kenhuang8 <span class="ext-arrow">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-1-pillars-row">
+              <div class="slide-1-pillar-pill">
+                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '🇺🇸 美国' : '🇺🇸 United States'}</div>
+                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '实验室 RSI、CVE、企业调研' : 'Lab RSI, CVEs, enterprise surveys'}</div>
+              </div>
+          </div>
+        `;
+      } else {
+        bodyHtml += '<div id="slide-content-wrap" class="slide-content-wrapper">' + formatBullets(restLines) + '</div>';
+      }
+
+      bodyEl.innerHTML = bodyHtml;
+      translateDom(bodyEl);
+      
+      // Dynamic Text-Sizing Engine:
+      // Maximize font size so text and graphics fill >= 82% to 92% of the card height
+      // while guaranteeing ZERO overflow and ZERO scrollbars
+      if (!isCode && !isSkill) {
+        bodyEl.style.setProperty('--fit-scale', '1.0');
+        const wrapper = document.getElementById('slide-content-wrap') || bodyEl;
+        const clientH = bodyEl.clientHeight;
+        const targetH = clientH * 0.90;
+        let maxScale = 3.25;
+        const isSetupSlide = !!wrapper.querySelector('.setup-slide-grid');
+        if (isSetupSlide) {
+          maxScale = 1.70;
+        } else if (wrapper.querySelector('.sub-bullets') || wrapper.querySelector('.capstone-layout-grid') || wrapper.querySelector('.course-map-columns-grid') || wrapper.querySelector('.thesis-grid') || wrapper.querySelector('.slide-1-container')) {
+          maxScale = 1.20;
+        } else if (wrapper.querySelector('.main-bullets')) {
+          maxScale = 1.50;
+        }
+        
+        let scale = 1.0;
+        let growIter = 0;
+        while (wrapper.offsetHeight < targetH && bodyEl.scrollHeight <= clientH && scale < maxScale && growIter < 45) {
+          scale += 0.05;
+          bodyEl.style.setProperty('--fit-scale', scale.toFixed(2));
+          growIter++;
+        }
+        
+        // If scaled over client height or causing scroll, scale down until it fits with zero scroll.
+        // Setup slide uses auto-height cards; do not shrink just because the wrapper fills the card.
+        let shrinkIter = 0;
+        while ((bodyEl.scrollHeight > clientH || (!isSetupSlide && wrapper.offsetHeight > (clientH - 6))) && scale > 0.50 && shrinkIter < 60) {
+          scale -= 0.02;
+          bodyEl.style.setProperty('--fit-scale', scale.toFixed(2));
+          shrinkIter++;
+        }
+      } else {
+        bodyEl.style.setProperty('--fit-scale', '1.0');
+      }
+
+      const pct = ((idx + 1) / slidesData.length) * 100;
+      document.getElementById('progress-fill').style.width = pct + '%';
+    }
+
+    function renderGrid() {
+      const gridContainer = document.getElementById('grid-mode');
+      gridContainer.innerHTML = '';
+      slidesData.forEach((slide, idx) => {
+        const card = document.createElement('div');
+        card.className = 'grid-slide-card';
+        card.onclick = () => { isGridMode = true; toggleMode(); renderSlide(idx); };
+        
+        const view = localizedSlide(slide);
+        let title = view.raw_lines[0] || `Slide ${slide.number}`;
+        let body = (view.raw_lines.slice(1, 4).join(' ') || (slide.code_block ? slide.code_block.slice(0, 120) : '')).replace(/[•\-#]/g, '');
+        let typeBadge = slide.slide_type ? `<span style="background:var(--accent-sf); color:var(--accent-dk); font-size:0.68rem; font-weight:700; padding:2px 6px; border-radius:4px;">${slide.slide_type.toUpperCase()}</span>` : '';
+        
+        card.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+            <span style="font-size:0.75rem; color:var(--ink); font-weight:800;">${slideLang === 'zh' ? `第 ${slide.number} 张` : `SLIDE ${slide.number}`}</span>
+            ${typeBadge}
+          </div>
+          <div class="grid-slide-title">${title}</div>
+          <div class="grid-slide-body">${body}...</div>
+        `;
+        gridContainer.appendChild(card);
+      });
+    }
+
+    function prevSlide() { renderSlide(currentIdx - 1); }
+    function nextSlide() { renderSlide(currentIdx + 1); }
+    function goToSlide(val) { renderSlide(parseInt(val)); }
+
+    function jumpToEnteredSlide() {
+      const input = document.getElementById('goto-input');
+      if (!input) return;
+      const val = parseInt(input.value, 10);
+      if (!isNaN(val) && val >= 1 && val <= slidesData.length) {
+        renderSlide(val - 1);
+        input.value = '';
+      } else {
+        alert(slideLang === 'zh' ? `请输入 1 到 ${slidesData.length} 之间的页码。` : `Please enter a slide number between 1 and ${slidesData.length}.`);
+      }
+    }
+
+    function toggleMode() {
+      isGridMode = !isGridMode;
+      document.getElementById('presentation-mode').style.display = isGridMode ? 'none' : 'flex';
+      document.getElementById('grid-mode').style.display = isGridMode ? 'grid' : 'none';
+      document.getElementById('mode-text').innerText = isGridMode ? uiText('Presentation Mode', '放映模式') : uiText('Grid View', '网格视图');
+      document.getElementById('mode-icon').innerText = isGridMode ? '📺' : '📜';
+      if (isGridMode) renderGrid();
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') nextSlide();
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+      if (e.key === 'm' || e.key === 'M') toggleMode();
+      if (e.key === 'g' || e.key === 'G') {
+        e.preventDefault();
+        const gotoInp = document.getElementById('goto-input');
+        if (gotoInp) { gotoInp.focus(); gotoInp.select(); }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (!isGridMode) renderSlide(currentIdx);
+    });
+
+    function getInitialSlideIndex() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const num = parseInt(hash, 10);
+        if (!isNaN(num)) {
+          const foundIdx = slidesData.findIndex(s => s.number === num);
+          if (foundIdx !== -1) return foundIdx;
+        }
+      }
+      return 0;
+    }
+
+    window.addEventListener('hashchange', () => {
+      const idx = getInitialSlideIndex();
+      if (idx !== currentIdx) renderSlide(idx);
+    });
+
+    initSlideLang();
+    rebuildSlideSelect();
+    renderSlide(getInitialSlideIndex());
+  </script>
+</body>
+</html>

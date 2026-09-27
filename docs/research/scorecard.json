@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-09-27",
+  "source_article": "https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+  "predictions": [
+    {
+      "id": 1,
+      "title": "Self-Improving Agentic AI",
+      "verdict": "on_track"
+    },
+    {
+      "id": 2,
+      "title": "Agency > Intelligence",
+      "verdict": "on_track"
+    },
+    {
+      "id": 3,
+      "title": "MAESTRO Security Benchmarks",
+      "verdict": "partial"
+    },
+    {
+      "id": 4,
+      "title": "Agentic Risk Management",
+      "verdict": "confirmed"
+    },
+    {
+      "id": 5,
+      "title": "Vibe Coding Security Hangover",
+      "verdict": "confirmed"
+    },
+    {
+      "id": 6,
+      "title": "Browser Agents Struggle",
+      "verdict": "on_track"
+    },
+    {
+      "id": 7,
+      "title": "Enterprise Internal First",
+      "verdict": "mostly_confirmed"
+    },
+    {
+      "id": 8,
+      "title": "More Agentic CVEs",
+      "verdict": "confirmed"
+    },
+    {
+      "id": 9,
+      "title": "MAESTRO v2",
+      "verdict": "confirmed"
+    },
+    {
+      "id": 10,
+      "title": "OWASP AIVSS v1",
+      "verdict": "in_progress"
+    }
+  ]
+}

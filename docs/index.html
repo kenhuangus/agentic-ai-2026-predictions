@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard</title>
+  <meta name="description" content="Ken Huang's CSA Top 10 Agentic AI predictions (Jan 2026) audited against public evidence in the United States, China, and the EU as of September 27, 2026." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F0EEE6;
+      --surface: #FAF9F5;
+      --ink: #141413;
+      --ink-muted: #6B6B63;
+      --rule: #E3E0D6;
+      --accent: #D97757;
+      --accent-dk: #BD5D3A;
+      --accent-sf: #F5E6DF;
+      --ok: #2F6B4F;
+      --warn: #8A5A00;
+      --mid: #3D5A80;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    header {
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding: 0.85rem 0 1.4rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+    .brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
+    .brand h1 { font-size: 1.05rem; font-weight: 750; line-height: 1.25; }
+    .brand p { font-size: 0.82rem; color: var(--ink-muted); }
+    .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: var(--surface); border: 1px solid var(--rule); color: var(--ink);
+      padding: 0.55rem 0.9rem; border-radius: 8px; font-weight: 650; font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--accent-sf); border-color: var(--accent); }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--ink); font-weight: 750; }
+    .hero {
+      background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+      padding: 1.5rem 1.4rem; margin-bottom: 1.5rem;
+    }
+    .hero .eyebrow { color: var(--accent-dk); font-weight: 750; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.45rem; }
+    .hero h2 { font-family: Georgia, ui-serif, serif; font-size: clamp(1.55rem, 3vw, 2.1rem); line-height: 1.2; margin-bottom: 0.7rem; }
+    .hero p { color: var(--ink-muted); max-width: 62ch; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;
+    }
+    .chip {
+      background: var(--accent-sf); border: 1px solid var(--rule); border-radius: 999px;
+      padding: 0.28rem 0.7rem; font-size: 0.78rem; font-weight: 650;
+    }
+    h3 { font-size: 1.15rem; margin: 1.6rem 0 0.7rem; }
+    table {
+      width: 100%; border-collapse: collapse; background: var(--surface);
+      border: 1px solid var(--rule); border-radius: 12px; overflow: hidden;
+      font-size: 0.92rem;
+    }
+    th, td { padding: 0.7rem 0.85rem; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    th { background: var(--accent-sf); font-weight: 750; }
+    tr:last-child td { border-bottom: none; }
+    .v { font-weight: 750; white-space: nowrap; }
+    .v-confirmed { color: var(--ok); }
+    .v-mostly { color: var(--ok); }
+    .v-ontrack { color: var(--mid); }
+    .v-partial { color: var(--warn); }
+    .v-progress { color: var(--warn); }
+    .regions {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; margin-top: 0.85rem;
+    }
+    @media (max-width: 820px) { .regions { grid-template-columns: 1fr; } }
+    .region {
+      background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1rem;
+    }
+    .region h4 { margin-bottom: 0.4rem; font-size: 0.98rem; }
+    .region p { font-size: 0.88rem; color: var(--ink-muted); }
+    footer {
+      margin-top: 2.2rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+      font-size: 0.85rem; color: var(--ink-muted);
+    }
+    footer a { color: var(--accent-dk); font-weight: 650; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.2rem; margin-top: 0.6rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="assets/images/ken-head-shot.png" alt="Ken Huang" />
+        <div>
+          <h1>Agentic AI 2026 Predictions</h1>
+          <p>Ken Huang · DistributedApps.ai · USF Adjunct Professor</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="slides.html">Open slides</a>
+        <a class="btn" href="slides.html?lang=zh">中文幻灯片</a>
+        <a class="btn" href="https://github.com/kenhuangus/agentic-ai-2026-predictions" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Mid-year scorecard · cut-off 2026-09-27</div>
+      <h2>How the Top 10 Agentic AI predictions are holding up in the United States, China, and the EU</h2>
+      <p>
+        In January 2026, Ken Huang published
+        <a href="https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026" target="_blank" rel="noopener">My Top 10 Predictions for Agentic AI in 2026</a>
+        with the Cloud Security Alliance (also on Substack). This site audits each prediction against public evidence through September 27, 2026.
+      </p>
+      <div class="meta">
+        <span class="chip">8 / 10 confirmed, mostly confirmed, or on track</span>
+        <span class="chip">MAESTRO v2 shipped 2026-06-22</span>
+        <span class="chip">AIVSS v1 public review open until 2026-10-01</span>
+      </div>
+    </section>
+
+    <h3>Scorecard</h3>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Prediction</th><th>Verdict</th><th>One-line evidence</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>Self-improving / RSI agents</td>
+          <td class="v v-ontrack">On track</td>
+          <td>Weco AIDE² Level-1 RSI (Jul 2026); China agent regulation constrains open deploy</td>
+        </tr>
+        <tr>
+          <td>2</td><td>Agency &gt; Intelligence</td>
+          <td class="v v-ontrack">On track</td>
+          <td>AgencyBench (ACL 2026), Autonomous Agency Scale; autonomy as risk object in EU/CN</td>
+        </tr>
+        <tr>
+          <td>3</td><td>MAESTRO security benchmarks</td>
+          <td class="v v-partial">Partial</td>
+          <td>Playbooks + CI tooling live; shared public leaderboards still maturing</td>
+        </tr>
+        <tr>
+          <td>4</td><td>Agentic risk management</td>
+          <td class="v v-confirmed">Confirmed</td>
+          <td>AICM v1.1, NIST AI RMF, China agent law (Jul 15), EU AI Act + control mappings</td>
+        </tr>
+        <tr>
+          <td>5</td><td>Vibe-coding security hangover</td>
+          <td class="v v-confirmed">Confirmed</td>
+          <td>arXiv:2606.23130 — 91% of audited vibe-coded apps vulnerable</td>
+        </tr>
+        <tr>
+          <td>6</td><td>Browser agents struggle</td>
+          <td class="v v-ontrack">On track</td>
+          <td>AG-UI production drift; A2UI at v0.9.1 / v1.0-rc — reliability still hard</td>
+        </tr>
+        <tr>
+          <td>7</td><td>Enterprise: internal first</td>
+          <td class="v v-mostly">Mostly confirmed</td>
+          <td>Contentstack: 37% internal-primary, 10% external-primary, 53% both</td>
+        </tr>
+        <tr>
+          <td>8</td><td>More agentic-ecosystem CVEs</td>
+          <td class="v v-confirmed">Confirmed</td>
+          <td>LangChain CVE-2026-55443, MCP CVE-2026-59950, coding-agent RCEs</td>
+        </tr>
+        <tr>
+          <td>9</td><td>MAESTRO v2 practical release</td>
+          <td class="v v-confirmed">Confirmed</td>
+          <td>CSA artifact released 2026-06-22 — 10 layers + Trust Control Plane</td>
+        </tr>
+        <tr>
+          <td>10</td><td>OWASP AIVSS v1 official release</td>
+          <td class="v v-progress">In progress</td>
+          <td>v0.8 live; v1.0 public review through 2026-10-01; freeze targeted before year-end</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Regional lens</h3>
+    <div class="regions">
+      <article class="region">
+        <h4>United States</h4>
+        <p>Lab RSI evidence, AgencyBench, sustained CVE stream, enterprise surveys showing internal-first with growing dual programs, CSA/OWASP artifact leadership.</p>
+      </article>
+      <article class="region">
+        <h4>China</h4>
+        <p>Dedicated national AI-agent regulation enforceable from 2026-07-15; internal ops agents under localization; filing, audit logs, and human override for high-impact autonomy.</p>
+      </article>
+      <article class="region">
+        <h4>European Union</h4>
+        <p>EU AI Act + AICM operational controls; A2UI standardization; CRA/NIS2 pressure on AI-generated software supply chains; cautious open-web agent deployment.</p>
+      </article>
+    </div>
+
+    <h3>Present the deck</h3>
+    <p style="color:var(--ink-muted); margin-bottom:0.8rem;">17 bilingual slides (EN/中文) built from the same interactive HTML template — keyboard navigation, grid view, go-to jump, fullscreen.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="slides.html#1">Start at slide 1</a>
+      <a class="btn" href="slides.html#3">Jump to scorecard table</a>
+      <a class="btn" href="slides.html#14">Regional comparison</a>
+      <a class="btn" href="research/scorecard.json">scorecard.json</a>
+    </div>
+
+    <footer>
+      <p>Author: Ken Huang — Adjunct Professor, University of San Francisco · CEO &amp; Chief AI Officer, DistributedApps.ai · OWASP AIVSS Project Lead · CSA AI Safety Working Groups.</p>
+      <div class="links">
+        <a href="https://www.usfca.edu/faculty/ken-huang" target="_blank" rel="noopener">USF faculty profile</a>
+        <a href="https://kenhuangus.substack.com/" target="_blank" rel="noopener">Substack</a>
+        <a href="https://aivss.owasp.org/" target="_blank" rel="noopener">aivss.owasp.org</a>
+        <a href="https://cloudsecurityalliance.org/artifacts/maestro-v2" target="_blank" rel="noopener">MAESTRO v2</a>
+        <a href="https://linkedin.com/in/kenhuang8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
