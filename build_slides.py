@@ -187,10 +187,12 @@ SLIDES_EN = [
     {
         "number": 17,
         "raw_lines": [
-            "Thank You",
+            "Looking Ahead",
+            "• RSI and agent swarms are becoming important",
+            "• Physical AI and humanoid robots are still in an early stage",
+            "• World models need much more work — GPT-6 and Astra give some hope",
+            "• Agentic AI security will focus on the secure harness",
             "• Not Investment Advice",
-            "• Themes: agent runtime controls, security for AI-generated code, MCP and gateway security",
-            "• Watch: AIVSS v1 · browser-agent reliability · MAESTRO v2 when CSA publishes it",
             "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
         ]
     },
@@ -330,10 +332,12 @@ SLIDES_ZH = {
         "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告"
     ],
     "17": [
-        "谢谢",
+        "展望",
+        "• RSI 与智能体集群（Agent Swarm）正变得越来越重要",
+        "• 具身智能（Physical AI）与人形机器人仍处早期阶段",
+        "• 世界模型仍需大量工作 — GPT-6 与 Astra 带来一些希望",
+        "• 智能体 AI 安全将聚焦安全驾驭层（Secure Harness）",
         "• 不构成投资建议",
-        "• 主题：智能体运行时控制、AI 生成代码安全、MCP 与网关安全",
-        "• 关注：AIVSS v1 · 浏览器智能体可靠性 · CSA 发布后的 MAESTRO v2",
         "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
     ],
     "18": [
