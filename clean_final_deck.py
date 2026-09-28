@@ -1,15 +1,16 @@
-#!/usr/bin/env python3
-"""Inject prediction slides + ZH pack into the packt-harness template."""
+# -*- coding: utf-8 -*-
+"""Rewrite slide content: plain language, fewer points, no working notes."""
 from __future__ import annotations
 
+import ast
 import json
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-
-# Verdict labels used in scorecard tables
-# ON_TRACK | CONFIRMED | PARTIAL | IN_PROGRESS | MOSTLY_CONFIRMED
+BUILD = ROOT / "build_slides.py"
 
 SLIDES_EN = [
     {
@@ -21,8 +22,8 @@ SLIDES_EN = [
             "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang",
             "Regions: United States · China · European Union",
-            "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
-        ]
+            "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
+        ],
     },
     {
         "number": 2,
@@ -38,8 +39,8 @@ SLIDES_EN = [
             "• Grant reviewer, Schmidt Sciences",
             "• EC-Council instructor — Generative AI for Cyber Security",
             "• CEO of DistributedApps.ai: https://distributedapps.ai/",
-            "• Substack: kenhuangus.substack.com  ·  LinkedIn: linkedin.com/in/kenhuang8"
-        ]
+            "• Substack: kenhuangus.substack.com  ·  LinkedIn: linkedin.com/in/kenhuang8",
+        ],
     },
     {
         "number": 3,
@@ -50,8 +51,8 @@ SLIDES_EN = [
             "• Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "• Publisher: Cloud Security Alliance",
             "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-            "IMG:assets/images/csa-top-10-predictions-2026.png"
-        ]
+            "IMG:assets/images/csa-top-10-predictions-2026.png",
+        ],
     },
     {
         "number": 4,
@@ -60,8 +61,8 @@ SLIDES_EN = [
             "• January 2026: ten technology predictions for Agentic AI (CSA)",
             "• This deck checks each prediction against public evidence in the US, China, and the EU",
             "• Short investment notes are for discussion only — Not Investment Advice",
-            "• Ask: who pays, what product, and why now"
-        ]
+            "• Ask: who pays, what product, and why now",
+        ],
     },
     {
         "number": 5,
@@ -78,8 +79,8 @@ SLIDES_EN = [
             "| 7 | Internal first | Internal platforms with KPIs / avoid public consumer first |",
             "| 8 | Agent CVEs | Secure MCP and patching / avoid unauthenticated tool servers |",
             "| 9 | MAESTRO v2 | Tools for today’s 7 layers / avoid fake v2 claims |",
-            "| 10 | AIVSS | Scoring after v1 is final / avoid unmapped private scores |"
-        ]
+            "| 10 | AIVSS | Scoring after v1 is final / avoid unmapped private scores |",
+        ],
     },
     {
         "number": 6,
@@ -87,8 +88,8 @@ SLIDES_EN = [
             "P1 — Self-Improving Agents",
             "Evidence: Early systems beat a fixed R&D budget baseline; production still needs private tests the agent cannot see, plus human control.",
             "• Opportunity — Test platforms and controls so self-improving agents cannot game the score; buyers are frontier labs and AI R&D teams",
-            "• Avoid — Public apps sold as self-improving AGI that rewrite their own code with no private tests and no spend limit"
-        ]
+            "• Avoid — Public apps sold as self-improving AGI that rewrite their own code with no private tests and no spend limit",
+        ],
     },
     {
         "number": 7,
@@ -96,8 +97,8 @@ SLIDES_EN = [
             "P2 — Agency Matters More Than IQ Scores",
             "Evidence: New benchmarks score multi-hour tool work, not quiz scores alone.",
             "• Opportunity — Agents that finish long tool workflows; sell planning and persistence scores into model selection and RFPs",
-            "• Avoid — Chat products labeled as agents with no tools and no multi-hour tasks"
-        ]
+            "• Avoid — Chat products labeled as agents with no tools and no multi-hour tasks",
+        ],
     },
     {
         "number": 8,
@@ -105,8 +106,8 @@ SLIDES_EN = [
             "P3 — MAESTRO Security Benchmarks",
             "Evidence: MAESTRO is in playbooks and CI; shared public leaderboards are still thin.",
             "• Opportunity — Scanners that map a change to MAESTRO layers and block high-risk agent merges",
-            "• Avoid — “MAESTRO compliant” badges with no layer tests and no scanner output"
-        ]
+            "• Avoid — “MAESTRO compliant” badges with no layer tests and no scanner output",
+        ],
     },
     {
         "number": 9,
@@ -114,8 +115,8 @@ SLIDES_EN = [
             "P4 — Agentic Risk Management",
             "Evidence: US, China, and EU rules now treat agent risk as a compliance problem.",
             "• Opportunity — Runtime allow or deny on tool calls, plus one control pack mapped to NIST, the EU AI Act, and China filing",
-            "• Avoid — Policy documents with no live control when an agent calls a tool"
-        ]
+            "• Avoid — Policy documents with no live control when an agent calls a tool",
+        ],
     },
     {
         "number": 10,
@@ -123,8 +124,8 @@ SLIDES_EN = [
             "P5 — Vibe Coding Security Hangover",
             "Evidence: About 91% of audited AI-generated apps had security holes (arXiv:2606.23130).",
             "• Opportunity — Security checks built into AI coding tools before deploy (login, secrets, access control)",
-            "• Avoid — Builders that ship demos with hardcoded keys and APIs with no authentication"
-        ]
+            "• Avoid — Builders that ship demos with hardcoded keys and APIs with no authentication",
+        ],
     },
     {
         "number": 11,
@@ -132,8 +133,8 @@ SLIDES_EN = [
             "P6 — Browser Agents Still Struggle",
             "Evidence: Browser-agent protocols still lose sync; desktop control remains easy to trick with prompt injection.",
             "• Opportunity — Agents limited to an approved action list, with human approval for payment and send-email",
-            "• Avoid — Consumer bots that can pay or send email with no human check"
-        ]
+            "• Avoid — Consumer bots that can pay or send email with no human check",
+        ],
     },
     {
         "number": 12,
@@ -141,8 +142,8 @@ SLIDES_EN = [
             "P7 — Enterprise: Internal First",
             "Evidence: Most enterprise programs start inside the company; many stall on content and data cleanup.",
             "• Opportunity — Internal agent platforms with ERP and IT connectors, and a KPI finance can audit",
-            "• Avoid — Public consumer agents before an internal workflow has a measurable KPI"
-        ]
+            "• Avoid — Public consumer agents before an internal workflow has a measurable KPI",
+        ],
     },
     {
         "number": 13,
@@ -150,8 +151,8 @@ SLIDES_EN = [
             "P8 — More Agentic Ecosystem CVEs",
             "Evidence: LangChain, MCP, and coding-agent bugs are already scored like normal software CVEs.",
             "• Opportunity — Secure MCP gateways and fast patching of agent frameworks and plugins",
-            "• Avoid — MCP servers with no login, and one shared token for every tool"
-        ]
+            "• Avoid — MCP servers with no login, and one shared token for every tool",
+        ],
     },
     {
         "number": 14,
@@ -159,8 +160,8 @@ SLIDES_EN = [
             "P9 — MAESTRO v2 Practical Adoption",
             "Evidence: MAESTRO v2 is not published. The model in use is still seven layers.",
             "• Opportunity — Implementation software and training for the current seven-layer model",
-            "• Avoid — Products that claim “MAESTRO v2” or “ten layers” before CSA publishes v2"
-        ]
+            "• Avoid — Products that claim “MAESTRO v2” or “ten layers” before CSA publishes v2",
+        ],
     },
     {
         "number": 15,
@@ -168,8 +169,8 @@ SLIDES_EN = [
             "P10 — OWASP AIVSS v1",
             "Evidence: v0.8 is live; v1.0 is in public review through October 1, 2026.",
             "• Opportunity — Scoring engines and release gates once v1 is final",
-            "• Avoid — Private “AI risk scores” that refuse to map to AIVSS after v1 is the standard"
-        ]
+            "• Avoid — Private “AI risk scores” that refuse to map to AIVSS after v1 is the standard",
+        ],
     },
     {
         "number": 16,
@@ -181,8 +182,8 @@ SLIDES_EN = [
             "| Self-improve / agency | Test vendors and vertical R&D agents | Regulated autonomy levels | Research ahead of open deploy |",
             "| Security | MAESTRO and AIVSS products, AppSec | Fast patching | Build and AI Act gates |",
             "| Browser agents | Reliable protocols and click defenses | Limited action lists in work apps | Standards plus easy human review |",
-            "| Enterprise | Internal platforms first | Data-local agent platforms | Human-in-the-loop before going external |"
-        ]
+            "| Enterprise | Internal platforms first | Data-local agent platforms | Human-in-the-loop before going external |",
+        ],
     },
     {
         "number": 17,
@@ -191,8 +192,8 @@ SLIDES_EN = [
             "• Will AIVSS v1 create paid scoring products, or stay a free checklist?",
             "• Will browser-agent reliability become a product category, or stay a framework feature?",
             "• Do internal agent platforms win budget before public consumer agents earn trust?",
-            "• Can security for AI-generated code become a default merge check?"
-        ]
+            "• Can security for AI-generated code become a default merge check?",
+        ],
     },
     {
         "number": 18,
@@ -204,8 +205,8 @@ SLIDES_EN = [
             "• MAESTRO seven-layer analysis: CSA blog 2026-08-13 (Ken Huang)",
             "• CSA AICM v1.1; China agent regulation (enforceable 2026-07-15); EU AI Act",
             "• Vibe coding security study: arXiv:2606.23130",
-            "• A2UI: a2ui.org · AIVSS: aivss.owasp.org · Contentstack Agentic Enterprise Report 2026"
-        ]
+            "• A2UI: a2ui.org · AIVSS: aivss.owasp.org · Contentstack Agentic Enterprise Report 2026",
+        ],
     },
     {
         "number": 19,
@@ -215,8 +216,8 @@ SLIDES_EN = [
             "• Not Investment Advice — not a recommendation to buy or sell",
             "• Near-term themes: runtime agent controls, security for AI-generated code, MCP and gateway security",
             "• Watch: AIVSS v1, browser-agent reliability, MAESTRO v2 when CSA publishes it",
-            "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
-        ]
+            "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8",
+        ],
     },
     {
         "number": 20,
@@ -224,9 +225,9 @@ SLIDES_EN = [
         "raw_lines": [
             "Thank you",
             "Graph Engineering for Agentic AI Systems · Harness Engineering",
-            "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
-        ]
-    }
+            "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM",
+        ],
+    },
 ]
 
 SLIDES_ZH = {
@@ -237,7 +238,7 @@ SLIDES_ZH = {
         "作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "旧金山大学（USF）客座教授：https://www.usfca.edu/faculty/ken-huang",
         "区域：美国 · 中国 · 欧盟",
-        "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
+        "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
     ],
     "2": [
         "关于演讲者：Ken Huang，CISSP",
@@ -250,7 +251,7 @@ SLIDES_ZH = {
         "• Schmidt Sciences 基金评审成员",
         "• EC-Council 讲师 — 面向网络安全的生成式 AI",
         "• DistributedApps.ai 首席执行官：https://distributedapps.ai/",
-        "• Substack：kenhuangus.substack.com  ·  LinkedIn：linkedin.com/in/kenhuang8"
+        "• Substack：kenhuangus.substack.com  ·  LinkedIn：linkedin.com/in/kenhuang8",
     ],
     "3": [
         "CSA 原文发布 — 2026 年 1 月 16 日",
@@ -259,14 +260,14 @@ SLIDES_ZH = {
         "• 作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "• 发布方：云安全联盟（CSA）",
         "• https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "IMG:assets/images/csa-top-10-predictions-2026.png"
+        "IMG:assets/images/csa-top-10-predictions-2026.png",
     ],
     "4": [
         "关于本演示",
         "• 2026 年 1 月：CSA 发布十条智能体 AI 技术预测",
         "• 本演示对照美国、中国、欧盟的公开证据检查每条预测",
         "• 投资相关说明仅供讨论 — 不构成投资建议",
-        "• 关注：谁付费、卖什么产品、为何是现在"
+        "• 关注：谁付费、卖什么产品、为何是现在",
     ],
     "5": [
         "资本可关注的方向 — 不构成投资建议",
@@ -281,67 +282,67 @@ SLIDES_ZH = {
         "| 7 | 内部优先 | 有 KPI 的内部平台 / 回避先做公网消费级 |",
         "| 8 | 智能体 CVE | 安全 MCP 与补丁 / 回避无登录的工具服务器 |",
         "| 9 | MAESTRO v2 | 现行七层工具与培训 / 回避虚假 v2 宣称 |",
-        "| 10 | AIVSS | v1 定稿后的评分 / 回避无法对照的私有分 |"
+        "| 10 | AIVSS | v1 定稿后的评分 / 回避无法对照的私有分 |",
     ],
     "6": [
         "预测 1 — 自我改进智能体",
         "现有证据：早期系统已能在固定研发预算下超过人工基线；投产仍需要智能体看不见的私有测试，以及人工控制。",
         "• 机会 — 私有测试与防刷分控制，卖给前沿实验室和 AI 研发团队",
-        "• 回避 — 面向公网、自称自我改进 AGI、无私有测试且无花费上限就自行改代码的应用"
+        "• 回避 — 面向公网、自称自我改进 AGI、无私有测试且无花费上限就自行改代码的应用",
     ],
     "7": [
         "预测 2 — 自主性比智商分数更重要",
         "现有证据：新基准主要打分「数小时工具任务」，而不是测验分数。",
         "• 机会 — 能完成长工具流程的智能体；把规划与持续执行分数卖进选型与招标",
-        "• 回避 — 没有工具、也完不成数小时任务、却自称智能体的聊天产品"
+        "• 回避 — 没有工具、也完不成数小时任务、却自称智能体的聊天产品",
     ],
     "8": [
         "预测 3 — MAESTRO 安全基准",
         "现有证据：MAESTRO 已进入操作手册和 CI；公开排行榜仍少。",
         "• 机会 — 按 MAESTRO 分层检查变更、并阻断高风险智能体合并的扫描器",
-        "• 回避 — 没有分层测试、没有扫描输出的「MAESTRO 合规」徽章"
+        "• 回避 — 没有分层测试、没有扫描输出的「MAESTRO 合规」徽章",
     ],
     "9": [
         "预测 4 — 智能体风险管理",
         "现有证据：美、中、欧规则已把智能体风险当作合规问题。",
         "• 机会 — 工具调用的实时允许或拒绝，外加一套映射 NIST、欧盟 AI 法案与中国备案的控制包",
-        "• 回避 — 只有制度文档、不能在工具调用时做实时控制的产品"
+        "• 回避 — 只有制度文档、不能在工具调用时做实时控制的产品",
     ],
     "10": [
         "预测 5 — Vibe Coding 安全后遗症",
         "现有证据：被审计的 AI 生成应用约 91% 有安全漏洞（arXiv:2606.23130）。",
         "• 机会 — 在 AI 编程工具里内置部署前安全检查（登录、密钥、访问控制）",
-        "• 回避 — 交付演示时带硬编码密钥、且 API 无认证的生成器"
+        "• 回避 — 交付演示时带硬编码密钥、且 API 无认证的生成器",
     ],
     "11": [
         "预测 6 — 浏览器智能体仍难落地",
         "现有证据：浏览器智能体协议仍易失同步；桌面操作仍容易被提示注入欺骗。",
         "• 机会 — 只允许批准动作清单，支付和发邮件需人工审批",
-        "• 回避 — 可以支付或发邮件、却没有人工确认的消费级机器人"
+        "• 回避 — 可以支付或发邮件、却没有人工确认的消费级机器人",
     ],
     "12": [
         "预测 7 — 企业：内部优先",
         "现有证据：多数企业项目从公司内部起步；很多卡在内容和数据清理。",
         "• 机会 — 连接 ERP/IT 的内部智能体平台，并有财务可审计的 KPI",
-        "• 回避 — 内部流程还没有可衡量 KPI 之前就做公网消费级智能体"
+        "• 回避 — 内部流程还没有可衡量 KPI 之前就做公网消费级智能体",
     ],
     "13": [
         "预测 8 — 智能体生态 CVE 增多",
         "现有证据：LangChain、MCP 和编程智能体漏洞已按普通软件 CVE 评级。",
         "• 机会 — 安全的 MCP 网关，以及对智能体框架与插件的快速补丁",
-        "• 回避 — 无登录的 MCP 服务器，以及一把令牌调用全部工具"
+        "• 回避 — 无登录的 MCP 服务器，以及一把令牌调用全部工具",
     ],
     "14": [
         "预测 9 — MAESTRO v2 落地采用",
         "现有证据：MAESTRO v2 尚未发布。现行模型仍是七层。",
         "• 机会 — 面向现行七层模型的落地软件与培训",
-        "• 回避 — 在 CSA 发布 v2 之前宣称「MAESTRO v2」或「十层」的产品"
+        "• 回避 — 在 CSA 发布 v2 之前宣称「MAESTRO v2」或「十层」的产品",
     ],
     "15": [
         "预测 10 — OWASP AIVSS v1",
         "现有证据：v0.8 已上线；v1.0 公开评审至 2026 年 10 月 1 日。",
         "• 机会 — v1 定稿后的评分引擎与发布门禁",
-        "• 回避 — v1 成为标准后仍拒绝对照 AIVSS 的私有「AI 风险分」"
+        "• 回避 — v1 成为标准后仍拒绝对照 AIVSS 的私有「AI 风险分」",
     ],
     "16": [
         "区域视角 — 美国 · 中国 · 欧盟",
@@ -351,14 +352,14 @@ SLIDES_ZH = {
         "| 自我改进 / 自主性 | 测试厂商与垂直研发智能体 | 受监管的自主等级 | 研究先于开放部署 |",
         "| 安全 | MAESTRO 与 AIVSS 产品、应用安全 | 快速补丁 | 构建与 AI 法案门禁 |",
         "| 浏览器智能体 | 可靠协议与点击防护 | 办公应用中的有限动作清单 | 标准 + 便于人工复核 |",
-        "| 企业 | 内部平台优先 | 数据本地智能体平台 | 对外前保留人工把关 |"
+        "| 企业 | 内部平台优先 | 数据本地智能体平台 | 对外前保留人工把关 |",
     ],
     "17": [
         "未决问题 — 不构成投资建议",
         "• AIVSS v1 会催生付费评分产品，还是停留在免费清单？",
         "• 浏览器智能体可靠性会成为独立产品，还是框架附带功能？",
         "• 内部智能体平台能否在公网消费级赢得信任之前拿到预算？",
-        "• AI 生成代码的安全检查能否成为默认合并门禁？"
+        "• AI 生成代码的安全检查能否成为默认合并门禁？",
     ],
     "18": [
         "主要来源",
@@ -368,7 +369,7 @@ SLIDES_ZH = {
         "• MAESTRO 七层分析：CSA 博客 2026-08-13（Ken Huang）",
         "• CSA AICM v1.1；中国智能体监管（2026-07-15 起施行）；欧盟 AI 法案",
         "• Vibe coding 安全研究：arXiv:2606.23130",
-        "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告"
+        "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告",
     ],
     "19": [
         "结语",
@@ -376,191 +377,126 @@ SLIDES_ZH = {
         "• 不构成投资建议 — 不是买卖推荐",
         "• 近期主题：智能体运行时控制、AI 生成代码安全、MCP 与网关安全",
         "• 可关注：AIVSS v1、浏览器智能体可靠性、以及 CSA 发布后的 MAESTRO v2",
-        "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
+        "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8",
     ],
     "20": [
         "谢谢",
         "《Graph Engineering for Agentic AI Systems》·《Harness Engineering》",
-        "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
-    ]
+        "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM",
+    ],
 }
 
-PHRASES = {
-    "Harness Engineering Masterclass": "智能体 AI 2026 预测成绩单",
-    "🏠 Home Site": "🏠 站点主页",
-    "Presentation Mode": "放映模式",
-    "Grid View": "网格视图",
-    "❮ Prev": "❮ 上一页",
-    "Next ❯": "下一页 ❯",
-    "Go ➔": "跳转 ➔",
-    "⛶ Fullscreen": "⛶ 全屏",
-}
+
+def to_py(obj: object) -> str:
+    s = json.dumps(obj, ensure_ascii=False, indent=4)
+    return s.replace(": true", ": True").replace(": false", ": False").replace(": null", ": None")
 
 
 def main() -> None:
-    html_path = ROOT / "slides.html"
-    text = html_path.read_text(encoding="utf-8")
+    for s in SLIDES_EN:
+        n = str(s["number"])
+        assert len(SLIDES_ZH[n]) == len(s["raw_lines"]), (n, len(SLIDES_ZH[n]), len(s["raw_lines"]))
 
-    # Replace slidesData
-    pattern = r"const slidesData = \[.*?\];\n"
-    replacement = "const slidesData = " + json.dumps(SLIDES_EN, ensure_ascii=False) + ";\n"
-    text2, n = re.subn(pattern, replacement, text, count=1, flags=re.S)
-    if n != 1:
-        raise SystemExit(f"Failed to replace slidesData (matches={n})")
+    text = BUILD.read_text(encoding="utf-8")
+    m_en = re.search(r"SLIDES_EN = (\[.*?\])\n\nSLIDES_ZH = ", text, re.S)
+    m_zh = re.search(r"SLIDES_ZH = (\{.*?\})\n\nPHRASES = ", text, re.S)
+    if not m_en or not m_zh:
+        raise SystemExit("Could not locate SLIDES_EN / SLIDES_ZH in build_slides.py")
 
-    # Branding / titles
-    replacements = [
-        (
-            "Packt Masterclass Presentation: 85 Interactive Code, Architecture & Skill Slides",
-            "Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard",
-        ),
-        ("Harness Engineering Masterclass", "Agentic AI 2026 Predictions"),
-        ("packt-slides-lang", "predictions-slides-lang"),
-        (
-            "Packt Masterclass Presentation: 85 Interactive Code, Architecture & Skill Slides",
-            "Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard",
-        ),
-        (
-            "document.title = uiText(\n        'Packt Masterclass Presentation: 85 Interactive Code, Architecture & Skill Slides',\n        'Packt 大师课演示：85 页交互式代码、架构与技能幻灯片'\n      );",
-            "document.title = uiText(\n        'Top 10 Predictions for Agentic AI in 2026',\n        '2026 智能体 AI 十大预测 — 年中成绩单'\n      );",
-        ),
-        (
-            "brand.textContent = uiText('Harness Engineering Masterclass', '智能体驾驭工程大师课');",
-            "brand.textContent = uiText('Agentic AI 2026 Predictions', '智能体 AI 2026 预测成绩单');",
-        ),
-        (
-            "home.textContent = uiText('🏠 Home Site', '🏠 课程主页');",
-            "home.textContent = uiText('🏠 Home Site', '🏠 站点主页');",
-        ),
-        (
-            'href="https://kenhuangus.github.io/packt-harness/"',
-            'href="./index.html"',
-        ),
-        (
-            "github.com/kenhuangus/packt-harness",
-            "github.com/kenhuangus/agentic-ai-2026-predictions",
-        ),
-    ]
-    for old, new in replacements:
-        text2 = text2.replace(old, new)
+    text2 = (
+        text[: m_en.start(1)]
+        + to_py(SLIDES_EN)
+        + text[m_en.end(1) : m_zh.start(1)]
+        + to_py(SLIDES_ZH)
+        + text[m_zh.end(1) :]
+    )
 
-    # Title slide hero / pillars — only replace if still on the Packt originals
-    old_hero = """          <div id="slide-content-wrap" class="slide-1-container">
-            <div class="slide-1-hero-card">
-              <div class="slide-1-hero-tagline">
-                Architecting Deterministic Control Systems for Non-Deterministic AI Agents
-              </div>
-              <div class="slide-1-hero-desc">
-                A comprehensive masterclass in engineering reliable, observable, and secure production agent harnesses with Claude, memory architectures, AST guardrails, TDA self-healing loops, and compound multi-agent teams.
-              </div>
-            </div>"""
-
-    new_hero = """          <div id="slide-content-wrap" class="slide-1-container">
-            <div class="slide-1-hero-card">
-              <div class="slide-1-hero-tagline">
-                ${slideLang === 'zh' ? '2026 智能体 AI 十大预测' : 'Top 10 Predictions for Agentic AI in 2026'}
-              </div>
-              <div class="slide-1-hero-desc">
-                ${slideLang === 'zh'
-                  ? 'CSA 技术预测（2026-01-16），证据截至 2026-09-27；附投资讨论，不构成投资建议。'
-                  : 'CSA technology predictions (2026-01-16), evidence through 2026-09-27, with investment discussion. Not Investment Advice.'}
-              </div>
-            </div>"""
-
-    if old_hero in text2:
-        text2 = text2.replace(old_hero, new_hero)
-
-    # Pillars on title slide
-    old_pillars = """            <div class="slide-1-pillars-row">
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">🛡️ Deterministic Harness</div>
-                <div class="slide-1-pillar-desc">Memory, scoped sandboxing &amp; AST hooks</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">🧪 Test-Driven Reliability</div>
-                <div class="slide-1-pillar-desc">Pytest feedback &amp; anti-regression suites</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">🤖 Multi-Agent Systems</div>
-                <div class="slide-1-pillar-desc">Planner, implementer &amp; reviewer worktrees</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">📜 5-Gate Scorecard</div>
-                <div class="slide-1-pillar-desc">Production readiness audit</div>
-              </div>
-            </div>"""
-
-    new_pillars = """            <div class="slide-1-pillars-row">
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '🇺🇸 美国' : '🇺🇸 United States'}</div>
-                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '实验室 RSI、CVE、企业调研' : 'Lab RSI, CVEs, enterprise surveys'}</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '🇨🇳 中国' : '🇨🇳 China'}</div>
-                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '智能体专项监管与落地' : 'Agent-specific regulation &amp; deployment'}</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '🇪🇺 欧盟' : '🇪🇺 European Union'}</div>
-                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? 'AI 法案、A2UI、控制映射' : 'AI Act, A2UI, control mappings'}</div>
-              </div>
-              <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '📊 10 条判定' : '📊 10 Verdicts'}</div>
-                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '截至 2026-09-27 的证据审计' : 'Evidence audit as of 2026-09-27'}</div>
-              </div>
-            </div>"""
-
-    if old_pillars in text2:
-        text2 = text2.replace(old_pillars, new_pillars)
-
-    # Hide packt logo badge if present — keep structure, point away from packt
+    # Clean hero template strings for future rebuilds
     text2 = text2.replace(
-        'style="display: (slide.number === 1) ? \'inline-flex\' : \'none\'"',
-        'style="display: none"',
+        "'CSA 技术预测（2026-01-16），年中证据截至 2026-09-27；投资论点为今日新增的讨论框架，不构成投资建议。状态存档：标签 v1-midyear-scorecard。'",
+        "'CSA 技术预测（2026-01-16），证据截至 2026-09-27；附投资讨论，不构成投资建议。'",
     )
-
-    # Course instructor badge label
     text2 = text2.replace(
-        "<span>🎓 Course Instructor</span>",
-        "<span>${slideLang === 'zh' ? '🎓 作者' : '🎓 Author'}</span>",
+        "'CSA technology predictions (2026-01-16), mid-year evidence through 2026-09-27, plus illustrative investment theses added today. Not Investment Advice. Status archive: tag v1-midyear-scorecard.'",
+        "'CSA technology predictions (2026-01-16), evidence through 2026-09-27, with investment discussion. Not Investment Advice.'",
+    )
+    text2 = text2.replace(
+        "'2026 智能体 AI 十大预测 · 年中成绩单'",
+        "'2026 智能体 AI 十大预测'",
+    )
+    text2 = text2.replace(
+        "'Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard'",
+        "'Top 10 Predictions for Agentic AI in 2026'",
     )
 
-    html_path.write_text(text2, encoding="utf-8")
+    BUILD.write_text(text2, encoding="utf-8")
 
-    zh_payload = {"lines": SLIDES_ZH, "phrases": PHRASES}
-    (ROOT / "slides-zh.js").write_text(
-        "window.SLIDES_ZH = " + json.dumps(zh_payload, ensure_ascii=False) + ";\n",
-        encoding="utf-8",
-    )
+    r = subprocess.run([sys.executable, str(BUILD)], cwd=ROOT)
+    if r.returncode:
+        raise SystemExit(r.returncode)
+    r = subprocess.run([sys.executable, str(ROOT / "cleanup_slides.py")], cwd=ROOT)
+    if r.returncode:
+        raise SystemExit(r.returncode)
 
-    # Persist research JSON for the landing page / README
-    research = {
-        "as_of": "2026-09-27",
-        "source_article": "https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "predictions": [
-            {"id": 1, "title": "Self-Improving Agentic AI", "verdict": "on_track"},
-            {"id": 2, "title": "Agency > Intelligence", "verdict": "on_track"},
-            {"id": 3, "title": "MAESTRO Security Benchmarks", "verdict": "partial"},
-            {"id": 4, "title": "Agentic Risk Management", "verdict": "confirmed"},
-            {"id": 5, "title": "Vibe Coding Security Hangover", "verdict": "confirmed"},
-            {"id": 6, "title": "Browser Agents Struggle", "verdict": "on_track"},
-            {"id": 7, "title": "Enterprise Internal First", "verdict": "mostly_confirmed"},
-            {"id": 8, "title": "More Agentic CVEs", "verdict": "confirmed"},
-            {"id": 9, "title": "MAESTRO v2", "verdict": "in_progress"},
-            {"id": 10, "title": "OWASP AIVSS v1", "verdict": "in_progress"},
-        ],
-    }
-    (ROOT / "research" / "scorecard.json").write_text(
-        json.dumps(research, indent=2) + "\n", encoding="utf-8"
-    )
+    # Patch live hero text (build only replaces Packt originals)
+    for path in (ROOT / "slides.html", ROOT / "docs" / "slides.html"):
+        t = path.read_text(encoding="utf-8")
+        replacements = [
+            (
+                "CSA technology predictions (2026-01-16), mid-year evidence through 2026-09-27, plus illustrative investment theses added today. Not Investment Advice. Status archive: tag v1-midyear-scorecard.",
+                "CSA technology predictions (2026-01-16), evidence through 2026-09-27, with investment discussion. Not Investment Advice.",
+            ),
+            (
+                "CSA 技术预测（2026-01-16），年中证据截至 2026-09-27；投资论点为今日新增的讨论框架，不构成投资建议。状态存档：标签 v1-midyear-scorecard。",
+                "CSA 技术预测（2026-01-16），证据截至 2026-09-27；附投资讨论，不构成投资建议。",
+            ),
+            (
+                "Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard",
+                "Top 10 Predictions for Agentic AI in 2026",
+            ),
+            (
+                "2026 智能体 AI 十大预测 · 年中成绩单",
+                "2026 智能体 AI 十大预测",
+            ),
+        ]
+        for old, new in replacements:
+            t = t.replace(old, new)
+        path.write_text(t, encoding="utf-8")
 
-    # Copy to docs/ for GitHub Pages option
-    docs = ROOT / "docs"
-    docs.mkdir(exist_ok=True)
-    (docs / "slides.html").write_text(text2, encoding="utf-8")
-    (docs / "slides-zh.js").write_bytes((ROOT / "slides-zh.js").read_bytes())
+    # Landing page: strip archive chip / working notes
+    for path in (ROOT / "index.html", ROOT / "docs" / "index.html"):
+        if not path.exists():
+            continue
+        t = path.read_text(encoding="utf-8")
+        t = t.replace(
+            '<div class="eyebrow">Technology predictions · investment theses added 2026-09-27 · Not Investment Advice</div>',
+            '<div class="eyebrow">Technology predictions · investment discussion · Not Investment Advice</div>',
+        )
+        t = t.replace(
+            "<h2>CSA technology forecasts first — illustrative investment theses added today</h2>",
+            "<h2>CSA technology forecasts, with a short investment discussion</h2>",
+        )
+        t = t.replace(
+            "This site checks each prediction against public evidence through September 27, 2026, and adds an optional investment-discussion layer created on that same date.",
+            "This site checks each prediction against public evidence through September 27, 2026, and adds a short investment discussion.",
+        )
+        t = t.replace(
+            '<span class="chip">Investment layer added 2026-09-27</span>\n        <span class="chip">Not Investment Advice</span>\n        <span class="chip">Archive: v1-midyear-scorecard</span>',
+            '<span class="chip">Not Investment Advice</span>',
+        )
+        t = t.replace(
+            '<p style="margin-top:0.55rem;"><strong style="color:var(--ink);">Not Investment Advice.</strong> Original CSA content is technology prediction. Investment theses on this site were added 2026-09-27 for discussion only.</p>',
+            '<p style="margin-top:0.55rem;"><strong style="color:var(--ink);">Not Investment Advice.</strong> Original CSA content is technology prediction. Investment notes are for discussion only.</p>',
+        )
+        t = t.replace("Weco AIDE² Level-1 RSI (Jul 2026)", "Early self-improving R&D agents (Jul 2026)")
+        path.write_text(t, encoding="utf-8")
 
-    print(f"Wrote {len(SLIDES_EN)} EN slides and ZH pack.")
-    print("Updated slides.html, slides-zh.js, research/scorecard.json, docs/")
+    # Final sanity: no archive tag, no hidden-eval wording
+    blob = (ROOT / "slides.html").read_text(encoding="utf-8") + (ROOT / "slides-zh.js").read_text(encoding="utf-8")
+    for bad in ("v1-midyear-scorecard", "hidden-eval", "hidden eval", "隐藏评测", "年中层", "Base layer", "Investment layer"):
+        if bad in blob:
+            raise SystemExit(f"Leftover working note or jargon: {bad}")
+    print("CLEAN OK")
 
 
 if __name__ == "__main__":
