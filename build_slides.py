@@ -264,7 +264,7 @@ SLIDES_ZH = {
     "6": [
         "预测 1 — 自我改进智能体 (Self-Improving / RSI)",
         "早期系统已能在固定研发预算下超过人工基线 (Human Baseline)。投产仍需要智能体看不见的私有测试 (Private Eval)，以及人工控制。",
-        "• 机会 — 私有测试平台与奖励黑客防护 (Reward Hacking) 控制，卖给前沿实验室和 AI 研发团队",
+        "• 机会 — 私有测试 (Private Eval) 平台与防刷分 (Reward Hacking) 控制，卖给前沿实验室和 AI 研发团队",
         "• 回避 — 面向公网、自称自我改进 AGI、无 Private Eval 且无花费上限就自行改代码的应用"
     ],
     "7": [
