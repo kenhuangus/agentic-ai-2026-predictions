@@ -174,29 +174,6 @@ SLIDES_EN = [
     {
         "number": 16,
         "raw_lines": [
-            "United States · China · European Union",
-            "| Theme | United States | China | European Union |",
-            "|---|---|---|---|",
-            "| Demand | Labs, CVE tools, enterprise buyers | Internal ops under local rules and filing | Compliance software and human oversight |",
-            "| Self-improve / agency | Test vendors and vertical R&D agents | Regulated autonomy levels | Research ahead of open deploy |",
-            "| Security | MAESTRO and AIVSS products, AppSec | Fast patching | Build and AI Act gates |",
-            "| Browser agents | Reliable protocols and click defenses | Limited action lists in work apps | Standards plus easy human review |",
-            "| Enterprise | Internal platforms first | Data-local agent platforms | Human review before going external |"
-        ]
-    },
-    {
-        "number": 17,
-        "raw_lines": [
-            "Open Questions — Not Investment Advice",
-            "• Will AIVSS v1 create paid scoring products, or stay a free checklist?",
-            "• Will browser-agent reliability become a product category, or stay a framework feature?",
-            "• Do internal agent platforms win budget before public consumer agents earn trust?",
-            "• Can security for AI-generated code become a default merge check?"
-        ]
-    },
-    {
-        "number": 18,
-        "raw_lines": [
             "Primary Sources",
             "• CSA predictions: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
             "• Self-improving agents (AIDE²): weco.ai blog (2026-07-14); arXiv:2609.26457",
@@ -208,7 +185,7 @@ SLIDES_EN = [
         ]
     },
     {
-        "number": 19,
+        "number": 17,
         "raw_lines": [
             "Thank You",
             "• Not Investment Advice",
@@ -218,7 +195,7 @@ SLIDES_EN = [
         ]
     },
     {
-        "number": 20,
+        "number": 18,
         "slide_type": "thanks",
         "raw_lines": [
             "Recent Books",
@@ -343,23 +320,6 @@ SLIDES_ZH = {
         "• 回避 — v1 成为标准后仍拒绝对照 AIVSS 的私有「AI 风险分」"
     ],
     "16": [
-        "美国 · 中国 · 欧盟",
-        "| 主题 | 美国 | 中国 | 欧盟 |",
-        "|---|---|---|---|",
-        "| 需求 | 实验室、CVE 工具、企业买方 | 本地规则与备案下的内部运营 | 合规软件与人工监督 |",
-        "| 自我改进 / 自主性 | 测试厂商与垂直研发智能体 | 受监管的自主等级 | 研究先于开放部署 |",
-        "| 安全 | MAESTRO 与 AIVSS 产品、应用安全 | 快速补丁 | 构建与 AI 法案门禁 |",
-        "| 浏览器智能体 | 可靠协议与点击防护 | 办公应用中的有限动作清单 | 标准 + 便于人工复核 |",
-        "| 企业 | 内部平台优先 | 数据本地智能体平台 | 对外前保留人工把关 |"
-    ],
-    "17": [
-        "未决问题 — 不构成投资建议",
-        "• AIVSS v1 会催生付费评分产品，还是停留在免费清单？",
-        "• 浏览器智能体可靠性会成为独立产品，还是框架附带功能？",
-        "• 内部智能体平台能否在公网消费级赢得信任之前拿到预算？",
-        "• AI 生成代码的安全检查能否成为默认合并门禁？"
-    ],
-    "18": [
         "主要来源",
         "• CSA 预测：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
         "• 自我改进智能体（AIDE²）：weco.ai 博客（2026-07-14）；arXiv:2609.26457",
@@ -369,14 +329,14 @@ SLIDES_ZH = {
         "• Vibe coding 安全研究：arXiv:2606.23130",
         "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告"
     ],
-    "19": [
+    "17": [
         "谢谢",
         "• 不构成投资建议",
         "• 主题：智能体运行时控制、AI 生成代码安全、MCP 与网关安全",
         "• 关注：AIVSS v1 · 浏览器智能体可靠性 · CSA 发布后的 MAESTRO v2",
         "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
     ],
-    "20": [
+    "18": [
         "近期图书",
         "《Graph Engineering for Agentic AI Systems》·《Harness Engineering》",
         "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
