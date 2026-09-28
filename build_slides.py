@@ -86,7 +86,7 @@ SLIDES_EN = [
         "raw_lines": [
             "P1 — Self-Improving Agents",
             "Early systems beat a fixed R&D budget baseline. Production still needs private tests the agent cannot see, plus human control.",
-            "• Opportunity — Test platforms and controls so self-improving agents cannot game the score; buyers are frontier labs and AI R&D teams",
+            "• Opportunity — Private eval platforms and Reward Hacking controls for frontier labs and AI R&D teams",
             "• Avoid — Public apps sold as self-improving AGI that rewrite their own code with no private tests and no spend limit"
         ]
     },
@@ -247,97 +247,97 @@ SLIDES_ZH = {
         "• 请读者自行尽职调查"
     ],
     "5": [
-        "投资地图 — 不构成投资建议",
+        "投资地图 — 不构成投资建议 (Not Investment Advice)",
         "| # | 趋势 | 关注 / 回避 |",
         "|---|---|---|",
-        "| 1 | 自我改进智能体 | 私有测试 + 人工控制 / 回避公网自行改代码应用 |",
-        "| 2 | 自主性重于智商分 | 长任务智能体 / 回避聊天冒充智能体 |",
-        "| 3 | MAESTRO 基准 | CI 合并阻断 / 回避纸面徽章 |",
-        "| 4 | 智能体风险 | 工具调用实时放行拒绝 / 回避只有制度 PDF |",
-        "| 5 | Vibe coding 安全 | 安全的 AI 编程工具 / 回避带明文密钥的演示生成器 |",
-        "| 6 | 浏览器智能体 | 批准动作 + 人工审批 / 回避可支付发信机器人 |",
-        "| 7 | 内部优先 | 有 KPI 的内部平台 / 回避先做公网消费级 |",
+        "| 1 | 自我改进智能体 (Self-Improving / RSI) | 私有测试 (Private Eval) + 人工控制 / 回避公网自行改代码 |",
+        "| 2 | 自主性重于智商分 (Agency > IQ) | 长任务智能体 / 回避聊天冒充智能体 |",
+        "| 3 | MAESTRO 基准 (Benchmarks) | CI 合并阻断 / 回避纸面徽章 |",
+        "| 4 | 智能体风险 (Agentic Risk) | 工具调用实时放行/拒绝 (Allow/Deny) / 回避只有制度 PDF |",
+        "| 5 | Vibe Coding 安全 | 安全的 AI 编程工具 / 回避带明文密钥的演示生成器 |",
+        "| 6 | 浏览器智能体 (Browser Agents) | 批准动作清单 (Approved Actions) + 人工审批 / 回避可支付发信机器人 |",
+        "| 7 | 内部优先 (Internal First) | 有 KPI 的内部平台 / 回避先做公网消费级 |",
         "| 8 | 智能体 CVE | 安全 MCP 与补丁 / 回避无登录的工具服务器 |",
-        "| 9 | MAESTRO v2 | 现行七层工具与培训 / 回避虚假 v2 宣称 |",
+        "| 9 | MAESTRO v2 | 现行七层 (7 Layers) 工具与培训 / 回避虚假 v2 宣称 |",
         "| 10 | AIVSS | v1 定稿后的评分 / 回避无法对照的私有分 |"
     ],
     "6": [
-        "预测 1 — 自我改进智能体",
-        "早期系统已能在固定研发预算下超过人工基线。投产仍需要智能体看不见的私有测试，以及人工控制。",
-        "• 机会 — 私有测试与防刷分控制，卖给前沿实验室和 AI 研发团队",
-        "• 回避 — 面向公网、自称自我改进 AGI、无私有测试且无花费上限就自行改代码的应用"
+        "预测 1 — 自我改进智能体 (Self-Improving / RSI)",
+        "早期系统已能在固定研发预算下超过人工基线 (Human Baseline)。投产仍需要智能体看不见的私有测试 (Private Eval)，以及人工控制。",
+        "• 机会 — 私有测试平台与奖励黑客防护 (Reward Hacking) 控制，卖给前沿实验室和 AI 研发团队",
+        "• 回避 — 面向公网、自称自我改进 AGI、无 Private Eval 且无花费上限就自行改代码的应用"
     ],
     "7": [
-        "预测 2 — 自主性比智商分数更重要",
-        "新基准主要打分「数小时工具任务」，而不是测验分数。",
-        "• 机会 — 能完成长工具流程的智能体；把规划与持续执行分数卖进选型与招标",
-        "• 回避 — 没有工具、也完不成数小时任务、却自称智能体的聊天产品"
+        "预测 2 — 自主性 (Agency) 比智商分数 (IQ Scores) 更重要",
+        "新基准主要打分「数小时工具任务 (Multi-hour Tool Tasks)」，而不是测验分数。",
+        "• 机会 — 能完成长工具流程的智能体；把规划 (Planning) 与持续执行 (Persistence) 分数卖进选型与招标 (RFP)",
+        "• 回避 — 没有工具、也完不成数小时任务、却自称智能体 (Agent) 的聊天产品"
     ],
     "8": [
-        "预测 3 — MAESTRO 安全基准",
-        "MAESTRO 已进入操作手册和 CI。公开排行榜仍少。",
-        "• 机会 — 按 MAESTRO 分层检查变更、并阻断高风险智能体合并的扫描器",
+        "预测 3 — MAESTRO 安全基准 (Security Benchmarks)",
+        "MAESTRO 已进入操作手册 (Playbooks) 和 CI。公开排行榜 (Leaderboards) 仍少。",
+        "• 机会 — 按 MAESTRO 分层检查变更、并阻断高风险智能体合并 (Merge) 的扫描器",
         "• 回避 — 没有分层测试、没有扫描输出的「MAESTRO 合规」徽章"
     ],
     "9": [
-        "预测 4 — 智能体风险管理",
-        "美、中、欧规则已把智能体风险当作合规问题。",
-        "• 机会 — 工具调用的实时允许或拒绝，外加一套映射 NIST、欧盟 AI 法案与中国备案的控制包",
-        "• 回避 — 只有制度文档、不能在工具调用时做实时控制的产品"
+        "预测 4 — 智能体风险管理 (Agentic Risk Management)",
+        "美、中、欧规则已把智能体风险当作合规 (Compliance) 问题。",
+        "• 机会 — 工具调用的实时允许或拒绝 (Allow/Deny)，外加一套映射 NIST、欧盟 AI 法案与中国备案的控制包 (Control Pack)",
+        "• 回避 — 只有制度文档、不能在工具调用时做实时控制 (Runtime Control) 的产品"
     ],
     "10": [
-        "预测 5 — Vibe Coding 安全后遗症",
+        "预测 5 — Vibe Coding 安全后遗症 (Security Hangover)",
         "被审计的 AI 生成应用约 91% 有安全漏洞（arXiv:2606.23130）。",
-        "• 机会 — 在 AI 编程工具里内置部署前安全检查（登录、密钥、访问控制）",
-        "• 回避 — 交付演示时带硬编码密钥、且 API 无认证的生成器"
+        "• 机会 — 在 AI 编程工具里内置部署前安全检查：登录、密钥 (Secrets)、访问控制 (Access Control)",
+        "• 回避 — 交付演示时带硬编码密钥 (Hardcoded Secrets)、且 API 无认证 (No Auth) 的生成器"
     ],
     "11": [
-        "预测 6 — 浏览器智能体仍难落地",
-        "浏览器智能体协议仍易失同步。桌面操作仍容易被提示注入欺骗。",
-        "• 机会 — 只允许批准动作清单，支付和发邮件需人工审批",
+        "预测 6 — 浏览器智能体 (Browser Agents) 仍难落地",
+        "浏览器智能体协议仍易失同步 (Desync / Drift)。桌面操作仍容易被提示注入 (Prompt Injection) 欺骗。",
+        "• 机会 — 只允许批准动作清单 (Approved Action Catalog)，支付和发邮件需人工审批",
         "• 回避 — 可以支付或发邮件、却没有人工确认的消费级机器人"
     ],
     "12": [
-        "预测 7 — 企业：内部优先",
-        "多数企业项目从公司内部起步。很多卡在内容和数据清理。",
+        "预测 7 — 企业：内部优先 (Internal First)",
+        "多数企业项目从公司内部起步。很多卡在内容与数据清理 (Content / Data Cleanup)。",
         "• 机会 — 连接 ERP/IT 的内部智能体平台，并有财务可审计的 KPI",
-        "• 回避 — 内部流程还没有可衡量 KPI 之前就做公网消费级智能体"
+        "• 回避 — 内部流程还没有可衡量 KPI 之前就做公网消费级 (B2C) 智能体"
     ],
     "13": [
         "预测 8 — 智能体生态 CVE 增多",
         "LangChain、MCP 和编程智能体漏洞已按普通软件 CVE 评级。",
-        "• 机会 — 安全的 MCP 网关，以及对智能体框架与插件的快速补丁",
-        "• 回避 — 无登录的 MCP 服务器，以及一把令牌调用全部工具"
+        "• 机会 — 安全的 MCP 网关 (MCP Gateway)，以及对智能体框架与插件的快速补丁 (Patching)",
+        "• 回避 — 无登录的 MCP 服务器，以及一把令牌调用全部工具 (Shared / God Token)"
     ],
     "14": [
-        "预测 9 — MAESTRO v2 落地采用",
-        "MAESTRO v2 尚未发布。现行模型仍是七层。",
+        "预测 9 — MAESTRO v2 落地采用 (Practical Adoption)",
+        "MAESTRO v2 尚未发布。现行模型仍是七层 (7 Layers)。",
         "• 机会 — 面向现行七层模型的落地软件与培训",
-        "• 回避 — 在 CSA 发布 v2 之前宣称「MAESTRO v2」或「十层」的产品"
+        "• 回避 — 在 CSA 发布 v2 之前宣称「MAESTRO v2」或「十层 (10 Layers)」的产品"
     ],
     "15": [
         "预测 10 — OWASP AIVSS v1",
-        "v0.8 已上线。v1.0 公开评审至 2026 年 10 月 1 日。",
-        "• 机会 — v1 定稿后的评分引擎与发布门禁",
-        "• 回避 — v1 成为标准后仍拒绝对照 AIVSS 的私有「AI 风险分」"
+        "v0.8 已上线。v1.0 公开评审 (Public Review) 至 2026 年 10 月 1 日。",
+        "• 机会 — v1 定稿后的评分引擎 (Scoring Engine) 与发布门禁 (Release Gate)",
+        "• 回避 — v1 成为标准后仍拒绝对照 (Crosswalk) AIVSS 的私有「AI 风险分」"
     ],
     "16": [
-        "主要来源",
+        "主要来源 (Primary Sources)",
         "• CSA 预测：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026",
-        "• 自我改进智能体（AIDE²）：weco.ai 博客（2026-07-14）；arXiv:2609.26457",
-        "• AgencyBench（ACL 2026）；自主性量表 arXiv 2607.17947",
+        "• 自我改进智能体 / RSI（AIDE²）：weco.ai 博客（2026-07-14）；arXiv:2609.26457",
+        "• AgencyBench（ACL 2026）；自主性量表 (Autonomous Agency Scale) arXiv 2607.17947",
         "• MAESTRO 七层分析：CSA 博客 2026-08-13（Ken Huang）",
-        "• CSA AICM v1.1；中国智能体监管（2026-07-15 起施行）；欧盟 AI 法案",
-        "• Vibe coding 安全研究：arXiv:2606.23130",
+        "• CSA AICM v1.1；中国智能体监管（2026-07-15 起施行）；欧盟 AI 法案 (EU AI Act)",
+        "• Vibe Coding 安全研究：arXiv:2606.23130",
         "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告"
     ],
     "17": [
-        "展望",
-        "• RSI 与智能体集群（Agent Swarm）正变得越来越重要",
-        "• 具身智能（Physical AI）与人形机器人仍处早期阶段",
-        "• 世界模型仍需大量工作 — GPT-6 与 Astra 带来一些希望",
-        "• 智能体 AI 安全将聚焦安全驾驭层（Secure Harness）",
-        "• 不构成投资建议",
+        "展望 (Looking Ahead)",
+        "• RSI 与智能体集群 (Agent Swarm) 正变得越来越重要",
+        "• 具身智能 (Physical AI) 与人形机器人 (Humanoid Robot) 仍处早期阶段",
+        "• 世界模型 (World Model) 仍需大量工作 — GPT-6 与 Astra 带来一些希望",
+        "• 智能体 AI 安全将聚焦安全驾驭层 (Secure Harness)",
+        "• 不构成投资建议 (Not Investment Advice)",
         "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
     ],
     "18": [
