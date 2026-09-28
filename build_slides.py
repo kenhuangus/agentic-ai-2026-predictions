@@ -16,12 +16,12 @@ SLIDES_EN = [
         "number": 1,
         "raw_lines": [
             "Top 10 Predictions for Agentic AI in 2026",
-            "Technology forecasts (Cloud Security Alliance, January 16, 2026)",
-            "Evidence through September 27, 2026 · investment discussion · Not Investment Advice",
+            "Cloud Security Alliance · January 16, 2026",
+            "United States · China · European Union",
             "Author: Ken Huang, CEO & Chief AI Officer, DistributedApps.ai",
             "Adjunct Professor, University of San Francisco: https://www.usfca.edu/faculty/ken-huang",
-            "Regions: United States · China · European Union",
-            "CSA article: https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
+            "Not Investment Advice",
+            "https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
         ]
     },
     {
@@ -56,17 +56,17 @@ SLIDES_EN = [
     {
         "number": 4,
         "raw_lines": [
-            "About This Deck",
-            "• January 2026: ten technology predictions for Agentic AI (CSA)",
-            "• This deck checks each prediction against public evidence in the US, China, and the EU",
-            "• Short investment notes are for discussion only — Not Investment Advice",
-            "• Ask: who pays, what product, and why now"
+            "Not Investment Advice",
+            "• Technology predictions first published with the Cloud Security Alliance in January 2026",
+            "• Any investment comments here are for education only",
+            "• Not a recommendation to buy, sell, or hold any security or company",
+            "• Readers should do their own diligence"
         ]
     },
     {
         "number": 5,
         "raw_lines": [
-            "Where Capital Can Focus — Not Investment Advice",
+            "Investment Map — Not Investment Advice",
             "| # | Trend | Focus / avoid |",
             "|---|---|---|",
             "| 1 | Self-improving agents | Private tests + human control / avoid open self-rewriting apps |",
@@ -85,7 +85,7 @@ SLIDES_EN = [
         "number": 6,
         "raw_lines": [
             "P1 — Self-Improving Agents",
-            "Evidence: Early systems beat a fixed R&D budget baseline; production still needs private tests the agent cannot see, plus human control.",
+            "Early systems beat a fixed R&D budget baseline. Production still needs private tests the agent cannot see, plus human control.",
             "• Opportunity — Test platforms and controls so self-improving agents cannot game the score; buyers are frontier labs and AI R&D teams",
             "• Avoid — Public apps sold as self-improving AGI that rewrite their own code with no private tests and no spend limit"
         ]
@@ -94,7 +94,7 @@ SLIDES_EN = [
         "number": 7,
         "raw_lines": [
             "P2 — Agency Matters More Than IQ Scores",
-            "Evidence: New benchmarks score multi-hour tool work, not quiz scores alone.",
+            "New benchmarks score multi-hour tool work, not quiz scores alone.",
             "• Opportunity — Agents that finish long tool workflows; sell planning and persistence scores into model selection and RFPs",
             "• Avoid — Chat products labeled as agents with no tools and no multi-hour tasks"
         ]
@@ -103,7 +103,7 @@ SLIDES_EN = [
         "number": 8,
         "raw_lines": [
             "P3 — MAESTRO Security Benchmarks",
-            "Evidence: MAESTRO is in playbooks and CI; shared public leaderboards are still thin.",
+            "MAESTRO is in playbooks and CI. Shared public leaderboards are still thin.",
             "• Opportunity — Scanners that map a change to MAESTRO layers and block high-risk agent merges",
             "• Avoid — “MAESTRO compliant” badges with no layer tests and no scanner output"
         ]
@@ -112,7 +112,7 @@ SLIDES_EN = [
         "number": 9,
         "raw_lines": [
             "P4 — Agentic Risk Management",
-            "Evidence: US, China, and EU rules now treat agent risk as a compliance problem.",
+            "US, China, and EU rules now treat agent risk as a compliance problem.",
             "• Opportunity — Runtime allow or deny on tool calls, plus one control pack mapped to NIST, the EU AI Act, and China filing",
             "• Avoid — Policy documents with no live control when an agent calls a tool"
         ]
@@ -121,7 +121,7 @@ SLIDES_EN = [
         "number": 10,
         "raw_lines": [
             "P5 — Vibe Coding Security Hangover",
-            "Evidence: About 91% of audited AI-generated apps had security holes (arXiv:2606.23130).",
+            "About 91% of audited AI-generated apps had security holes (arXiv:2606.23130).",
             "• Opportunity — Security checks built into AI coding tools before deploy (login, secrets, access control)",
             "• Avoid — Builders that ship demos with hardcoded keys and APIs with no authentication"
         ]
@@ -130,7 +130,7 @@ SLIDES_EN = [
         "number": 11,
         "raw_lines": [
             "P6 — Browser Agents Still Struggle",
-            "Evidence: Browser-agent protocols still lose sync; desktop control remains easy to trick with prompt injection.",
+            "Browser-agent protocols still lose sync. Desktop control remains easy to trick with prompt injection.",
             "• Opportunity — Agents limited to an approved action list, with human approval for payment and send-email",
             "• Avoid — Consumer bots that can pay or send email with no human check"
         ]
@@ -139,7 +139,7 @@ SLIDES_EN = [
         "number": 12,
         "raw_lines": [
             "P7 — Enterprise: Internal First",
-            "Evidence: Most enterprise programs start inside the company; many stall on content and data cleanup.",
+            "Most enterprise programs start inside the company. Many stall on content and data cleanup.",
             "• Opportunity — Internal agent platforms with ERP and IT connectors, and a KPI finance can audit",
             "• Avoid — Public consumer agents before an internal workflow has a measurable KPI"
         ]
@@ -148,7 +148,7 @@ SLIDES_EN = [
         "number": 13,
         "raw_lines": [
             "P8 — More Agentic Ecosystem CVEs",
-            "Evidence: LangChain, MCP, and coding-agent bugs are already scored like normal software CVEs.",
+            "LangChain, MCP, and coding-agent bugs are already scored like normal software CVEs.",
             "• Opportunity — Secure MCP gateways and fast patching of agent frameworks and plugins",
             "• Avoid — MCP servers with no login, and one shared token for every tool"
         ]
@@ -157,7 +157,7 @@ SLIDES_EN = [
         "number": 14,
         "raw_lines": [
             "P9 — MAESTRO v2 Practical Adoption",
-            "Evidence: MAESTRO v2 is not published. The model in use is still seven layers.",
+            "MAESTRO v2 is not published. The model in use is still seven layers.",
             "• Opportunity — Implementation software and training for the current seven-layer model",
             "• Avoid — Products that claim “MAESTRO v2” or “ten layers” before CSA publishes v2"
         ]
@@ -166,7 +166,7 @@ SLIDES_EN = [
         "number": 15,
         "raw_lines": [
             "P10 — OWASP AIVSS v1",
-            "Evidence: v0.8 is live; v1.0 is in public review through October 1, 2026.",
+            "v0.8 is live. v1.0 is in public review through October 1, 2026.",
             "• Opportunity — Scoring engines and release gates once v1 is final",
             "• Avoid — Private “AI risk scores” that refuse to map to AIVSS after v1 is the standard"
         ]
@@ -174,14 +174,14 @@ SLIDES_EN = [
     {
         "number": 16,
         "raw_lines": [
-            "Regional Lens — United States · China · European Union",
+            "United States · China · European Union",
             "| Theme | United States | China | European Union |",
             "|---|---|---|---|",
-            "| Where demand is | Labs, CVE tools, enterprise buyers | Internal ops under local rules and filing | Compliance software and human oversight |",
+            "| Demand | Labs, CVE tools, enterprise buyers | Internal ops under local rules and filing | Compliance software and human oversight |",
             "| Self-improve / agency | Test vendors and vertical R&D agents | Regulated autonomy levels | Research ahead of open deploy |",
             "| Security | MAESTRO and AIVSS products, AppSec | Fast patching | Build and AI Act gates |",
             "| Browser agents | Reliable protocols and click defenses | Limited action lists in work apps | Standards plus easy human review |",
-            "| Enterprise | Internal platforms first | Data-local agent platforms | Human-in-the-loop before going external |"
+            "| Enterprise | Internal platforms first | Data-local agent platforms | Human review before going external |"
         ]
     },
     {
@@ -210,11 +210,10 @@ SLIDES_EN = [
     {
         "number": 19,
         "raw_lines": [
-            "Closing",
-            "• These ten items began as technology predictions — investment notes are discussion only",
-            "• Not Investment Advice — not a recommendation to buy or sell",
-            "• Near-term themes: runtime agent controls, security for AI-generated code, MCP and gateway security",
-            "• Watch: AIVSS v1, browser-agent reliability, MAESTRO v2 when CSA publishes it",
+            "Thank You",
+            "• Not Investment Advice",
+            "• Themes: agent runtime controls, security for AI-generated code, MCP and gateway security",
+            "• Watch: AIVSS v1 · browser-agent reliability · MAESTRO v2 when CSA publishes it",
             "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
         ]
     },
@@ -222,7 +221,7 @@ SLIDES_EN = [
         "number": 20,
         "slide_type": "thanks",
         "raw_lines": [
-            "Thank you",
+            "Recent Books",
             "Graph Engineering for Agentic AI Systems · Harness Engineering",
             "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
         ]
@@ -232,12 +231,12 @@ SLIDES_EN = [
 SLIDES_ZH = {
     "1": [
         "2026 智能体 AI 十大预测",
-        "技术预测（云安全联盟 CSA，2026 年 1 月 16 日）",
-        "证据截至 2026 年 9 月 27 日 · 附投资讨论 · 不构成投资建议",
+        "云安全联盟（CSA）· 2026 年 1 月 16 日",
+        "美国 · 中国 · 欧盟",
         "作者：Ken Huang，DistributedApps.ai 首席执行官兼首席 AI 官",
         "旧金山大学（USF）客座教授：https://www.usfca.edu/faculty/ken-huang",
-        "区域：美国 · 中国 · 欧盟",
-        "CSA 原文：https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
+        "不构成投资建议",
+        "https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026"
     ],
     "2": [
         "关于演讲者：Ken Huang，CISSP",
@@ -262,14 +261,14 @@ SLIDES_ZH = {
         "IMG:assets/images/csa-top-10-predictions-2026.png"
     ],
     "4": [
-        "关于本演示",
-        "• 2026 年 1 月：CSA 发布十条智能体 AI 技术预测",
-        "• 本演示对照美国、中国、欧盟的公开证据检查每条预测",
-        "• 投资相关说明仅供讨论 — 不构成投资建议",
-        "• 关注：谁付费、卖什么产品、为何是现在"
+        "不构成投资建议",
+        "• 技术预测最初于 2026 年 1 月与云安全联盟（CSA）发布",
+        "• 文中投资相关评论仅供教育与讨论",
+        "• 不是买卖或持有任何证券或公司的建议",
+        "• 请读者自行尽职调查"
     ],
     "5": [
-        "资本可关注的方向 — 不构成投资建议",
+        "投资地图 — 不构成投资建议",
         "| # | 趋势 | 关注 / 回避 |",
         "|---|---|---|",
         "| 1 | 自我改进智能体 | 私有测试 + 人工控制 / 回避公网自行改代码应用 |",
@@ -285,69 +284,69 @@ SLIDES_ZH = {
     ],
     "6": [
         "预测 1 — 自我改进智能体",
-        "现有证据：早期系统已能在固定研发预算下超过人工基线；投产仍需要智能体看不见的私有测试，以及人工控制。",
+        "早期系统已能在固定研发预算下超过人工基线。投产仍需要智能体看不见的私有测试，以及人工控制。",
         "• 机会 — 私有测试与防刷分控制，卖给前沿实验室和 AI 研发团队",
         "• 回避 — 面向公网、自称自我改进 AGI、无私有测试且无花费上限就自行改代码的应用"
     ],
     "7": [
         "预测 2 — 自主性比智商分数更重要",
-        "现有证据：新基准主要打分「数小时工具任务」，而不是测验分数。",
+        "新基准主要打分「数小时工具任务」，而不是测验分数。",
         "• 机会 — 能完成长工具流程的智能体；把规划与持续执行分数卖进选型与招标",
         "• 回避 — 没有工具、也完不成数小时任务、却自称智能体的聊天产品"
     ],
     "8": [
         "预测 3 — MAESTRO 安全基准",
-        "现有证据：MAESTRO 已进入操作手册和 CI；公开排行榜仍少。",
+        "MAESTRO 已进入操作手册和 CI。公开排行榜仍少。",
         "• 机会 — 按 MAESTRO 分层检查变更、并阻断高风险智能体合并的扫描器",
         "• 回避 — 没有分层测试、没有扫描输出的「MAESTRO 合规」徽章"
     ],
     "9": [
         "预测 4 — 智能体风险管理",
-        "现有证据：美、中、欧规则已把智能体风险当作合规问题。",
+        "美、中、欧规则已把智能体风险当作合规问题。",
         "• 机会 — 工具调用的实时允许或拒绝，外加一套映射 NIST、欧盟 AI 法案与中国备案的控制包",
         "• 回避 — 只有制度文档、不能在工具调用时做实时控制的产品"
     ],
     "10": [
         "预测 5 — Vibe Coding 安全后遗症",
-        "现有证据：被审计的 AI 生成应用约 91% 有安全漏洞（arXiv:2606.23130）。",
+        "被审计的 AI 生成应用约 91% 有安全漏洞（arXiv:2606.23130）。",
         "• 机会 — 在 AI 编程工具里内置部署前安全检查（登录、密钥、访问控制）",
         "• 回避 — 交付演示时带硬编码密钥、且 API 无认证的生成器"
     ],
     "11": [
         "预测 6 — 浏览器智能体仍难落地",
-        "现有证据：浏览器智能体协议仍易失同步；桌面操作仍容易被提示注入欺骗。",
+        "浏览器智能体协议仍易失同步。桌面操作仍容易被提示注入欺骗。",
         "• 机会 — 只允许批准动作清单，支付和发邮件需人工审批",
         "• 回避 — 可以支付或发邮件、却没有人工确认的消费级机器人"
     ],
     "12": [
         "预测 7 — 企业：内部优先",
-        "现有证据：多数企业项目从公司内部起步；很多卡在内容和数据清理。",
+        "多数企业项目从公司内部起步。很多卡在内容和数据清理。",
         "• 机会 — 连接 ERP/IT 的内部智能体平台，并有财务可审计的 KPI",
         "• 回避 — 内部流程还没有可衡量 KPI 之前就做公网消费级智能体"
     ],
     "13": [
         "预测 8 — 智能体生态 CVE 增多",
-        "现有证据：LangChain、MCP 和编程智能体漏洞已按普通软件 CVE 评级。",
+        "LangChain、MCP 和编程智能体漏洞已按普通软件 CVE 评级。",
         "• 机会 — 安全的 MCP 网关，以及对智能体框架与插件的快速补丁",
         "• 回避 — 无登录的 MCP 服务器，以及一把令牌调用全部工具"
     ],
     "14": [
         "预测 9 — MAESTRO v2 落地采用",
-        "现有证据：MAESTRO v2 尚未发布。现行模型仍是七层。",
+        "MAESTRO v2 尚未发布。现行模型仍是七层。",
         "• 机会 — 面向现行七层模型的落地软件与培训",
         "• 回避 — 在 CSA 发布 v2 之前宣称「MAESTRO v2」或「十层」的产品"
     ],
     "15": [
         "预测 10 — OWASP AIVSS v1",
-        "现有证据：v0.8 已上线；v1.0 公开评审至 2026 年 10 月 1 日。",
+        "v0.8 已上线。v1.0 公开评审至 2026 年 10 月 1 日。",
         "• 机会 — v1 定稿后的评分引擎与发布门禁",
         "• 回避 — v1 成为标准后仍拒绝对照 AIVSS 的私有「AI 风险分」"
     ],
     "16": [
-        "区域视角 — 美国 · 中国 · 欧盟",
+        "美国 · 中国 · 欧盟",
         "| 主题 | 美国 | 中国 | 欧盟 |",
         "|---|---|---|---|",
-        "| 需求所在 | 实验室、CVE 工具、企业买方 | 本地规则与备案下的内部运营 | 合规软件与人工监督 |",
+        "| 需求 | 实验室、CVE 工具、企业买方 | 本地规则与备案下的内部运营 | 合规软件与人工监督 |",
         "| 自我改进 / 自主性 | 测试厂商与垂直研发智能体 | 受监管的自主等级 | 研究先于开放部署 |",
         "| 安全 | MAESTRO 与 AIVSS 产品、应用安全 | 快速补丁 | 构建与 AI 法案门禁 |",
         "| 浏览器智能体 | 可靠协议与点击防护 | 办公应用中的有限动作清单 | 标准 + 便于人工复核 |",
@@ -371,22 +370,21 @@ SLIDES_ZH = {
         "• A2UI：a2ui.org · AIVSS：aivss.owasp.org · Contentstack 2026 智能体企业报告"
     ],
     "19": [
-        "结语",
-        "• 这十条首先是技术预测 — 投资说明仅供讨论",
-        "• 不构成投资建议 — 不是买卖推荐",
-        "• 近期主题：智能体运行时控制、AI 生成代码安全、MCP 与网关安全",
-        "• 可关注：AIVSS v1、浏览器智能体可靠性、以及 CSA 发布后的 MAESTRO v2",
+        "谢谢",
+        "• 不构成投资建议",
+        "• 主题：智能体运行时控制、AI 生成代码安全、MCP 与网关安全",
+        "• 关注：AIVSS v1 · 浏览器智能体可靠性 · CSA 发布后的 MAESTRO v2",
         "• kenhuangus.substack.com · aivss.owasp.org · DistributedApps.ai · linkedin.com/in/kenhuang8"
     ],
     "20": [
-        "谢谢",
+        "近期图书",
         "《Graph Engineering for Agentic AI Systems》·《Harness Engineering》",
         "amazon.com/dp/B0HHZVDQQY · amazon.com/dp/B0HF3F86YM"
     ]
 }
 
 PHRASES = {
-    "Harness Engineering Masterclass": "智能体 AI 2026 预测成绩单",
+    "Harness Engineering Masterclass": "智能体 AI 2026 预测",
     "🏠 Home Site": "🏠 站点主页",
     "Presentation Mode": "放映模式",
     "Grid View": "网格视图",
@@ -422,11 +420,11 @@ def main() -> None:
         ),
         (
             "document.title = uiText(\n        'Packt Masterclass Presentation: 85 Interactive Code, Architecture & Skill Slides',\n        'Packt 大师课演示：85 页交互式代码、架构与技能幻灯片'\n      );",
-            "document.title = uiText(\n        'Top 10 Predictions for Agentic AI in 2026',\n        '2026 智能体 AI 十大预测 — 年中成绩单'\n      );",
+            "document.title = uiText(\n        'Top 10 Predictions for Agentic AI in 2026',\n        '2026 智能体 AI 十大预测'\n      );",
         ),
         (
             "brand.textContent = uiText('Harness Engineering Masterclass', '智能体驾驭工程大师课');",
-            "brand.textContent = uiText('Agentic AI 2026 Predictions', '智能体 AI 2026 预测成绩单');",
+            "brand.textContent = uiText('Agentic AI 2026 Predictions', '智能体 AI 2026 预测');",
         ),
         (
             "home.textContent = uiText('🏠 Home Site', '🏠 课程主页');",
@@ -462,8 +460,8 @@ def main() -> None:
               </div>
               <div class="slide-1-hero-desc">
                 ${slideLang === 'zh'
-                  ? 'CSA 技术预测（2026-01-16），证据截至 2026-09-27；附投资讨论，不构成投资建议。'
-                  : 'CSA technology predictions (2026-01-16), evidence through 2026-09-27, with investment discussion. Not Investment Advice.'}
+                  ? '云安全联盟（CSA）2026 年 1 月技术预测。美国 · 中国 · 欧盟。不构成投资建议。'
+                  : 'Cloud Security Alliance technology predictions, January 2026. United States · China · European Union. Not Investment Advice.'}
               </div>
             </div>"""
 
@@ -504,8 +502,8 @@ def main() -> None:
                 <div class="slide-1-pillar-desc">${slideLang === 'zh' ? 'AI 法案、A2UI、控制映射' : 'AI Act, A2UI, control mappings'}</div>
               </div>
               <div class="slide-1-pillar-pill">
-                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '📊 10 条判定' : '📊 10 Verdicts'}</div>
-                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '截至 2026-09-27 的证据审计' : 'Evidence audit as of 2026-09-27'}</div>
+                <div class="slide-1-pillar-title">${slideLang === 'zh' ? '📊 投资讨论' : '📊 Investment Notes'}</div>
+                <div class="slide-1-pillar-desc">${slideLang === 'zh' ? '不构成投资建议' : 'Not Investment Advice'}</div>
               </div>
             </div>"""
 

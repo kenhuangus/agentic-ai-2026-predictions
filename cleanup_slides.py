@@ -29,7 +29,7 @@ t = t.replace(
       );""",
     """      document.title = uiText(
         'Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard',
-        '2026 智能体 AI 十大预测 — 年中成绩单'
+        '2026 智能体 AI 十大预测'
       );""",
 )
 
