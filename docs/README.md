@@ -1,38 +1,13 @@
-# Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard
+# Top 10 Predictions for Agentic AI in 2026
 
-Interactive GitHub Pages site auditing Ken Huang’s January 16, 2026 Cloud Security Alliance predictions against public evidence in the **United States**, **China**, and the **European Union** as of **September 27, 2026**.
+Bilingual GitHub Pages site for Ken Huang’s Cloud Security Alliance predictions (January 16, 2026). **Not Investment Advice.**
 
-- Live site (after Pages is enabled): `https://kenhuangus.github.io/agentic-ai-2026-predictions/`
-- Slides: [`slides.html`](./slides.html) (EN / 中文 via `?lang=zh`)
-- Machine-readable verdicts: [`research/scorecard.json`](./research/scorecard.json)
+- Live: https://kenhuangus.github.io/agentic-ai-2026-predictions/
+- Slides: [slides.html](./slides.html) (`?lang=en` / `?lang=zh`)
 
-## Original predictions
+## Original article
 
-Published on CSA and Substack: [My Top 10 Predictions for Agentic AI in 2026](https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026).
-
-| # | Prediction | Mid-year verdict |
-|---|---|---|
-| 1 | Self-improving / RSI agents | On track |
-| 2 | Agency > Intelligence | On track |
-| 3 | MAESTRO-based security benchmarks | Partial |
-| 4 | Agentic risk management center stage | Confirmed |
-| 5 | Vibe-coding security hangover | Confirmed |
-| 6 | Browser agents struggle | On track |
-| 7 | Enterprise: internal first | Mostly confirmed |
-| 8 | More CVEs in agentic ecosystem | Confirmed |
-| 9 | MAESTRO v2 practical release | In progress (v2 not published; still 7 layers) |
-| 10 | OWASP AIVSS v1 official release | In progress |
-
-## Local preview
-
-Open `index.html` or `slides.html` in a browser (no build step required at runtime).
-
-To regenerate slides after editing `build_slides.py`:
-
-```bash
-python build_slides.py
-python cleanup_slides.py
-```
+[My Top 10 Predictions for Agentic AI in 2026](https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026)
 
 ## Author
 

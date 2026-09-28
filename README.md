@@ -1,8 +1,6 @@
-# Top 10 Predictions for Agentic AI in 2026 — Mid-Year Scorecard
+# Top 10 Predictions for Agentic AI in 2026
 
-Interactive bilingual (EN / 中文) GitHub Pages site. **Current `main`:** investor thesis scorecard — up to **3 investable theses per CSA trend**, grounded in **United States / China / EU** evidence as of **September 27, 2026**.
-
-**Archived status-only mid-year audit** (before the investor rewrite): tag [`v1-midyear-scorecard`](https://github.com/kenhuangus/agentic-ai-2026-predictions/tree/v1-midyear-scorecard) · branch [`archive/v1-midyear-scorecard`](https://github.com/kenhuangus/agentic-ai-2026-predictions/tree/archive/v1-midyear-scorecard).
+Bilingual (EN / 中文) slides for Ken Huang’s Cloud Security Alliance predictions (January 16, 2026), with United States / China / EU evidence and investment notes. **Not Investment Advice.**
 
 ## Links
 
@@ -12,24 +10,16 @@ Interactive bilingual (EN / 中文) GitHub Pages site. **Current `main`:** inves
 | **Public slides** | https://kenhuangus.github.io/agentic-ai-2026-predictions/slides.html?lang=en | https://kenhuangus.github.io/agentic-ai-2026-predictions/slides.html?lang=zh |
 | **Repo** | https://github.com/kenhuangus/agentic-ai-2026-predictions | |
 
-### Local (this machine)
-
-- Home: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/index.html`
-- Slides EN: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/slides.html?lang=en`
-- Slides 中文: `file:///C:/Users/kenhu/agentic-ai-2026-predictions/slides.html?lang=zh`
+### Local
 
 ```powershell
 start C:\Users\kenhu\agentic-ai-2026-predictions\index.html
 start "C:\Users\kenhu\agentic-ai-2026-predictions\slides.html?lang=zh"
 ```
 
-## Original predictions
+## Original article
 
 [My Top 10 Predictions for Agentic AI in 2026](https://cloudsecurityalliance.org/blog/2026/01/16/my-top-10-predictions-for-agentic-ai-in-2026) (CSA, 2026-01-16).
-
-## Language switch
-
-Use the **EN** / **中文** header buttons, or `?lang=en` / `?lang=zh`. Chinese copy is in `slides-zh.js` (same line count as English).
 
 ## Author
 
